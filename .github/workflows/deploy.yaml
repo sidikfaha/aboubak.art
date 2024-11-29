@@ -1,0 +1,52 @@
+name: Deploy Website
+on:
+  push:
+    branches: [master]
+
+env:
+  node-version: "20.18.0"
+  cache-name: yarn-cache
+
+jobs:
+  deploy:
+    name: Build and deploy to cloufront
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.node-version }}
+      - name: Caching dependencies
+        id: yarn-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.yarn
+            node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: yarn list
+      - name: Installing dependencies
+        run: yarn
+      - name: Build
+        run: |
+          cat <<EOF > .env
+            ${{ secrets.ENV }}
+          EOF
+          yarn generate
+      - name: Configure AWS credentials
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set default.region ${{ secrets.AWS_DEFAULT_REGION }}
+      - name: Deploy
+        run: |
+          aws s3 sync dist/ s3://${{ secrets.S3_PATH }}/
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
