@@ -8,9 +8,14 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
+    'nuxt-gtag',
   ],
 
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+  },
+
+  gtag: {
+    id: "G-2C0YD2E13F",
   },
 });

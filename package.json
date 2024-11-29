@@ -13,6 +13,7 @@
     "@nuxt/icon": "^1.8.2",
     "@pinia/nuxt": "^0.7.0",
     "nuxt": "^3.14.1592",
+    "nuxt-gtag": "^3.0.2",
     "vue": "latest",
     "vue-router": "latest"
   },
