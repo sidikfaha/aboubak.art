@@ -146,7 +146,7 @@
     </section>
 
     <!-- Ils m'ont fait confiance -->
-    <section class="py-10 dark:bg-white dark:text-gray-700">
+    <section data-mode="light" class="py-10 bg-primary/70">
       <div class="flex flex-col items-center text-center container">
         <h2 class="text-6xl font-extrabold">
           Ils m'ont fait <span class="text-primary">confiance</span>
@@ -156,7 +156,7 @@
           <img
             v-for="(client, index) in clients"
             :title="client.name"
-            class="h-20 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+            class="h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
             :src="client.logo"
             :alt="client.name"
             :key="index"
@@ -166,7 +166,7 @@
 
           <nuxt-link
             to="#"
-            class="px-8 py-4 rounded-xl border border-dashed border-gray-400 text-gray-400 hover:text-primary hover:border-primary flex flex-col gap-2 items-center"
+            class="px-8 py-4 rounded-xl border border-dashed border-gray-800 text-gray-800 hover:text-white hover:border-white flex flex-col gap-2 items-center"
           >
             <icon name="tabler:photo-plus" :size="32" />
             <small>Votre logo ici</small>
@@ -186,6 +186,7 @@ import BiciciImage from "~/assets/images/clients/bicici.png";
 import JackwestinImage from "~/assets/images/clients/jackwestin.svg";
 import DrBalconyImage from "~/assets/images/clients/dr-balcony.png";
 import JMFImage from "~/assets/images/clients/jmf.webp";
+import EverestConsultingImage from "~/assets/images/clients/everest-consulting.png";
 
 const clients = [
   {
@@ -215,6 +216,10 @@ const clients = [
   {
     name: "J'Moov Free",
     logo: JMFImage,
+  },
+  {
+    name: "Everest Consulting",
+    logo: EverestConsultingImage,
   },
 ];
 </script>

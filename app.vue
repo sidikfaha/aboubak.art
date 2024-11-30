@@ -1,5 +1,8 @@
 <template>
   <NuxtLayout>
+    <Head>
+      <Link rel="icon" href="/favicon.svg" />
+    </Head>
     <NuxtPage />
   </NuxtLayout>
 </template>
