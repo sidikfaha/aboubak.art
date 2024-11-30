@@ -9,6 +9,9 @@ env:
 
 jobs:
   deploy:
+    environment: 
+      name: Production
+      url: https://aboubak.art
     name: Build and deploy to cloufront
     runs-on: ubuntu-22.04
     steps:
