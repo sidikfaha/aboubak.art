@@ -24,7 +24,7 @@
         </p>
         <div class="mt-10">
           <a
-            href="https://calendly.com/me-aboubak/parlons-de-moi"
+            :href="appointmentLink"
             target="_blank"
             class="py-4 px-8 text-xl rounded-lg text-white bg-primary inline-flex items-center gap-4"
           >
@@ -80,7 +80,7 @@
           </p>
 
           <a
-            href="https://calendly.com/me-aboubak/parlons-de-moi"
+            :href="appointmentLink"
             target="_blank"
             class="mt-10 py-4 px-8 text-xl rounded-lg text-white bg-primary inline-flex items-center gap-4"
           >
@@ -222,4 +222,6 @@ const clients = [
     logo: EverestConsultingImage,
   },
 ];
+
+const appointmentLink = "https://calendar.app.google/qEuB6T8Qz8nfAJpw5";
 </script>

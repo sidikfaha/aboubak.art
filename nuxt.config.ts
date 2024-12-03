@@ -9,9 +9,14 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
     'nuxt-gtag',
+    '@nuxt/image',
   ],
 
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+  },
+
+  image: {
+    formats: ["webp", "avif"],
   },
 });
