@@ -18,7 +18,16 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@iconify-json/circum": "^1.2.1",
+    "@iconify-json/mdi-light": "^1.2.1",
+    "@iconify-json/mingcute": "^1.2.1",
+    "@iconify-json/pajamas": "^1.2.4",
+    "@iconify-json/solar": "^1.2.1",
+    "@iconify-json/tabler": "^1.2.10",
+    "@iconify-json/uil": "^1.2.1",
     "@nuxt/image": "^1.8.1",
-    "@nuxtjs/tailwindcss": "^6.12.2"
+    "@nuxtjs/i18n": "^9.0.0-rc.2",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "typescript": "^5.7.2"
   }
 }

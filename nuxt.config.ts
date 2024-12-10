@@ -8,8 +8,9 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
-    'nuxt-gtag',
-    '@nuxt/image',
+    "nuxt-gtag",
+    "@nuxt/image",
+    "@nuxtjs/i18n",
   ],
 
   app: {
@@ -18,5 +19,11 @@ export default defineNuxtConfig({
 
   image: {
     formats: ["webp", "avif"],
+  },
+
+  i18n: {
+    vueI18n: "./i18n.config.ts",
+    locales: ["en", "fr"],
+    defaultLocale: "en",
   },
 });

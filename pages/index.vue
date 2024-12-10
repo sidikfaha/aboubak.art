@@ -149,7 +149,7 @@
     <section data-mode="light" class="py-10 bg-primary/70">
       <div class="flex flex-col items-center text-center container">
         <h2 class="text-6xl font-extrabold">
-          Ils m'ont fait <span class="text-primary">confiance</span>
+          {{ $t('welcome') }} <span class="text-primary">confiance</span>
         </h2>
 
         <div class="flex gap-16 justify-center items-center pt-16 flex-wrap">
