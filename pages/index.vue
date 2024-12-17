@@ -205,7 +205,7 @@
 
           <nuxt-link
             to="#"
-            class="px-8 py-4 rounded-xl border border-dashed border-gray-300 hover:text-white hover:border-white flex flex-col gap-2 items-center"
+            class="px-8 py-4 rounded-xl border border-dashed border-gray-700 hover:text-primary hover:border-primary flex flex-col gap-2 items-center dark:border-gray-300 dark:hover:border-primary-500"
           >
             <icon name="tabler:photo-plus" :size="32" />
             <small>
