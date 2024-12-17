@@ -1,8 +1,8 @@
 <template>
   <Html
-    lang="fr"
+    :lang="$i18n.locale"
     :data-mode="uiStore.darkMode ? 'dark' : 'light'"
-    class="dark:bg-gray-900 dark:text-white transition-colors"
+    class="dark:bg-gray-900 dark:text-gray-300 transition-colors"
   >
     <div v-if="uiStore.loading" class="h-screen w-screen fixed z-50">
       <div
@@ -27,11 +27,19 @@
               <ul class="flex gap-6">
                 <li>
                   <nuxt-link to="#" class="hover:text-primary">
-                    Compétences
+                    {{ $t("home.menu.skills") }}
                   </nuxt-link>
                 </li>
-                <li><nuxt-link to="#">Services</nuxt-link></li>
-                <li><nuxt-link to="#">Projets</nuxt-link></li>
+                <li>
+                  <nuxt-link to="#">
+                    {{ $t("home.menu.services") }}
+                  </nuxt-link>
+                </li>
+                <li>
+                  <nuxt-link to="#">
+                    {{ $t("home.menu.projects") }}
+                  </nuxt-link>
+                </li>
               </ul>
             </nav>
 
@@ -53,7 +61,7 @@
                     to="#"
                     class="py-2 px-4 rounded-full text-white bg-primary"
                   >
-                    Contactez-moi
+                    {{ $t("home.contactMe") }}
                   </nuxt-link>
                 </li>
               </ul>
@@ -77,21 +85,21 @@
             <a
               href="https://github.com/sidikfaha"
               target="_blank"
-              class="size-8 rounded-full bg-gray-700 flex items-center justify-center text-white"
+              class="size-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 dark:bg-gray-700 dark:text-gray-300"
             >
               <icon name="feather:github" />
             </a>
             <a
               href="https://x.com/sidikfaha"
               target="_blank"
-              class="size-8 rounded-full bg-gray-700 flex items-center justify-center text-white"
+              class="size-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 dark:bg-gray-700 dark:text-gray-300"
             >
               <icon name="pajamas:twitter" />
             </a>
             <a
               href="https://instagram.com/aboubak.art"
               target="_blank"
-              class="size-8 rounded-full bg-gray-700 flex items-center justify-center text-white"
+              class="size-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 dark:bg-gray-700 dark:text-gray-300"
             >
               <icon name="feather:instagram" />
             </a>

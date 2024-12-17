@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "@nuxt/image",
     "@nuxtjs/i18n",
+    "@nuxtjs/sitemap",
   ],
 
   app: {
@@ -22,8 +23,11 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    vueI18n: "./i18n.config.ts",
-    locales: ["en", "fr"],
-    defaultLocale: "en",
+    langDir: "locales/",
+    defaultLocale: "fr",
+    locales: [
+      { code: "en", iso: "en-US", file: "en.json" },
+      { code: "fr", iso: "fr-FR", file: "fr.json" },
+    ],
   },
 });

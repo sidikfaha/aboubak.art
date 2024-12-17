@@ -1,0 +1,63 @@
+{
+  "home": {
+    "meta": {
+      "title": "Aboubakar Sidik Faha :: Consultant DevOps & Entrepreneur à Abidjan",
+      "description": "Je suis Aboubakar Sidik Faha, un consultant DevOps expérimenté et entrepreneur basé à Abidjan. Je vous aiderai à rendre votre infrastructure informatique plus fiable, évolutive et sécurisée ainsi que votre entreprise plus rentable.",
+      "keywords": "devops, consultant, entrepreneur, abidjan, cote d'ivoire, infrastructure informatique, entreprise, rentable"
+    },
+    "menu": {
+      "skills": "Competences",
+      "services": "Services",
+      "projects": "Projets"
+    },
+    "contactMe": "Contactez-moi",
+    "hero": {
+      "greeting": "Salut,",
+      "iam": "Je suis",
+      "profession": "Consultant DevOps expérimenté",
+      "and": "et",
+      "profession2": "Entrepreneur",
+      "basedIn": "basé à",
+      "location": "Abidjan",
+      "description": "Je vous aiderai à rendre votre infrastructure informatique plus fiable, évolutive et sécurisée ainsi que votre entreprise plus rentable.",
+      "cta": "Réserver un appel"
+    },
+    "stats": {
+      "projects": "Projects réalisés",
+      "clients": "Clients satisfaits",
+      "experience": "Années d'expérience",
+      "satisfactionPercentage": "Satisfaction client"
+    },
+    "whyMe": {
+      "title": "Pourquoi travailler avec",
+      "me": "moi",
+      "description": "Voici quelques raisons pour lesquelles vous devriez me choisir pour votre prochain projet.",
+      "cta": "Réserver un appel",
+      "reasons": {
+        "expert": {
+          "title": "Expertise",
+          "description": "Je suis un expert dans mon domaine et je mets à votre disposition mon savoir-faire."
+        },
+        "quality": {
+          "title": "Qualité",
+          "description": "Je mets un point d'honneur à vous fournir un travail de qualité irréprochable."
+        },
+        "support": {
+          "title": "Support",
+          "description": "Je vous accompagne tout au long de votre projet et même après sa livraison."
+        },
+        "price": {
+          "title": "Prix",
+          "description": "Je vous propose des tarifs compétitifs et adaptés à votre budget."
+        }
+      }
+    },
+    "clients": {
+      "title": {
+        "part1": "Ils m'ont fait",
+        "part2": "confiance"
+      },
+      "add": "Soyez le prochain logo"
+    }
+  }
+}
