@@ -2,6 +2,7 @@ export const useUiStore = defineStore("ui", {
   state: () => ({
     _darkMode: true,
     _loading: true,
+    _drawer: false,
   }),
 
   actions: {
@@ -16,11 +17,14 @@ export const useUiStore = defineStore("ui", {
     setLoading(value: boolean) {
       this._loading = value;
     },
+    setDrawerOpen(value: boolean) {
+      this._drawer = value;
+    }
   },
 
   getters: {
-    appName: () => "Software",
     darkMode: (state) => state._darkMode,
     loading: (state) => state._loading,
+    drawerOpen: (state) => state._drawer,
   },
 });

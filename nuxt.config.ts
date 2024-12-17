@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/i18n",
     "@nuxtjs/sitemap",
+    "radix-vue/nuxt",
   ],
 
   app: {
@@ -26,8 +27,8 @@ export default defineNuxtConfig({
     langDir: "locales/",
     defaultLocale: "fr",
     locales: [
-      { code: "en", iso: "en-US", file: "en.json" },
-      { code: "fr", iso: "fr-FR", file: "fr.json" },
+      { code: "en", iso: "en-US", file: "en.json", name: "English" },
+      { code: "fr", iso: "fr-FR", file: "fr.json", name: "Français" },
     ],
   },
 });

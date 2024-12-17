@@ -23,7 +23,7 @@
               />
             </nuxt-link>
 
-            <nav>
+            <nav class="hidden lg:flex gap-6">
               <ul class="flex gap-6">
                 <li>
                   <nuxt-link to="#" class="hover:text-primary">
@@ -44,22 +44,62 @@
             </nav>
 
             <nav>
-              <ul class="flex gap-2 text-sm items-center">
+              <ul class="flex text-sm items-center">
                 <li>
                   <icon-btn
                     class="hover:bg-gray-300/50 dark:hover:bg-gray-900/50"
                     @click="uiStore.toggleDarkMode"
                     :name="
-                      uiStore.darkMode
+                      !uiStore.darkMode
                         ? 'solar:sun-outline'
                         : 'solar:moon-outline'
                     "
                   />
                 </li>
                 <li>
+                  <DropdownMenuRoot>
+                    <DropdownMenuTrigger as-child>
+                      <icon-btn
+                        class="hover:bg-gray-300/50 dark:hover:bg-gray-900/50"
+                        name="mdi:language"
+                      >
+                        <template #indicator>
+                          <icon :name="`circle-flags:${locale}`" size="10" class="absolute top-2 right-2" />
+                        </template>
+                      </icon-btn>
+                    </DropdownMenuTrigger>
+
+                    <Transition name="fade">
+                      <DropdownMenuContent
+                        class="bg-gray-200 dark:bg-gray-700 shadow-lg rounded-lg p-1"
+                      >
+                        <DropdownMenuItem
+                          v-for="locale in availableLocales"
+                          :key="locale.code"
+                          @click="setLocale(locale.code)"
+                          class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-gray-300/50 dark:hover:bg-gray-900/50 rounded-lg"
+                        >
+                          <icon :name="`circle-flags:${locale.code}`" />
+                          <span class="capitalize">{{ locale.name }}</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuArrow
+                          class="fill-gray-200 dark:fill-gray-700 stroke-2"
+                        />
+                      </DropdownMenuContent>
+                    </Transition>
+                  </DropdownMenuRoot>
+                </li>
+                <li class="lg:hidden">
+                  <icon-btn
+                    class="hover:bg-gray-300/50 dark:hover:bg-gray-900/50"
+                    @click="() => uiStore.setDrawerOpen(true)"
+                    name="feather:menu"
+                  />
+                </li>
+                <li>
                   <nuxt-link
                     to="#"
-                    class="py-2 px-4 rounded-full text-white bg-primary"
+                    class="ml-2 py-2 px-4 rounded-full text-white bg-primary hidden lg:inline"
                   >
                     {{ $t("home.contactMe") }}
                   </nuxt-link>
@@ -74,8 +114,8 @@
         <slot />
       </main>
 
-      <footer class="container mt-6">
-        <div class="py-6 text-center border-t flex justify-between">
+      <footer class="container border-t dark:border-gray-700 py-6">
+        <div class="text-center flex justify-between">
           <small>
             &copy; {{ new Date().getFullYear() }} Aboubak'Art. All Rights
             Reserved
@@ -107,11 +147,23 @@
         </div>
       </footer>
     </div>
+
+    <Transition name="fade">
+      <Drawer
+        v-if="uiStore.drawerOpen"
+        @close="() => uiStore.setDrawerOpen(false)"
+      />
+    </Transition>
   </Html>
 </template>
 
 <script setup>
+const { locales, locale, setLocale } = useI18n();
 const uiStore = useUiStore();
+
+const availableLocales = computed(() =>
+  locales.value.filter((l) => l !== locale.value)
+);
 
 onMounted(async () => {
   await new Promise((resolve) => {
@@ -124,3 +176,15 @@ onMounted(async () => {
   uiStore.setLoading(false);
 });
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

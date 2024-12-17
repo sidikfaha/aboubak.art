@@ -15,9 +15,10 @@ defineProps({
 <template>
   <button
     v-bind="$attrs"
-    class="rounded-full hover:bg-gray-100 flex items-center justify-center dark:hover:bg-gray-800"
+    class="rounded-full hover:bg-gray-100 flex items-center justify-center dark:hover:bg-gray-800 relative"
     :style="{ width: `${size}px`, height: `${size}px` }"
   >
     <icon :name :size="iconSize" />
+    <slot name="indicator" />
   </button>
 </template>
