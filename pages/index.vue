@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-8 lg:space-y-32">
+  <div class="space-y-8">
     <Head>
       <Title>{{ $t("home.meta.title") }}</Title>
       <Meta name="description" :content="$t('home.meta.description')" />
@@ -23,7 +23,7 @@
 
     <!-- Hero -->
     <section
-      class="pt-10 lg:pt-32 flex flex-col lg:flex-row gap-16 lg:gap-28 container"
+      class="py-10 lg:pt-32 flex flex-col lg:flex-row gap-16 lg:gap-28 container"
     >
       <div class="flex flex-col justify-center">
         <h1 class="flex gap-2 justify-between items-center">
@@ -104,7 +104,7 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container py-10">
       <div class="grid lg:grid-cols-5 gap-8">
         <div class="lg:col-span-2">
           <h2 class="text-5xl font-extrabold">
@@ -196,7 +196,7 @@
     </section>
 
     <!-- Ils m'ont fait confiance -->
-    <section class="py-10 bg-gray-200 dark:bg-gray-800">
+    <section class="py-20 bg-gray-100 dark:bg-gray-800">
       <div class="flex flex-col items-stretch container">
         <h2 class="text-5xl font-extrabold md:text-center">
           {{ $t("home.clients.title.part1") }}
@@ -231,6 +231,24 @@
             </small>
           </nuxt-link>
         </div>
+      </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="container py-20">
+      <h2 class="text-5xl font-extrabold text-center">
+        {{ $t("home.recommendations.title") }}
+      </h2>
+
+      <div class="lg:columns-2 pt-8 gap-4">
+        <TestimonyItem
+          v-for="(testimony, index) in testimonyList"
+          :key="index"
+          :name="testimony.name"
+          :title="testimony.title"
+          :image="testimony.image"
+          :testimony="testimony.testimony"
+        />
       </div>
     </section>
   </div>
@@ -280,6 +298,37 @@ const clients = [
     name: "Everest Consulting",
     logo: EverestConsultingImage,
   },
+];
+
+const testimonyList = [
+  {
+    name: "David Ben OTTO",
+    title: "Ingénieur Cloud AWS chez KodeCloud Inc",
+    image: 'https://media.licdn.com/dms/image/v2/D4E03AQE4IsBWfNDhJg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1669302475415?e=1740614400&v=beta&t=e17aluc1h7jBxHyCdnDsaYKVr-1uzyNWgk3BR2ZVYfc',
+    testimony:
+      "I've worked with Aboubakar in a very innovative project around connected vehicules and I've discover a professionnal Team Lead with great background in Development and DevOps. He use to manage the projects with a collaborative spirit. On the technical side, Aboubakar was just a guru: we worked hours on CI-CD pipelines with GitHub Actions (he's a perfective approch) and integration of micro services using API. He helped you to skill-up on CICD pipelines and orchestration tools like Docker Swarm and Kubernetes. On the other end, Aboubakar designed application architeture with design pattern integrated. We worked intensively on AWS Cloud Plaform for our projects and many services have been involved. I will always be happy to collaborate again with Aboubakar.",
+  },
+  {
+    name: "Cabraule Ketchanga",
+    title: "React & Angular | Flutter Developer",
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQEn3OzeIZDi1w/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1725642375995?e=1740614400&v=beta&t=_i1pZL2J3m-sFcfgnHHCONTWdbrfXQgI_O7pYvPScQQ",
+    testimony:
+      "C'est l'une des personnes dynamique que je connaisse en développement.\nSon sens de l'engagement et sa prise de responsabilité fait qu'il est toujours considérer comme celui qui doit manager les autres, ce qui est facilement approuvé à cause de son expérience et ces capacités techniques.",
+  },
+  {
+    name: "Kwiringira Bruce Hervé",
+    title: "Architecte Cloud",
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQHFSqOLezSZzw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1654590458641?e=1740614400&v=beta&t=xYIgBWYdiBsOxO2QN8fy7c0i-dgCgO4q5hisoZCT3ps",
+    testimony:
+      "It's rare that you come across a standout talent like Aboubakar. Incredibly multi talented, a fully fledged full stack engineer capable of coding in multiple JavaScript frameworks, code in different programming languages for backend micro-services and on top of that be a fully fledged DevOps engineer capable of putting in place software architectures, deploy, operate and maintain distributed systems on multiple clouds and automate development processes via CI/CD pipelines. Plus an ability to lead and juggle multiple projects at the same time.",
+  },
+  {
+    name: "Jim Carlsson Ngnintedem",
+    title: "DevOps Engineer",
+    image: 'https://media.licdn.com/dms/image/v2/C4D03AQF7V_Ka1NbFew/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1631537543608?e=1740614400&v=beta&t=24tHaaWupBt6lGPC1rt8GlD-8XE_Wpa_THrUvcC4-3Q',
+    testimony:
+      "Curieux, responsable, très impliqué et naturellement doté d’un esprit critique et de synthèse, Sidik Aboubakar est un moteur qui aime les challenges et s’investir dans de nouveaux projets. Doté d’un fort esprit d’équipe, il a également toujours su travailler en parfaite autonomie et responsabilité tout au long de ses missions.",
+  }
 ];
 
 const appointmentLink = "https://calendar.app.google/qEuB6T8Qz8nfAJpw5";

@@ -58,6 +58,9 @@
         "part2": "confiance"
       },
       "add": "Soyez le prochain logo"
+    },
+    "recommendations": {
+      "title": "Recommendations reçues"
     }
   }
 }
