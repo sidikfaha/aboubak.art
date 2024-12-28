@@ -235,8 +235,8 @@
     </section>
 
     <!-- Recommendations -->
-    <section class="container py-20">
-      <h2 class="text-5xl font-extrabold text-center">
+    <section class="container lg:py-20">
+      <h2 class="text-4xl lg:text-5xl font-extrabold lg:text-center">
         {{ $t("home.recommendations.title") }}
       </h2>
 
