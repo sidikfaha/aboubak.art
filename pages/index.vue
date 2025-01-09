@@ -311,7 +311,7 @@ const testimonyList = [
   {
     name: "Cabraule Ketchanga",
     title: "React & Angular | Flutter Developer",
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQEn3OzeIZDi1w/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1725642375995?e=1740614400&v=beta&t=_i1pZL2J3m-sFcfgnHHCONTWdbrfXQgI_O7pYvPScQQ",
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQFSAieIfVxbRQ/profile-displayphoto-shrink_100_100/B4EZQ262UJGwAU-/0/1736088186793?e=1741824000&v=beta&t=TeV6p4NWWvePP3Ez7x6OKRx6CM_6vJFXKHKu1IJ8w48",
     testimony:
       "C'est l'une des personnes dynamique que je connaisse en développement.\nSon sens de l'engagement et sa prise de responsabilité fait qu'il est toujours considérer comme celui qui doit manager les autres, ce qui est facilement approuvé à cause de son expérience et ces capacités techniques.",
   },
