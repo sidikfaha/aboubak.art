@@ -10,7 +10,7 @@
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-8 stagger-children" ref="servicesRef">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 stagger-children" ref="servicesRef">
         <div
           v-for="(service, key, index) in services"
           :key="key"

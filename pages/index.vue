@@ -273,18 +273,18 @@
           <p class="text-xl font-light max-w-3xl mx-auto text-gray-600 dark:text-gray-300 mb-10">
             {{ $t("home.contact.description") }}
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               :href="appointmentLink"
               target="_blank"
-              class="px-8 py-4 bg-gradient-primary text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3"
+              class="w-full sm:w-auto px-8 py-4 bg-gradient-primary text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3"
             >
               <icon name="mdi:calendar" :size="20" />
               {{ $t("home.hero.cta") }}
             </a>
             <a
               href="mailto:hello@aboubak.art"
-              class="px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center gap-3"
+              class="w-full sm:w-auto px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center gap-3"
             >
               <icon name="mdi:email" :size="20" />
               {{ $t("home.contact.email") }}

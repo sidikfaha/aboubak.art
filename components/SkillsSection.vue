@@ -10,7 +10,7 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children" ref="skillsRef">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children" ref="skillsRef">
         <div
           v-for="(category, key, index) in skillCategories"
           :key="key"
