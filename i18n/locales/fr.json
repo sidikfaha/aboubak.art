@@ -65,55 +65,115 @@
     "skills": {
       "title": "Compétences & Technologies",
       "description": "Voici les principales technologies et outils avec lesquels je travaille pour livrer des résultats exceptionnels.",
-      "categories": {
-        "cloud": {
-          "title": "Plateformes Cloud",
-          "items": ["AWS", "Azure", "Google Cloud", "DigitalOcean"]
-        },
-        "devops": {
-          "title": "Outils DevOps",
-          "items": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions"]
-        },
-        "backend": {
-          "title": "Développement Backend",
-          "items": ["Node.js", "Python", "PHP", "Go"]
-        },
-        "frontend": {
-          "title": "Développement Frontend",
-          "items": ["Vue.js", "React", "TypeScript", "Tailwind CSS"]
-        }
+      "cloud": {
+        "title": "Plateformes Cloud",
+        "item1": "AWS",
+        "item2": "Azure",
+        "item3": "Google Cloud",
+        "item4": "DigitalOcean"
+      },
+      "devops": {
+        "title": "Outils DevOps",
+        "item1": "Docker",
+        "item2": "Kubernetes",
+        "item3": "Jenkins",
+        "item4": "GitHub Actions"
+      },
+      "backend": {
+        "title": "Développement Backend",
+        "item1": "Node.js",
+        "item2": "Python",
+        "item3": "PHP",
+        "item4": "Go"
+      },
+      "frontend": {
+        "title": "Développement Frontend",
+        "item1": "Vue.js",
+        "item2": "React",
+        "item3": "TypeScript",
+        "item4": "Tailwind CSS"
       }
     },
     "services": {
       "title": "Mes Services",
       "description": "J'offre des solutions complètes pour aider votre entreprise à croître et évoluer efficacement.",
-      "items": {
-        "devops": {
-          "title": "Consulting DevOps",
-          "description": "Optimisez votre workflow de développement avec des pratiques et outils DevOps modernes.",
-          "features": ["Pipelines CI/CD", "Infrastructure as Code", "Monitoring & Logging", "Bonnes pratiques de sécurité"]
-        },
-        "cloud": {
-          "title": "Architecture Cloud",
-          "description": "Concevez et implémentez une infrastructure cloud évolutive et sécurisée pour vos applications.",
-          "features": ["Migration Cloud", "Optimisation des coûts", "Haute disponibilité", "Plan de reprise"]
-        },
-        "development": {
-          "title": "Développement Full-Stack",
-          "description": "Créez des applications web modernes avec les dernières technologies et meilleures pratiques.",
-          "features": ["Applications web sur mesure", "Développement API", "Design de base de données", "Optimisation des performances"]
-        },
-        "consulting": {
-          "title": "Consulting Business",
-          "description": "Conseils stratégiques pour aider votre entreprise à tirer parti de la technologie pour la croissance.",
-          "features": ["Stratégie technologique", "Transformation digitale", "Formation d'équipe", "Optimisation des processus"]
-        }
+      "devops": {
+        "title": "Consulting DevOps",
+        "description": "Optimisez votre workflow de développement avec des pratiques et outils DevOps modernes.",
+        "feature1": "Pipelines CI/CD",
+        "feature2": "Infrastructure as Code",
+        "feature3": "Monitoring & Logging",
+        "feature4": "Bonnes pratiques de sécurité"
+      },
+      "cloud": {
+        "title": "Architecture Cloud",
+        "description": "Concevez et implémentez une infrastructure cloud évolutive et sécurisée pour vos applications.",
+        "feature1": "Migration Cloud",
+        "feature2": "Optimisation des coûts",
+        "feature3": "Haute disponibilité",
+        "feature4": "Plan de reprise"
+      },
+      "development": {
+        "title": "Développement Full-Stack",
+        "description": "Créez des applications web modernes avec les dernières technologies et meilleures pratiques.",
+        "feature1": "Applications web sur mesure",
+        "feature2": "Développement API",
+        "feature3": "Design de base de données",
+        "feature4": "Optimisation des performances"
+      },
+      "consulting": {
+        "title": "Consulting Business",
+        "description": "Conseils stratégiques pour aider votre entreprise à tirer parti de la technologie pour la croissance.",
+        "feature1": "Stratégie technologique",
+        "feature2": "Transformation digitale",
+        "feature3": "Formation d'équipe",
+        "feature4": "Optimisation des processus"
       }
     },
     "contact": {
       "title": "Prêt à démarrer votre projet ?",
       "description": "Discutons de la façon dont je peux vous aider à atteindre vos objectifs avec des solutions technologiques modernes.",
       "email": "Envoyer un email"
+    },
+    "common": {
+      "professionalServices": "Services Professionnels",
+      "readyToGetStarted": "Prêt à commencer ?",
+      "getStartedDescription": "Discutons de votre projet et voyons comment je peux vous aider à atteindre vos objectifs.",
+      "availableNow": "Disponible maintenant",
+      "menu": "Menu",
+      "verifiedClient": "Client vérifié",
+      "quickLinks": "Liens rapides",
+      "skillsExpertise": "Compétences & Expertise",
+      "services": "Services",
+      "projects": "Projets",
+      "contact": "Contact",
+      "connectWithMe": "Connectez-vous avec moi",
+      "buildTogether": "Créons quelque chose d'incroyable ensemble !",
+      "allRightsReserved": "Tous droits réservés",
+      "madeWith": "Fait avec",
+      "and": "et",
+      "availableForProjects": "Disponible pour de nouveaux projets",
+      "followMe": "Suivez-moi",
+      "close": "Fermer",
+      "digitalExperiences": "Créer des expériences numériques avec passion, précision et technologie moderne.",
+      "discoverMore": "Découvrir Plus",
+      "whyChooseMe": "Pourquoi Me Choisir",
+      "trustedPartners": "Partenaires de Confiance",
+      "clientTestimonials": "Témoignages Clients",
+      "readyToStart": "Prêt à Commencer",
+      "scheduleCall": "Planifier un Appel",
+      "sendEmail": "Envoyer un Email",
+      "joinSuccessStories": "Rejoignez nos histoires de succès",
+      "trustedPartnersDescription": "Découvrez les entreprises qui m'ont fait confiance pour leur transformation numérique",
+      "testimonialsDescription": "Écoutez ce que les clients disent de travailler avec moi",
+      "bookConsultation": "Réservez une consultation pour discuter de votre projet",
+      "reachOutEmail": "Contactez-moi par email pour des demandes détaillées",
+      "fastResponse": "Réponse 24h",
+      "ndaAvailable": "NDA Disponible",
+      "freeConsultation": "Consultation Gratuite",
+      "devopsBadge": "🚀 DevOps",
+      "cloudBadge": "☁️ Cloud",
+      "fullStackBadge": "💻 Full-Stack"
     }
   }
 }
