@@ -26,19 +26,19 @@
             <nav class="hidden lg:flex gap-6">
               <ul class="flex gap-6">
                 <li>
-                  <nuxt-link to="#" class="hover:text-primary">
+                  <a href="#skills" class="hover:text-primary transition-colors">
                     {{ $t("home.menu.skills") }}
-                  </nuxt-link>
+                  </a>
                 </li>
                 <li>
-                  <nuxt-link to="#">
+                  <a href="#services" class="hover:text-primary transition-colors">
                     {{ $t("home.menu.services") }}
-                  </nuxt-link>
+                  </a>
                 </li>
                 <li>
-                  <nuxt-link to="#">
+                  <a href="#clients" class="hover:text-primary transition-colors">
                     {{ $t("home.menu.projects") }}
-                  </nuxt-link>
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -97,12 +97,12 @@
                   />
                 </li>
                 <li>
-                  <nuxt-link
-                    to="#"
-                    class="ml-2 py-2 px-4 rounded-full text-white bg-primary hidden lg:inline"
+                  <a
+                    href="#contact"
+                    class="ml-2 py-2 px-4 rounded-full text-white bg-primary hidden lg:inline hover:bg-primary-600 transition-colors"
                   >
                     {{ $t("home.contactMe") }}
-                  </nuxt-link>
+                  </a>
                 </li>
               </ul>
             </nav>

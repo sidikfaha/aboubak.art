@@ -24,8 +24,9 @@
     <!-- Hero -->
     <section
       class="py-10 lg:pt-32 flex flex-col lg:flex-row gap-16 lg:gap-28 container"
+      ref="heroRef"
     >
-      <div class="flex flex-col justify-center">
+      <div class="flex flex-col justify-center animate-fade-left">
         <h1 class="flex gap-2 justify-between items-center">
           <div class="text-3xl lg:text-5xl font-extrabold">
             {{ $t("home.hero.greeting") }} <br class="" />
@@ -38,7 +39,7 @@
           <img
             src="~/assets/images/home/me.webp"
             alt="Aboubakar Sidik"
-            class="lg:hidden rounded-full size-28 flex-shrink-0"
+            class="lg:hidden rounded-full size-28 flex-shrink-0 hover:scale-110 transition-transform duration-300"
           />
         </h1>
         <p class="text-2xl mt-4 font-light">
@@ -58,55 +59,61 @@
           <a
             :href="appointmentLink"
             target="_blank"
-            class="py-4 px-8 text-xl rounded-lg text-white bg-primary flex justify-center lg:justify-start lg:inline-flex items-center gap-4"
+            class="py-4 px-8 text-xl rounded-lg text-white bg-gradient-primary flex justify-center lg:justify-start lg:inline-flex items-center gap-4 hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             <icon name="uil:schedule" />
             {{ $t("home.hero.cta") }}
           </a>
         </div>
       </div>
-      <div class="hidden lg:block flex-shrink-0 w-64">
+      <div class="hidden lg:block flex-shrink-0 w-64 animate-fade-right">
         <img
           src="~/assets/images/home/me.webp"
           alt="Aboubakar Sidik"
-          class="rounded-full w-full"
+          class="rounded-full w-full hover:scale-105 transition-transform duration-300"
         />
       </div>
     </section>
 
     <!-- Stats -->
-    <section class="py-5 lg:py-10 bg-primary-50 dark:bg-primary-950">
-      <div class="container grid grid-cols-2 lg:grid-cols-4 lg:gap-6">
-        <div class="p-5 lg:p-10">
+    <section class="py-5 lg:py-10 bg-primary-50 dark:bg-primary-950" ref="statsRef">
+      <div class="container grid grid-cols-2 lg:grid-cols-4 lg:gap-6 stagger-children">
+        <div class="p-5 lg:p-10 animate-scale-up" style="--index: 0">
           <p class="text-5xl font-bold text-primary dark:text-primary-500">
-            20+
+            <AnimatedCounter :value="20" />
           </p>
           <h3 class="text-lg">{{ $t("home.stats.projects") }}</h3>
         </div>
-        <div class="p-5 lg:p-10">
+        <div class="p-5 lg:p-10 animate-scale-up" style="--index: 1">
           <p class="text-5xl font-bold text-primary dark:text-primary-500">
-            10+
+            <AnimatedCounter :value="10" />
           </p>
           <h3 class="text-lg">{{ $t("home.stats.clients") }}</h3>
         </div>
-        <div class="p-5 lg:p-10">
+        <div class="p-5 lg:p-10 animate-scale-up" style="--index: 2">
           <p class="text-5xl font-bold text-primary dark:text-primary-500">
-            {{ new Date().getFullYear() - 2019 }}+
+            <AnimatedCounter :value="new Date().getFullYear() - 2019" />
           </p>
           <h3 class="text-lg">{{ $t("home.stats.experience") }}</h3>
         </div>
-        <div class="p-5 lg:p-10">
+        <div class="p-5 lg:p-10 animate-scale-up" style="--index: 3">
           <p class="text-5xl font-bold text-primary dark:text-primary-500">
-            100%
+            <AnimatedCounter :value="100" suffix="%" />
           </p>
           <h3 class="text-lg">{{ $t("home.stats.satisfactionPercentage") }}</h3>
         </div>
       </div>
     </section>
 
-    <section class="container py-10">
+    <!-- Skills Section -->
+    <SkillsSection id="skills" />
+
+    <!-- Services Section -->
+    <ServicesSection id="services" />
+
+    <section class="container py-10" ref="whyMeRef">
       <div class="grid lg:grid-cols-5 gap-8">
-        <div class="lg:col-span-2">
+        <div class="lg:col-span-2 animate-fade-left">
           <h2 class="text-5xl font-extrabold">
             {{ $t("home.whyMe.title") }}
             <span class="text-primary dark:text-primary-500">{{
@@ -121,7 +128,7 @@
           <a
             :href="appointmentLink"
             target="_blank"
-            class="mt-10 py-4 px-8 text-xl rounded-lg text-white bg-primary flex justify-center lg:justify-start lg:inline-flex items-center gap-4"
+            class="mt-10 py-4 px-8 text-xl rounded-lg text-white bg-gradient-primary flex justify-center lg:justify-start lg:inline-flex items-center gap-4 hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             <icon name="uil:phone" />
             {{ $t("home.whyMe.cta") }}
@@ -129,9 +136,10 @@
         </div>
 
         <div
-          class="grid grid-cols-2 gap-1 text-center lg:text-left lg:col-span-3 lg:gap-4"
+          class="grid grid-cols-2 gap-1 text-center lg:text-left lg:col-span-3 lg:gap-4 stagger-children"
+          ref="reasonsRef"
         >
-          <div class="p-6 rounded-3xl">
+          <div class="p-6 rounded-3xl hover-lift animate-scale-up" style="--index: 0">
             <h3
               class="text-2xl font-bold flex items-center lg:items-start flex-col gap-2"
             >
@@ -146,7 +154,7 @@
               {{ $t("home.whyMe.reasons.expert.description") }}
             </p>
           </div>
-          <div class="p-6 rounded-3xl">
+          <div class="p-6 rounded-3xl hover-lift animate-scale-up" style="--index: 1">
             <h3
               class="text-2xl font-bold flex items-center lg:items-start flex-col gap-2"
             >
@@ -161,7 +169,7 @@
               {{ $t("home.whyMe.reasons.quality.description") }}
             </p>
           </div>
-          <div class="p-6 rounded-3xl">
+          <div class="p-6 rounded-3xl hover-lift animate-scale-up" style="--index: 2">
             <h3
               class="text-2xl font-bold flex items-center lg:items-start flex-col gap-2"
             >
@@ -176,7 +184,7 @@
               {{ $t("home.whyMe.reasons.support.description") }}
             </p>
           </div>
-          <div class="p-6 rounded-3xl">
+          <div class="p-6 rounded-3xl hover-lift animate-scale-up" style="--index: 3">
             <h3
               class="text-2xl font-bold flex items-center lg:items-start flex-col gap-2"
             >
@@ -196,21 +204,22 @@
     </section>
 
     <!-- Ils m'ont fait confiance -->
-    <section class="py-20 bg-gray-100 dark:bg-gray-800">
+    <section class="py-20 bg-gray-100 dark:bg-gray-800" id="clients" ref="clientsRef">
       <div class="flex flex-col items-stretch container">
-        <h2 class="text-5xl font-extrabold md:text-center">
+        <h2 class="text-5xl font-extrabold md:text-center animate-fade-up">
           {{ $t("home.clients.title.part1") }}
           <span class="text-primary dark:text-primary-500">
             {{ $t("home.clients.title.part2") }}
           </span>
         </h2>
 
-        <div class="grid pt-8 lg:pt-16 grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="grid pt-8 lg:pt-16 grid-cols-2 lg:grid-cols-4 gap-4 stagger-children" ref="clientLogosRef">
           <div
             v-for="(client, index) in clients"
             :key="index"
             :title="client.name"
-            class="p-5 rounded-xl bg-primary-600 text-center cursor-pointer dark:bg-primary-500"
+            class="p-5 rounded-xl bg-primary-600 text-center cursor-pointer dark:bg-primary-500 hover-lift animate-scale-up"
+            :style="{ '--index': index }"
           >
             <img
               class="h-16 object-scale-down filter grayscale hover:grayscale-0 transition-all duration-300 inline"
@@ -220,10 +229,10 @@
           </div>
 
           <!-- Add your logo -->
-
           <nuxt-link
             to="#"
-            class="px-8 py-4 rounded-xl border border-dashed border-gray-700 hover:text-primary hover:border-primary flex flex-col gap-2 items-center dark:border-gray-300 dark:hover:border-primary-500"
+            class="px-8 py-4 rounded-xl border border-dashed border-gray-700 hover:text-primary hover:border-primary flex flex-col gap-2 items-center dark:border-gray-300 dark:hover:border-primary-500 hover-lift animate-scale-up"
+            :style="{ '--index': clients.length }"
           >
             <icon name="tabler:photo-plus" :size="32" />
             <small>
@@ -235,12 +244,12 @@
     </section>
 
     <!-- Recommendations -->
-    <section class="container lg:py-20">
-      <h2 class="text-4xl lg:text-5xl font-extrabold lg:text-center">
+    <section class="container lg:py-20" ref="recommendationsRef">
+      <h2 class="text-4xl lg:text-5xl font-extrabold lg:text-center animate-fade-up">
         {{ $t("home.recommendations.title") }}
       </h2>
 
-      <div class="lg:columns-2 pt-8 gap-4">
+      <div class="lg:columns-2 pt-8 gap-4 stagger-children" ref="testimonialsRef">
         <TestimonyItem
           v-for="(testimony, index) in testimonyList"
           :key="index"
@@ -248,7 +257,40 @@
           :title="testimony.title"
           :image="testimony.image"
           :testimony="testimony.testimony"
+          class="animate-fade-up hover-lift"
+          :style="{ '--index': index }"
         />
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 gradient-bg" id="contact" ref="contactRef">
+      <div class="container text-center">
+        <div class="animate-fade-up">
+          <h2 class="text-4xl lg:text-5xl font-extrabold mb-6">
+            {{ $t("home.contact.title") }}
+          </h2>
+          <p class="text-xl font-light max-w-3xl mx-auto text-gray-600 dark:text-gray-300 mb-10">
+            {{ $t("home.contact.description") }}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              :href="appointmentLink"
+              target="_blank"
+              class="px-8 py-4 bg-gradient-primary text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3"
+            >
+              <icon name="mdi:calendar" :size="20" />
+              {{ $t("home.hero.cta") }}
+            </a>
+            <a
+              href="mailto:hello@aboubak.art"
+              class="px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center gap-3"
+            >
+              <icon name="mdi:email" :size="20" />
+              {{ $t("home.contact.email") }}
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -332,4 +374,91 @@ const testimonyList = [
 ];
 
 const appointmentLink = "https://calendar.app.google/qEuB6T8Qz8nfAJpw5";
+
+// Animation setup
+const { animateOnScroll } = useScrollAnimation()
+
+// Refs for animation targets
+const heroRef = ref(null)
+const statsRef = ref(null)
+const whyMeRef = ref(null)
+const reasonsRef = ref(null)
+const clientsRef = ref(null)
+const clientLogosRef = ref(null)
+const recommendationsRef = ref(null)
+const testimonialsRef = ref(null)
+const contactRef = ref(null)
+
+// Initialize animations on mount
+onMounted(() => {
+  nextTick(() => {
+    // Hero section animations
+    if (heroRef.value) {
+      const heroElements = heroRef.value.querySelectorAll('.animate-fade-left, .animate-fade-right')
+      animateOnScroll(heroElements)
+    }
+
+    // Stats animations
+    if (statsRef.value) {
+      const statElements = statsRef.value.querySelectorAll('.animate-scale-up')
+      statElements.forEach((el, index) => {
+        el.style.setProperty('--stagger-delay', '100ms')
+        el.style.setProperty('--index', index)
+      })
+      animateOnScroll(statElements)
+    }
+
+    // Why me section
+    if (whyMeRef.value) {
+      const whyMeElements = whyMeRef.value.querySelectorAll('.animate-fade-left')
+      animateOnScroll(whyMeElements)
+    }
+
+    // Reasons cards
+    if (reasonsRef.value) {
+      const reasonCards = reasonsRef.value.querySelectorAll('.animate-scale-up')
+      reasonCards.forEach((card, index) => {
+        card.style.setProperty('--stagger-delay', '100ms')
+        card.style.setProperty('--index', index)
+      })
+      animateOnScroll(reasonCards)
+    }
+
+    // Clients section
+    if (clientsRef.value) {
+      const clientsTitle = clientsRef.value.querySelector('.animate-fade-up')
+      if (clientsTitle) animateOnScroll([clientsTitle])
+    }
+
+    if (clientLogosRef.value) {
+      const logoElements = clientLogosRef.value.querySelectorAll('.animate-scale-up')
+      logoElements.forEach((el, index) => {
+        el.style.setProperty('--stagger-delay', '80ms')
+        el.style.setProperty('--index', index)
+      })
+      animateOnScroll(logoElements)
+    }
+
+    // Recommendations section
+    if (recommendationsRef.value) {
+      const title = recommendationsRef.value.querySelector('.animate-fade-up')
+      if (title) animateOnScroll([title])
+    }
+
+    if (testimonialsRef.value) {
+      const testimonials = testimonialsRef.value.querySelectorAll('.animate-fade-up')
+      testimonials.forEach((el, index) => {
+        el.style.setProperty('--stagger-delay', '150ms')
+        el.style.setProperty('--index', index)
+      })
+      animateOnScroll(testimonials)
+    }
+
+    // Contact section
+    if (contactRef.value) {
+      const contactElements = contactRef.value.querySelectorAll('.animate-fade-up')
+      animateOnScroll(contactElements)
+    }
+  })
+})
 </script>

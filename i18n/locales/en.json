@@ -61,6 +61,59 @@
     },
     "recommendations": {
       "title": "Gotten Recommendations"
+    },
+    "skills": {
+      "title": "Skills & Technologies",
+      "description": "Here are the main technologies and tools I work with to deliver exceptional results.",
+      "categories": {
+        "cloud": {
+          "title": "Cloud Platforms",
+          "items": ["AWS", "Azure", "Google Cloud", "DigitalOcean"]
+        },
+        "devops": {
+          "title": "DevOps Tools",
+          "items": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions"]
+        },
+        "backend": {
+          "title": "Backend Development",
+          "items": ["Node.js", "Python", "PHP", "Go"]
+        },
+        "frontend": {
+          "title": "Frontend Development",
+          "items": ["Vue.js", "React", "TypeScript", "Tailwind CSS"]
+        }
+      }
+    },
+    "services": {
+      "title": "My Services",
+      "description": "I offer comprehensive solutions to help your business grow and scale efficiently.",
+      "items": {
+        "devops": {
+          "title": "DevOps Consulting",
+          "description": "Streamline your development workflow with modern DevOps practices and tools.",
+          "features": ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Logging", "Security Best Practices"]
+        },
+        "cloud": {
+          "title": "Cloud Architecture",
+          "description": "Design and implement scalable, secure cloud infrastructure for your applications.",
+          "features": ["Cloud Migration", "Cost Optimization", "High Availability", "Disaster Recovery"]
+        },
+        "development": {
+          "title": "Full-Stack Development",
+          "description": "Build modern web applications with the latest technologies and best practices.",
+          "features": ["Custom Web Apps", "API Development", "Database Design", "Performance Optimization"]
+        },
+        "consulting": {
+          "title": "Business Consulting",
+          "description": "Strategic guidance to help your business leverage technology for growth.",
+          "features": ["Technology Strategy", "Digital Transformation", "Team Training", "Process Optimization"]
+        }
+      }
+    },
+    "contact": {
+      "title": "Ready to Start Your Project?",
+      "description": "Let's discuss how I can help you achieve your goals with modern technology solutions.",
+      "email": "Send Email"
     }
   }
 }

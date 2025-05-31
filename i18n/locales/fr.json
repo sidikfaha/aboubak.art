@@ -61,6 +61,59 @@
     },
     "recommendations": {
       "title": "Recommendations reçues"
+    },
+    "skills": {
+      "title": "Compétences & Technologies",
+      "description": "Voici les principales technologies et outils avec lesquels je travaille pour livrer des résultats exceptionnels.",
+      "categories": {
+        "cloud": {
+          "title": "Plateformes Cloud",
+          "items": ["AWS", "Azure", "Google Cloud", "DigitalOcean"]
+        },
+        "devops": {
+          "title": "Outils DevOps",
+          "items": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions"]
+        },
+        "backend": {
+          "title": "Développement Backend",
+          "items": ["Node.js", "Python", "PHP", "Go"]
+        },
+        "frontend": {
+          "title": "Développement Frontend",
+          "items": ["Vue.js", "React", "TypeScript", "Tailwind CSS"]
+        }
+      }
+    },
+    "services": {
+      "title": "Mes Services",
+      "description": "J'offre des solutions complètes pour aider votre entreprise à croître et évoluer efficacement.",
+      "items": {
+        "devops": {
+          "title": "Consulting DevOps",
+          "description": "Optimisez votre workflow de développement avec des pratiques et outils DevOps modernes.",
+          "features": ["Pipelines CI/CD", "Infrastructure as Code", "Monitoring & Logging", "Bonnes pratiques de sécurité"]
+        },
+        "cloud": {
+          "title": "Architecture Cloud",
+          "description": "Concevez et implémentez une infrastructure cloud évolutive et sécurisée pour vos applications.",
+          "features": ["Migration Cloud", "Optimisation des coûts", "Haute disponibilité", "Plan de reprise"]
+        },
+        "development": {
+          "title": "Développement Full-Stack",
+          "description": "Créez des applications web modernes avec les dernières technologies et meilleures pratiques.",
+          "features": ["Applications web sur mesure", "Développement API", "Design de base de données", "Optimisation des performances"]
+        },
+        "consulting": {
+          "title": "Consulting Business",
+          "description": "Conseils stratégiques pour aider votre entreprise à tirer parti de la technologie pour la croissance.",
+          "features": ["Stratégie technologique", "Transformation digitale", "Formation d'équipe", "Optimisation des processus"]
+        }
+      }
+    },
+    "contact": {
+      "title": "Prêt à démarrer votre projet ?",
+      "description": "Discutons de la façon dont je peux vous aider à atteindre vos objectifs avec des solutions technologiques modernes.",
+      "email": "Envoyer un email"
     }
   }
 }

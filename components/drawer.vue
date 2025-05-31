@@ -11,19 +11,24 @@
       <div class="p-6 bg-gray-200 dark:bg-gray-700 shadow-lg h-full rounded-3xl">
         <ul class="flex flex-col gap-4">
           <li>
-            <nuxt-link to="#" class="hover:text-primary">
+            <a href="#skills" class="hover:text-primary transition-colors">
               {{ $t("home.menu.skills") }}
-            </nuxt-link>
+            </a>
           </li>
           <li>
-            <nuxt-link to="#" class="hover:text-primary">
+            <a href="#services" class="hover:text-primary transition-colors">
               {{ $t("home.menu.services") }}
-            </nuxt-link>
+            </a>
           </li>
           <li>
-            <nuxt-link to="#" class="hover:text-primary">
+            <a href="#clients" class="hover:text-primary transition-colors">
               {{ $t("home.menu.projects") }}
-            </nuxt-link>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-primary transition-colors">
+              {{ $t("home.contactMe") }}
+            </a>
           </li>
         </ul>
       </div>
