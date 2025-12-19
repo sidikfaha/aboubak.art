@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "portfolio",
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,27 +10,19 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/icon": "^1.8.2",
-    "@pinia/nuxt": "^0.7.0",
-    "nuxt": "^3.14.1592",
-    "nuxt-gtag": "^3.0.2",
-    "radix-vue": "^1.9.11",
-    "vue": "latest",
-    "vue-router": "latest"
-  },
-  "devDependencies": {
-    "@iconify-json/circum": "^1.2.1",
-    "@iconify-json/feather": "^1.2.1",
-    "@iconify-json/mdi-light": "^1.2.1",
-    "@iconify-json/mingcute": "^1.2.1",
-    "@iconify-json/pajamas": "^1.2.4",
-    "@iconify-json/solar": "^1.2.1",
-    "@iconify-json/tabler": "^1.2.10",
-    "@iconify-json/uil": "^1.2.1",
-    "@nuxt/image": "^1.8.1",
-    "@nuxtjs/i18n": "^9.0.0-rc.2",
-    "@nuxtjs/sitemap": "^7.0.0",
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "typescript": "^5.7.2"
+    "@iconify-json/heroicons": "^1.2.3",
+    "@iconify-json/mdi": "^1.2.3",
+    "@nuxt/content": "^3.9.0",
+    "@nuxt/eslint": "^1.12.1",
+    "@nuxt/icon": "^2.1.1",
+    "@nuxtjs/i18n": "^10.2.1",
+    "@tailwindcss/vite": "^4.1.18",
+    "better-sqlite3": "^12.5.0",
+    "eslint": "^9.39.2",
+    "nuxt": "^4.2.2",
+    "reka-ui": "^2.6.1",
+    "tailwindcss": "^4.1.18",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.4"
   }
 }

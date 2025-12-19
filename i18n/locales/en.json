@@ -1,179 +1,127 @@
 {
-  "home": {
-    "meta": {
-      "title": "Aboubakar Sidik Faha :: DevOps Consultant & Entrepreneur in Abidjan",
-      "description": "I'm Aboubakar Sidik Faha, an experienced DevOps consultant and entrepreneur based in Abidjan. I'll help you making your IT infrastructure more reliable, scalable and secure as well as your business more profitable.",
-      "keywords": "devops, consultant, entrepreneur, abidjan, cote d'ivoire, it infrastructure, business, profitable, ivory coast"
-    },
-    "menu": {
-      "skills": "Skills",
-      "services": "Services",
-      "projects": "Projects"
-    },
-    "contactMe": "Contact me",
-    "hero": {
-      "greeting": "Hello,",
-      "iam": "I'm",
-      "profession": "experienced DevOps Consultant",
-      "and": "and",
-      "profession2": "Entrepreneur",
-      "basedIn": "based in",
-      "location": "Abidjan",
-      "description": "I'll help you making your IT infrastructure more reliable, scalable and secure as well as your business more profitable.",
-      "cta": "Book a call"
-    },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "bookCall": "Book a Call"
+  },
+  "hero": {
+    "name": "Aboubakar Sidik Faha",
+    "title": "Digital Consultant & Tech Entrepreneur",
+    "description": "Transform your digital vision into reality with innovative and custom-made solutions. Expertise in web development, digital strategy, and artificial intelligence.",
+    "discoverServices": "Discover my services",
+    "viewPortfolio": "View portfolio",
     "stats": {
       "projects": "Projects completed",
-      "clients": "Satisfied clients",
-      "experience": "Years of experience",
-      "satisfactionPercentage": "Client satisfaction"
-    },
-    "whyMe": {
-      "title": "Why work with",
-      "me": "me",
-      "description": "Here are a few reasons why you should choose me for your next project.",
-      "cta": "Book a call",
-      "reasons": {
-        "expert": {
-          "title": "Expertise",
-          "description": "I'm an expert in my field and I'm making my expertise available to you."
-        },
-        "quality": {
-          "title": "Quality",
-          "description": "I'm committed to providing you with impeccable quality work."
-        },
-        "support": {
-          "title": "Support",
-          "description": "I support you throughout your project and even after its delivery."
-        },
-        "price": {
-          "title": "Price",
-          "description": "I offer you competitive rates that are tailored to your budget."
-        }
-      }
-    },
-    "clients": {
-      "title": {
-        "part1": "They",
-        "part2": "trusted me"
-      },
-      "add": "Be the next logo"
-    },
-    "recommendations": {
-      "title": "Gotten Recommendations"
-    },
-    "skills": {
-      "title": "Skills & Technologies",
-      "description": "Here are the main technologies and tools I work with to deliver exceptional results.",
-      "cloud": {
-        "title": "Cloud Platforms",
-        "item1": "AWS",
-        "item2": "Azure",
-        "item3": "Google Cloud",
-        "item4": "DigitalOcean"
-      },
-      "devops": {
-        "title": "DevOps Tools",
-        "item1": "Docker",
-        "item2": "Kubernetes",
-        "item3": "Jenkins",
-        "item4": "GitHub Actions"
-      },
-      "backend": {
-        "title": "Backend Development",
-        "item1": "Node.js",
-        "item2": "Python",
-        "item3": "PHP",
-        "item4": "Go"
-      },
-      "frontend": {
-        "title": "Frontend Development",
-        "item1": "Vue.js",
-        "item2": "React",
-        "item3": "TypeScript",
-        "item4": "Tailwind CSS"
-      }
-    },
-    "services": {
-      "title": "My Services",
-      "description": "I offer comprehensive solutions to help your business grow and scale efficiently.",
-      "devops": {
-        "title": "DevOps Consulting",
-        "description": "Streamline your development workflow with modern DevOps practices and tools.",
-        "feature1": "CI/CD Pipelines",
-        "feature2": "Infrastructure as Code",
-        "feature3": "Monitoring & Logging",
-        "feature4": "Security Best Practices"
-      },
-      "cloud": {
-        "title": "Cloud Architecture",
-        "description": "Design and implement scalable, secure cloud infrastructure for your applications.",
-        "feature1": "Cloud Migration",
-        "feature2": "Cost Optimization",
-        "feature3": "High Availability",
-        "feature4": "Disaster Recovery"
-      },
-      "development": {
-        "title": "Full-Stack Development",
-        "description": "Build modern web applications with the latest technologies and best practices.",
-        "feature1": "Custom Web Apps",
-        "feature2": "API Development",
-        "feature3": "Database Design",
-        "feature4": "Performance Optimization"
-      },
-      "consulting": {
-        "title": "Business Consulting",
-        "description": "Strategic guidance to help your business leverage technology for growth.",
-        "feature1": "Technology Strategy",
-        "feature2": "Digital Transformation",
-        "feature3": "Team Training",
-        "feature4": "Process Optimization"
-      }
-    },
-    "contact": {
-      "title": "Ready to Start Your Project?",
-      "description": "Let's discuss how I can help you achieve your goals with modern technology solutions.",
-      "email": "Send Email"
-    },
-    "common": {
-      "professionalServices": "Professional Services",
-      "readyToGetStarted": "Ready to Get Started?",
-      "getStartedDescription": "Let's discuss your project and see how I can help you achieve your goals.",
-      "availableNow": "Available Now",
-      "menu": "Menu",
-      "verifiedClient": "Verified Client",
-      "quickLinks": "Quick Links",
-      "skillsExpertise": "Skills & Expertise",
-      "services": "Services",
-      "projects": "Projects",
-      "contact": "Contact",
-      "connectWithMe": "Connect With Me",
-      "buildTogether": "Let's build something amazing together!",
-      "allRightsReserved": "All Rights Reserved",
-      "madeWith": "Made with",
-      "and": "and",
-      "availableForProjects": "Available for new projects",
-      "followMe": "Follow me",
-      "close": "Close",
-      "digitalExperiences": "Crafting digital experiences with passion, precision, and modern technology.",
-      "discoverMore": "Discover More",
-      "whyChooseMe": "Why Choose Me",
-      "trustedPartners": "Trusted Partners",
-      "clientTestimonials": "Client Testimonials",
-      "readyToStart": "Ready to Start",
-      "scheduleCall": "Schedule a Call",
-      "sendEmail": "Send Email",
-      "joinSuccessStories": "Join our success stories",
-      "trustedPartnersDescription": "Discover the companies that have trusted me with their digital transformation",
-      "testimonialsDescription": "Hear what clients say about working with me",
-      "bookConsultation": "Book a consultation to discuss your project",
-      "reachOutEmail": "Reach out via email for detailed inquiries",
-      "fastResponse": "24h Response",
-      "ndaAvailable": "NDA Available",
-      "freeConsultation": "Free Consultation",
-      "devopsBadge": "🚀 DevOps",
-      "cloudBadge": "☁️ Cloud",
-      "fullStackBadge": "💻 Full-Stack"
+      "satisfaction": "Client satisfaction",
+      "experience": "Years of experience"
     }
+  },
+  "about": {
+    "title": "About",
+    "heading": "Digital Innovator & Solutions Architect",
+    "description1": "Passionate about technological innovation, I transform complex challenges into elegant and high-performing solutions. My approach combines cutting-edge technical expertise with strategic vision to create exceptional digital experiences.",
+    "description2": "Specialized in modern web application development, artificial intelligence, and digital transformation, I support startups and established companies in their technological evolution.",
+    "skills": {
+      "development": "Development",
+      "aiMl": "AI & ML",
+      "strategy": "Strategy"
+    },
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Cutting-edge technologies and avant-garde solutions"
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Agile approach and transparent communication"
+      }
+    },
+    "cta": {
+      "discuss": "Let's discuss your project",
+      "downloadCv": "Download CV"
+    }
+  },
+  "services": {
+    "title": "Premium Services",
+    "subtitle": "Custom technological solutions to propel your business",
+    "learnMore": "Learn more",
+    "startingFrom": "Starting from",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Modern and high-performing web applications using the latest technologies: React, Vue.js, Node.js, and cloud-native architectures.",
+      "features": ["SPA/PWA Applications", "RESTful & GraphQL APIs", "Performance optimization"],
+      "price": "€2500"
+    },
+    "ai": {
+      "title": "Artificial Intelligence",
+      "description": "Integration of AI and Machine Learning solutions to automate and optimize your business processes with measurable results.",
+      "features": ["Intelligent chatbots", "Predictive analytics", "Computer vision"],
+      "price": "€3500"
+    },
+    "strategy": {
+      "title": "Digital Strategy",
+      "description": "Complete strategic support to transform your digital presence and maximize your ROI with proven methods.",
+      "features": ["360° digital audit", "Technology roadmap", "Digital transformation"],
+      "price": "€1800"
+    },
+    "mobile": {
+      "title": "Mobile Applications",
+      "description": "Development of native and cross-platform mobile applications offering a smooth and intuitive user experience.",
+      "features": ["Native iOS & Android", "React Native / Flutter", "Store publishing"],
+      "price": "€4000"
+    }
+  },
+  "projects": {
+    "title": "Completed Projects",
+    "subtitle": "A selection of my most innovative achievements",
+    "ecommerce": {
+      "title": "E-Commerce Platform",
+      "description": "Complete solution with AI recommendation"
+    },
+    "analytics": {
+      "title": "Analytics Dashboard",
+      "description": "Real-time AI dashboard"
+    },
+    "fintech": {
+      "title": "FinTech Mobile App",
+      "description": "Secure banking application"
+    }
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "subtitle": "What those who trusted me have to say",
+    "client1": {
+      "name": "Marc Dubois",
+      "role": "CEO, TechStart Inc.",
+      "text": "Aboubakar transformed our vision into an exceptional platform. His technical expertise and business understanding are remarkable."
+    },
+    "client2": {
+      "name": "Sophie Martin",
+      "role": "Marketing Director",
+      "text": "Smooth collaboration, results beyond our expectations. The developed application boosted our engagement by 300%."
+    }
+  },
+  "cta": {
+    "title": "Ready to Start?",
+    "subtitle": "Let's transform your vision into digital reality together",
+    "scheduleCall": "Schedule a Call",
+    "sendEmail": "Send an Email",
+    "features": {
+      "response": "Response within 24h",
+      "nda": "NDA available",
+      "consultation": "Free consultation"
+    }
+  },
+  "trustedBy": {
+    "title": "Trusted by innovative companies"
+  },
+  "footer": {
+    "brandName": "Aboubak'Art",
+    "tagline": "Digital innovation & Technical excellence",
+    "copyright": "© 2025 Aboubak'Art. Made with passion"
   }
 }

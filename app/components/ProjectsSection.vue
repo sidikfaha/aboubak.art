@@ -1,0 +1,112 @@
+<script setup lang="ts">
+const { t } = useI18n();
+
+interface Project {
+  key: string;
+  image: string;
+  tags: { name: string; color: string; bg: string }[];
+}
+
+const projects = ref<Project[]>([
+  {
+    key: "ecommerce",
+    image: "/images/644a626d62f687623f771b718eda33628314b4ef.png",
+    tags: [
+      { name: "React", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Node.js", color: "text-secondary", bg: "bg-secondary/20" },
+    ],
+  },
+  {
+    key: "analytics",
+    image: "/images/ec5a3dd22ad2d6706e807c2a11c95e845211383d.png",
+    tags: [
+      { name: "Vue.js", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Python", color: "text-accent", bg: "bg-accent/20" },
+    ],
+  },
+  {
+    key: "fintech",
+    image: "/images/644a626d62f687623f771b718eda33628314b4ef.png",
+    tags: [
+      { name: "Flutter", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Firebase", color: "text-secondary", bg: "bg-secondary/20" },
+    ],
+  },
+]);
+</script>
+
+<template>
+  <section id="portfolio" class="py-24">
+    <div class="container-lg px-6">
+      <!-- Section Header -->
+      <div class="flex flex-col items-center gap-4 mb-16">
+        <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-gradient-primary">
+          {{ t("projects.title") }}
+        </h2>
+        <p class="font-inter text-lg md:text-xl text-text-muted text-center max-w-2xl">
+          {{ t("projects.subtitle") }}
+        </p>
+        <div class="w-24 h-1 bg-gradient-primary rounded-full" />
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          v-for="project in projects"
+          :key="project.key"
+          class="group glass-card rounded-2xl overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+        >
+          <!-- Image -->
+          <div class="relative h-64 overflow-hidden">
+            <img
+              :src="project.image"
+              :alt="t(`projects.${project.key}.title`)"
+              class="size-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <!-- Overlay on hover -->
+            <div
+              class="absolute inset-0 bg-linear-to-t from-background via-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+            >
+              <div class="space-y-2">
+                <h3 class="font-orbitron font-bold text-xl text-white">
+                  {{ t(`projects.${project.key}.title`) }}
+                </h3>
+                <p class="font-inter text-sm text-text-secondary">
+                  {{ t(`projects.${project.key}.description`) }}
+                </p>
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span
+                    v-for="tag in project.tags"
+                    :key="tag.name"
+                    :class="[tag.bg, tag.color, 'px-3 py-1 rounded-full text-xs font-inter']"
+                  >
+                    {{ tag.name }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Content (visible on mobile) -->
+          <div class="p-6 lg:hidden">
+            <h3 class="font-orbitron font-bold text-lg text-white mb-2">
+              {{ t(`projects.${project.key}.title`) }}
+            </h3>
+            <p class="font-inter text-sm text-text-secondary mb-4">
+              {{ t(`projects.${project.key}.description`) }}
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="tag in project.tags"
+                :key="tag.name"
+                :class="[tag.bg, tag.color, 'px-3 py-1 rounded-full text-xs font-inter']"
+              >
+                {{ tag.name }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

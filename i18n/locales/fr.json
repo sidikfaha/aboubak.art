@@ -1,179 +1,127 @@
 {
-  "home": {
-    "meta": {
-      "title": "Aboubakar Sidik Faha :: Consultant DevOps & Entrepreneur à Abidjan",
-      "description": "Je suis Aboubakar Sidik Faha, un consultant DevOps expérimenté et entrepreneur basé à Abidjan. Je vous aiderai à rendre votre infrastructure informatique plus fiable, évolutive et sécurisée ainsi que votre entreprise plus rentable.",
-      "keywords": "devops, consultant, entrepreneur, abidjan, cote d'ivoire, infrastructure informatique, entreprise, rentable"
-    },
-    "menu": {
-      "skills": "Competences",
-      "services": "Services",
-      "projects": "Projets"
-    },
-    "contactMe": "Contactez-moi",
-    "hero": {
-      "greeting": "Salut,",
-      "iam": "Je suis",
-      "profession": "Consultant DevOps expérimenté",
-      "and": "et",
-      "profession2": "Entrepreneur",
-      "basedIn": "basé à",
-      "location": "Abidjan",
-      "description": "Je vous aiderai à rendre votre infrastructure informatique plus fiable, évolutive et sécurisée ainsi que votre entreprise plus rentable.",
-      "cta": "Réserver un appel"
-    },
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "testimonials": "Témoignages",
+    "contact": "Contact",
+    "bookCall": "Réserver un appel"
+  },
+  "hero": {
+    "name": "Aboubakar Sidik Faha",
+    "title": "Consultant Digital & Entrepreneur Tech",
+    "description": "Transformez votre vision digitale en réalité avec des solutions innovantes et sur-mesure. Expertise en développement web, stratégie digitale et intelligence artificielle.",
+    "discoverServices": "Découvrir mes services",
+    "viewPortfolio": "Voir le portfolio",
     "stats": {
-      "projects": "Projects réalisés",
-      "clients": "Clients satisfaits",
-      "experience": "Années d'expérience",
-      "satisfactionPercentage": "Satisfaction client"
-    },
-    "whyMe": {
-      "title": "Pourquoi travailler avec",
-      "me": "moi",
-      "description": "Voici quelques raisons pour lesquelles vous devriez me choisir pour votre prochain projet.",
-      "cta": "Réserver un appel",
-      "reasons": {
-        "expert": {
-          "title": "Expertise",
-          "description": "Je suis un expert dans mon domaine et je mets à votre disposition mon savoir-faire."
-        },
-        "quality": {
-          "title": "Qualité",
-          "description": "Je mets un point d'honneur à vous fournir un travail de qualité irréprochable."
-        },
-        "support": {
-          "title": "Support",
-          "description": "Je vous accompagne tout au long de votre projet et même après sa livraison."
-        },
-        "price": {
-          "title": "Prix",
-          "description": "Je vous propose des tarifs compétitifs et adaptés à votre budget."
-        }
-      }
-    },
-    "clients": {
-      "title": {
-        "part1": "Ils m'ont fait",
-        "part2": "confiance"
-      },
-      "add": "Soyez le prochain logo"
-    },
-    "recommendations": {
-      "title": "Recommendations reçues"
-    },
-    "skills": {
-      "title": "Compétences & Technologies",
-      "description": "Voici les principales technologies et outils avec lesquels je travaille pour livrer des résultats exceptionnels.",
-      "cloud": {
-        "title": "Plateformes Cloud",
-        "item1": "AWS",
-        "item2": "Azure",
-        "item3": "Google Cloud",
-        "item4": "DigitalOcean"
-      },
-      "devops": {
-        "title": "Outils DevOps",
-        "item1": "Docker",
-        "item2": "Kubernetes",
-        "item3": "Jenkins",
-        "item4": "GitHub Actions"
-      },
-      "backend": {
-        "title": "Développement Backend",
-        "item1": "Node.js",
-        "item2": "Python",
-        "item3": "PHP",
-        "item4": "Go"
-      },
-      "frontend": {
-        "title": "Développement Frontend",
-        "item1": "Vue.js",
-        "item2": "React",
-        "item3": "TypeScript",
-        "item4": "Tailwind CSS"
-      }
-    },
-    "services": {
-      "title": "Mes Services",
-      "description": "J'offre des solutions complètes pour aider votre entreprise à croître et évoluer efficacement.",
-      "devops": {
-        "title": "Consulting DevOps",
-        "description": "Optimisez votre workflow de développement avec des pratiques et outils DevOps modernes.",
-        "feature1": "Pipelines CI/CD",
-        "feature2": "Infrastructure as Code",
-        "feature3": "Monitoring & Logging",
-        "feature4": "Bonnes pratiques de sécurité"
-      },
-      "cloud": {
-        "title": "Architecture Cloud",
-        "description": "Concevez et implémentez une infrastructure cloud évolutive et sécurisée pour vos applications.",
-        "feature1": "Migration Cloud",
-        "feature2": "Optimisation des coûts",
-        "feature3": "Haute disponibilité",
-        "feature4": "Plan de reprise"
-      },
-      "development": {
-        "title": "Développement Full-Stack",
-        "description": "Créez des applications web modernes avec les dernières technologies et meilleures pratiques.",
-        "feature1": "Applications web sur mesure",
-        "feature2": "Développement API",
-        "feature3": "Design de base de données",
-        "feature4": "Optimisation des performances"
-      },
-      "consulting": {
-        "title": "Consulting Business",
-        "description": "Conseils stratégiques pour aider votre entreprise à tirer parti de la technologie pour la croissance.",
-        "feature1": "Stratégie technologique",
-        "feature2": "Transformation digitale",
-        "feature3": "Formation d'équipe",
-        "feature4": "Optimisation des processus"
-      }
-    },
-    "contact": {
-      "title": "Prêt à démarrer votre projet ?",
-      "description": "Discutons de la façon dont je peux vous aider à atteindre vos objectifs avec des solutions technologiques modernes.",
-      "email": "Envoyer un email"
-    },
-    "common": {
-      "professionalServices": "Services Professionnels",
-      "readyToGetStarted": "Prêt à commencer ?",
-      "getStartedDescription": "Discutons de votre projet et voyons comment je peux vous aider à atteindre vos objectifs.",
-      "availableNow": "Disponible maintenant",
-      "menu": "Menu",
-      "verifiedClient": "Client vérifié",
-      "quickLinks": "Liens rapides",
-      "skillsExpertise": "Compétences & Expertise",
-      "services": "Services",
-      "projects": "Projets",
-      "contact": "Contact",
-      "connectWithMe": "Connectez-vous avec moi",
-      "buildTogether": "Créons quelque chose d'incroyable ensemble !",
-      "allRightsReserved": "Tous droits réservés",
-      "madeWith": "Fait avec",
-      "and": "et",
-      "availableForProjects": "Disponible pour de nouveaux projets",
-      "followMe": "Suivez-moi",
-      "close": "Fermer",
-      "digitalExperiences": "Créer des expériences numériques avec passion, précision et technologie moderne.",
-      "discoverMore": "Découvrir Plus",
-      "whyChooseMe": "Pourquoi Me Choisir",
-      "trustedPartners": "Partenaires de Confiance",
-      "clientTestimonials": "Témoignages Clients",
-      "readyToStart": "Prêt à Commencer",
-      "scheduleCall": "Planifier un Appel",
-      "sendEmail": "Envoyer un Email",
-      "joinSuccessStories": "Rejoignez nos histoires de succès",
-      "trustedPartnersDescription": "Découvrez les entreprises qui m'ont fait confiance pour leur transformation numérique",
-      "testimonialsDescription": "Écoutez ce que les clients disent de travailler avec moi",
-      "bookConsultation": "Réservez une consultation pour discuter de votre projet",
-      "reachOutEmail": "Contactez-moi par email pour des demandes détaillées",
-      "fastResponse": "Réponse 24h",
-      "ndaAvailable": "NDA Disponible",
-      "freeConsultation": "Consultation Gratuite",
-      "devopsBadge": "🚀 DevOps",
-      "cloudBadge": "☁️ Cloud",
-      "fullStackBadge": "💻 Full-Stack"
+      "projects": "Projets réalisés",
+      "satisfaction": "Satisfaction client",
+      "experience": "Années d'expérience"
     }
+  },
+  "about": {
+    "title": "À Propos",
+    "heading": "Innovateur Digital & Architecte de Solutions",
+    "description1": "Passionné par l'innovation technologique, je transforme les défis complexes en solutions élégantes et performantes. Mon approche combine expertise technique pointue et vision stratégique pour créer des expériences digitales exceptionnelles.",
+    "description2": "Spécialisé dans le développement d'applications web modernes, l'intelligence artificielle et la transformation digitale, j'accompagne startups et entreprises établies dans leur évolution technologique.",
+    "skills": {
+      "development": "Développement",
+      "aiMl": "IA & ML",
+      "strategy": "Stratégie"
+    },
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Technologies de pointe et solutions avant-gardistes"
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Approche agile et communication transparente"
+      }
+    },
+    "cta": {
+      "discuss": "Discutons de votre projet",
+      "downloadCv": "Télécharger CV"
+    }
+  },
+  "services": {
+    "title": "Services Premium",
+    "subtitle": "Solutions technologiques sur-mesure pour propulser votre entreprise",
+    "learnMore": "En savoir plus",
+    "startingFrom": "À partir de",
+    "webDev": {
+      "title": "Développement Web",
+      "description": "Applications web modernes et performantes utilisant les dernières technologies : React, Vue.js, Node.js, et architectures cloud-native.",
+      "features": ["Applications SPA/PWA", "APIs RESTful & GraphQL", "Optimisation performances"],
+      "price": "2500€"
+    },
+    "ai": {
+      "title": "Intelligence Artificielle",
+      "description": "Intégration de solutions IA et Machine Learning pour automatiser et optimiser vos processus métier avec des résultats mesurables.",
+      "features": ["Chatbots intelligents", "Analyse prédictive", "Vision par ordinateur"],
+      "price": "3500€"
+    },
+    "strategy": {
+      "title": "Stratégie Digitale",
+      "description": "Accompagnement stratégique complet pour transformer votre présence digitale et maximiser votre ROI avec des méthodes éprouvées.",
+      "features": ["Audit digital 360°", "Roadmap technologique", "Transformation digitale"],
+      "price": "1800€"
+    },
+    "mobile": {
+      "title": "Applications Mobile",
+      "description": "Développement d'applications mobiles natives et cross-platform offrant une expérience utilisateur fluide et intuitive.",
+      "features": ["iOS & Android natif", "React Native / Flutter", "Publication stores"],
+      "price": "4000€"
+    }
+  },
+  "projects": {
+    "title": "Projets Réalisés",
+    "subtitle": "Une sélection de mes réalisations les plus innovantes",
+    "ecommerce": {
+      "title": "E-Commerce Platform",
+      "description": "Solution complète avec IA de recommandation"
+    },
+    "analytics": {
+      "title": "Analytics Dashboard",
+      "description": "Tableau de bord IA temps réel"
+    },
+    "fintech": {
+      "title": "FinTech Mobile App",
+      "description": "Application bancaire sécurisée"
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages Clients",
+    "subtitle": "Ce que disent ceux qui m'ont fait confiance",
+    "client1": {
+      "name": "Marc Dubois",
+      "role": "CEO, TechStart Inc.",
+      "text": "Aboubakar a transformé notre vision en une plateforme exceptionnelle. Son expertise technique et sa compréhension business sont remarquables."
+    },
+    "client2": {
+      "name": "Sophie Martin",
+      "role": "Directrice Marketing",
+      "text": "Collaboration fluide, résultats au-delà de nos attentes. L'application développée a boosté notre engagement de 300%."
+    }
+  },
+  "cta": {
+    "title": "Prêt à Démarrer ?",
+    "subtitle": "Transformons ensemble votre vision en réalité digitale",
+    "scheduleCall": "Planifier un Appel",
+    "sendEmail": "Envoyer un Email",
+    "features": {
+      "response": "Réponse sous 24h",
+      "nda": "NDA disponible",
+      "consultation": "Consultation gratuite"
+    }
+  },
+  "trustedBy": {
+    "title": "Ils nous font confiance"
+  },
+  "footer": {
+    "brandName": "Aboubak'Art",
+    "tagline": "Innovation digitale & Excellence technique",
+    "copyright": "© 2025 Aboubak'Art. Made with passion"
   }
 }
