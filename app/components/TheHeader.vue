@@ -1,13 +1,12 @@
 <script setup lang="ts">
-const { t, locale } = useI18n();
+const { t } = useI18n();
+const localePath = useLocalePath();
 
 const navItems = computed(() => [
-  { key: "home", href: "#home" },
-  { key: "about", href: "#about" },
-  { key: "services", href: "#services" },
-  { key: "portfolio", href: "#portfolio" },
-  { key: "testimonials", href: "#testimonials" },
-  { key: "contact", href: "#contact" },
+  { key: "home", href: "/#home", isRoute: false },
+  { key: "services", href: "/#services", isRoute: false },
+  { key: "portfolio", href: "/#portfolio", isRoute: false },
+  { key: "contact", href: localePath("/contact"), isRoute: true },
 ]);
 
 const isMobileMenuOpen = ref(false);
@@ -29,14 +28,22 @@ const isMobileMenuOpen = ref(false);
 
         <!-- Desktop Navigation -->
         <nav class="hidden lg:flex items-center gap-8">
-          <a
-            v-for="item in navItems"
-            :key="item.key"
-            :href="item.href"
-            class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
-          >
-            {{ t(`nav.${item.key}`) }}
-          </a>
+          <template v-for="item in navItems" :key="item.key">
+            <NuxtLink
+              v-if="item.isRoute"
+              :to="item.href"
+              class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
+            >
+              {{ t(`nav.${item.key}`) }}
+            </NuxtLink>
+            <a
+              v-else
+              :href="item.href"
+              class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
+            >
+              {{ t(`nav.${item.key}`) }}
+            </a>
+          </template>
         </nav>
 
         <!-- Actions -->
@@ -84,15 +91,24 @@ const isMobileMenuOpen = ref(false);
       >
         <nav v-if="isMobileMenuOpen" class="lg:hidden py-4 border-t border-border mt-4">
           <div class="flex flex-col gap-4">
-            <a
-              v-for="item in navItems"
-              :key="item.key"
-              :href="item.href"
-              class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
-              @click="isMobileMenuOpen = false"
-            >
-              {{ t(`nav.${item.key}`) }}
-            </a>
+            <template v-for="item in navItems" :key="item.key">
+              <NuxtLink
+                v-if="item.isRoute"
+                :to="item.href"
+                class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
+                @click="isMobileMenuOpen = false"
+              >
+                {{ t(`nav.${item.key}`) }}
+              </NuxtLink>
+              <a
+                v-else
+                :href="item.href"
+                class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
+                @click="isMobileMenuOpen = false"
+              >
+                {{ t(`nav.${item.key}`) }}
+              </a>
+            </template>
             <a
               href="https://calendar.app.google/DeCnXF86SxmiLF6M6"
               target="_blank"

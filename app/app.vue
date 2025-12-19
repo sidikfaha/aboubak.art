@@ -3,13 +3,7 @@
     <NuxtRouteAnnouncer />
     <TheHeader />
     <main>
-      <HeroSection />
-      <TrustedBySection />
-      <AboutSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <TestimonialsSection />
-      <CtaSection />
+      <NuxtPage />
     </main>
     <TheFooter />
     <ScrollToTop />

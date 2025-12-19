@@ -119,6 +119,20 @@
   "trustedBy": {
     "title": "Trusted by innovative companies"
   },
+  "contact": {
+    "pageTitle": "Contact",
+    "pageDescription": "Get in touch with Aboubakar Sidik Faha for your digital projects. Web development, AI, and digital strategy consulting.",
+    "title": "Let's Get in Touch",
+    "subtitle": "Have a project in mind? Let's discuss how I can help transform your digital vision into reality.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "Rue D74, Riviera 3, Cocody, Côte d'Ivoire",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDescription": "Book a free consultation call to discuss your needs and explore how we can work together.",
+    "scheduleCall": "Schedule a Call",
+    "sendEmail": "Send an Email"
+  },
   "footer": {
     "brandName": "Aboubak'Art",
     "tagline": "Digital innovation & Technical excellence",
