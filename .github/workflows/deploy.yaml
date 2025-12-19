@@ -5,7 +5,7 @@ on:
 
 env:
   node-version: "20.18.0"
-  cache-name: yarn-cache
+  cache-name: npm-cache
 
 jobs:
   deploy:
@@ -20,30 +20,29 @@ jobs:
         with:
           node-version: ${{ env.node-version }}
       - name: Caching dependencies
-        id: yarn-cache
+        id: npm-cache
         uses: actions/cache@v4
         with:
           path: |
             ~/.npm
-            ~/.yarn
             node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
+      - if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
         name: List the state of node modules
         continue-on-error: true
-        run: yarn list
+        run: npm list
       - name: Installing dependencies
-        run: yarn
+        run: npm ci
       - name: Build
         run: |
           cat <<EOF > .env
             ${{ secrets.ENV }}
           EOF
-          yarn generate
+          npm run generate
       - name: Configure AWS credentials
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
