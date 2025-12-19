@@ -17,6 +17,7 @@
     "@nuxt/icon": "^2.1.1",
     "@nuxtjs/i18n": "^10.2.1",
     "@nuxtjs/sitemap": "^7.5.0",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
     "better-sqlite3": "^12.5.0",
     "eslint": "^9.39.2",

@@ -14,6 +14,33 @@ export default defineNuxtConfig({
   site: {
     url: "https://aboubak.art",
   },
+  runtimeConfig: {
+    public: {
+      siteUrl: "https://aboubak.art",
+    },
+  },
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: "github-dark",
+          langs: [
+            "javascript",
+            "typescript",
+            "vue",
+            "html",
+            "css",
+            "json",
+            "bash",
+            "python",
+          ],
+        },
+      },
+    },
+  },
+  routeRules: {
+    "/blog/**": { isr: 3600 },
+  },
   vite: {
     plugins: [tailwindcss()],
   },

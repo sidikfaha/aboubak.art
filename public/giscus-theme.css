@@ -1,0 +1,337 @@
+/*
+ * Custom Giscus theme for aboubak.art
+ * Matches the site's dark theme with cyan/pink gradient accents
+ */
+
+main {
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  
+  /* Main colors - matching site theme */
+  --color-canvas-default: #0f172a;
+  --color-canvas-overlay: #1e293b;
+  --color-canvas-inset: #0c1322;
+  --color-canvas-subtle: #1e293b;
+  
+  /* Border colors */
+  --color-border-default: rgba(6, 182, 212, 0.2);
+  --color-border-muted: rgba(6, 182, 212, 0.15);
+  --color-border-subtle: rgba(6, 182, 212, 0.1);
+  
+  /* Neutral colors */
+  --color-neutral-muted: rgba(110, 118, 129, 0.4);
+  --color-neutral-subtle: rgba(110, 118, 129, 0.1);
+  --color-neutral-emphasis-plus: #6e7681;
+  --color-neutral-emphasis: #484f58;
+  
+  /* Accent colors - using site primary (cyan) */
+  --color-accent-fg: #06b6d4;
+  --color-accent-emphasis: #06b6d4;
+  --color-accent-muted: rgba(6, 182, 212, 0.4);
+  --color-accent-subtle: rgba(6, 182, 212, 0.15);
+  
+  /* Text colors */
+  --color-fg-default: #f3f4f6;
+  --color-fg-muted: #9ca3af;
+  --color-fg-subtle: #6b7280;
+  --color-fg-on-emphasis: #ffffff;
+  
+  /* Success colors */
+  --color-success-fg: #3fb950;
+  --color-success-emphasis: #238636;
+  --color-success-muted: rgba(46, 160, 67, 0.4);
+  --color-success-subtle: rgba(46, 160, 67, 0.15);
+  
+  /* Attention/Warning colors */
+  --color-attention-fg: #d29922;
+  --color-attention-emphasis: #9e6a03;
+  --color-attention-muted: rgba(187, 128, 9, 0.4);
+  --color-attention-subtle: rgba(187, 128, 9, 0.15);
+  
+  /* Severe colors */
+  --color-severe-fg: #db6d28;
+  --color-severe-emphasis: #bd561d;
+  --color-severe-muted: rgba(219, 109, 40, 0.4);
+  --color-severe-subtle: rgba(219, 109, 40, 0.15);
+  
+  /* Danger colors */
+  --color-danger-fg: #f85149;
+  --color-danger-emphasis: #da3633;
+  --color-danger-muted: rgba(248, 81, 73, 0.4);
+  --color-danger-subtle: rgba(248, 81, 73, 0.15);
+  
+  /* Open colors */
+  --color-open-fg: #3fb950;
+  --color-open-emphasis: #238636;
+  --color-open-muted: rgba(46, 160, 67, 0.4);
+  --color-open-subtle: rgba(46, 160, 67, 0.15);
+  
+  /* Closed colors */
+  --color-closed-fg: #f85149;
+  --color-closed-emphasis: #da3633;
+  --color-closed-muted: rgba(248, 81, 73, 0.4);
+  --color-closed-subtle: rgba(248, 81, 73, 0.15);
+  
+  /* Done colors - using site secondary (pink) */
+  --color-done-fg: #ec4899;
+  --color-done-emphasis: #db2777;
+  --color-done-muted: rgba(236, 72, 153, 0.4);
+  --color-done-subtle: rgba(236, 72, 153, 0.15);
+  
+  /* Sponsors colors - using site accent (purple) */
+  --color-sponsors-fg: #a855f7;
+  --color-sponsors-emphasis: #9333ea;
+  --color-sponsors-muted: rgba(168, 85, 247, 0.4);
+  --color-sponsors-subtle: rgba(168, 85, 247, 0.15);
+  
+  /* Primer colors */
+  --color-primer-fg-disabled: #484f58;
+  --color-primer-canvas-backdrop: rgba(15, 23, 42, 0.8);
+  --color-primer-canvas-sticky: rgba(15, 23, 42, 0.95);
+  --color-primer-border-active: #ec4899;
+  --color-primer-border-contrast: rgba(255, 255, 255, 0.2);
+  --color-primer-shadow-highlight: rgba(6, 182, 212, 0.1);
+  --color-primer-shadow-inset: rgba(0, 0, 0, 0.5);
+  --color-primer-shadow-focus: 0 0 0 3px rgba(6, 182, 212, 0.3);
+  
+  /* Scale colors */
+  --color-scale-black: #0f172a;
+  --color-scale-white: #ffffff;
+  --color-scale-gray-0: #f0f6fc;
+  --color-scale-gray-1: #c9d1d9;
+  --color-scale-gray-2: #b1bac4;
+  --color-scale-gray-3: #8b949e;
+  --color-scale-gray-4: #6e7681;
+  --color-scale-gray-5: #484f58;
+  --color-scale-gray-6: #30363d;
+  --color-scale-gray-7: #1e293b;
+  --color-scale-gray-8: #161b22;
+  --color-scale-gray-9: #0f172a;
+
+  /* Avatar */
+  --color-avatar-bg: rgba(255, 255, 255, 0.1);
+  --color-avatar-border: rgba(6, 182, 212, 0.2);
+  --color-avatar-stack-fade: #30363d;
+  --color-avatar-stack-fade-more: #1e293b;
+  
+  /* Button colors */
+  --color-btn-text: #f3f4f6;
+  --color-btn-bg: #1e293b;
+  --color-btn-border: rgba(6, 182, 212, 0.2);
+  --color-btn-shadow: 0 0 transparent;
+  --color-btn-inset-shadow: 0 0 transparent;
+  --color-btn-hover-bg: #334155;
+  --color-btn-hover-border: rgba(6, 182, 212, 0.3);
+  --color-btn-active-bg: #1e293b;
+  --color-btn-active-border: rgba(6, 182, 212, 0.4);
+  --color-btn-selected-bg: #1e293b;
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-bg: #06b6d4;
+  --color-btn-primary-border: #06b6d4;
+  --color-btn-primary-shadow: 0 0 transparent;
+  --color-btn-primary-inset-shadow: 0 0 transparent;
+  --color-btn-primary-hover-bg: #0891b2;
+  --color-btn-primary-hover-border: #0891b2;
+  --color-btn-primary-selected-bg: #0e7490;
+  --color-btn-primary-selected-shadow: 0 0 transparent;
+  --color-btn-primary-disabled-text: rgba(255, 255, 255, 0.5);
+  --color-btn-primary-disabled-bg: rgba(6, 182, 212, 0.4);
+  --color-btn-primary-disabled-border: transparent;
+  
+  /* Control colors */
+  --color-action-list-item-default-hover-bg: rgba(6, 182, 212, 0.1);
+  --color-action-list-item-default-hover-border: transparent;
+  --color-action-list-item-default-active-bg: rgba(6, 182, 212, 0.2);
+  --color-action-list-item-default-active-border: transparent;
+  --color-action-list-item-default-selected-bg: rgba(6, 182, 212, 0.15);
+  
+  /* Switch colors */
+  --color-switch-track-bg: #1e293b;
+  --color-switch-track-border: rgba(6, 182, 212, 0.2);
+  --color-switch-track-checked-bg: rgba(6, 182, 212, 0.35);
+  --color-switch-track-checked-hover-bg: rgba(6, 182, 212, 0.45);
+  --color-switch-track-checked-active-bg: rgba(6, 182, 212, 0.55);
+  --color-switch-track-checked-border: #06b6d4;
+  --color-switch-knob-bg: #0f172a;
+  --color-switch-knob-border: rgba(6, 182, 212, 0.2);
+  --color-switch-knob-checked-bg: #06b6d4;
+  --color-switch-knob-checked-border: #06b6d4;
+  --color-switch-knob-checked-disabled-bg: #6e7681;
+  
+  /* Segment colors */
+  --color-segmented-control-bg: rgba(6, 182, 212, 0.1);
+  --color-segmented-control-button-bg: transparent;
+  --color-segmented-control-button-hover-bg: rgba(6, 182, 212, 0.1);
+  --color-segmented-control-button-active-bg: rgba(6, 182, 212, 0.15);
+  --color-segmented-control-button-selected-border: rgba(6, 182, 212, 0.2);
+  
+  /* Tree view colors */
+  --color-tree-view-item-chevron-hover-bg: rgba(6, 182, 212, 0.1);
+  --color-tree-view-item-directory-fill: #9ca3af;
+  
+  /* Header colors */
+  --color-header-text: rgba(255, 255, 255, 0.9);
+  --color-header-bg: #0f172a;
+  --color-header-divider: rgba(6, 182, 212, 0.2);
+  --color-header-logo: #f3f4f6;
+  
+  /* Page header */
+  --color-page-header-bg: #0f172a;
+  
+  /* Menu */
+  --color-menu-bg-active: #1e293b;
+  
+  /* Side nav */
+  --color-sidenav-selected-bg: #1e293b;
+  
+  /* Focus */
+  --color-focus-ring: rgba(6, 182, 212, 0.6);
+  
+  /* Misc */
+  --color-underlinenav-icon: #6e7681;
+  --color-underlinenav-border-hover: rgba(6, 182, 212, 0.3);
+  --color-counter-border: transparent;
+  
+  /* Timeline */
+  --color-timeline-badge-bg: #1e293b;
+  
+  /* Ansi colors */
+  --color-ansi-black: #484f58;
+  --color-ansi-black-bright: #6e7681;
+  --color-ansi-white: #b1bac4;
+  --color-ansi-white-bright: #f0f6fc;
+  --color-ansi-gray: #6e7681;
+  --color-ansi-red: #ff7b72;
+  --color-ansi-red-bright: #ffa198;
+  --color-ansi-green: #3fb950;
+  --color-ansi-green-bright: #56d364;
+  --color-ansi-yellow: #d29922;
+  --color-ansi-yellow-bright: #e3b341;
+  --color-ansi-blue: #58a6ff;
+  --color-ansi-blue-bright: #79c0ff;
+  --color-ansi-magenta: #bc8cff;
+  --color-ansi-magenta-bright: #d2a8ff;
+  --color-ansi-cyan: #39c5cf;
+  --color-ansi-cyan-bright: #56d4dd;
+  
+  /* Social Reactions */
+  --color-social-reaction-bg-hover: rgba(6, 182, 212, 0.1);
+  --color-social-reaction-bg-reacted-hover: rgba(6, 182, 212, 0.2);
+}
+
+/* Custom styles for giscus elements */
+main .gsc-comment-box {
+  border-color: rgba(6, 182, 212, 0.2) !important;
+  background-color: #1e293b !important;
+}
+
+main .gsc-comment-box:focus-within {
+  border-color: #06b6d4 !important;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2) !important;
+}
+
+main .gsc-comment {
+  background-color: #0f172a !important;
+}
+
+main .gsc-header {
+  border-bottom-color: rgba(6, 182, 212, 0.2) !important;
+}
+
+main .gsc-reactions-button {
+  border-color: rgba(6, 182, 212, 0.2) !important;
+}
+
+main .gsc-reactions-button:hover {
+  border-color: rgba(6, 182, 212, 0.4) !important;
+  background-color: rgba(6, 182, 212, 0.1) !important;
+}
+
+main .gsc-reply-box {
+  border-color: rgba(6, 182, 212, 0.2) !important;
+  background-color: #1e293b !important;
+}
+
+main .gsc-social-reaction-summary-item {
+  border-color: rgba(6, 182, 212, 0.2) !important;
+}
+
+main .gsc-social-reaction-summary-item:hover {
+  background-color: rgba(6, 182, 212, 0.1) !important;
+}
+
+main .gsc-social-reaction-summary-item.has-reacted {
+  border-color: rgba(6, 182, 212, 0.4) !important;
+  background-color: rgba(6, 182, 212, 0.15) !important;
+}
+
+main .gsc-timeline {
+  border-left-color: rgba(6, 182, 212, 0.2) !important;
+}
+
+main a {
+  color: #06b6d4 !important;
+}
+
+main a:hover {
+  color: #22d3ee !important;
+}
+
+/* Primary button gradient effect */
+main .gsc-comment-box-bottom button[type="submit"],
+main button.gsc-direct-reaction-button-option--picked {
+  background: linear-gradient(135deg, #06b6d4 0%, #ec4899 100%) !important;
+  border: none !important;
+  color: white !important;
+}
+
+main .gsc-comment-box-bottom button[type="submit"]:hover,
+main button.gsc-direct-reaction-button-option--picked:hover {
+  opacity: 0.9 !important;
+}
+
+/* Input field focus styles */
+main textarea:focus,
+main input:focus {
+  border-color: #06b6d4 !important;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2) !important;
+  outline: none !important;
+}
+
+/* Dropdown menu styling */
+main .gsc-direct-reaction-buttons button:hover {
+  background-color: rgba(6, 182, 212, 0.1) !important;
+}
+
+/* Loading state */
+main .gsc-loading {
+  background-color: #0f172a !important;
+}

@@ -5,6 +5,7 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "testimonials": "Testimonials",
+    "blog": "Blog",
     "contact": "Contact",
     "bookCall": "Book a Call"
   },
@@ -137,5 +138,18 @@
     "brandName": "Aboubak'Art",
     "tagline": "Digital innovation & Technical excellence",
     "copyright": "© 2025 Aboubak'Art. Made with passion"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Explore articles about web development, artificial intelligence, and digital transformation.",
+    "badge": "Insights & Articles",
+    "subtitle": "Thoughts, tutorials, and insights on technology and digital innovation",
+    "author": "Digital Consultant & Tech Entrepreneur",
+    "share": "Share this article",
+    "relatedPosts": "Related Articles",
+    "empty": {
+      "title": "No articles yet",
+      "description": "New content is coming soon. Stay tuned!"
+    }
   }
 }

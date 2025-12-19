@@ -6,6 +6,7 @@ const navItems = computed(() => [
   { key: "home", href: "/#home", isRoute: false },
   { key: "services", href: "/#services", isRoute: false },
   { key: "portfolio", href: "/#portfolio", isRoute: false },
+  { key: "blog", href: localePath("/blog"), isRoute: true },
   { key: "contact", href: localePath("/contact"), isRoute: true },
 ]);
 
