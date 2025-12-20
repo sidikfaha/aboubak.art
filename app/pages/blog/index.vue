@@ -2,6 +2,11 @@
 const { t, locale } = useI18n();
 const localePath = useLocalePath();
 
+// Get localized full URL
+const getLocalizedUrl = (path: string) => {
+  return `https://aboubak.art${localePath(path)}`;
+};
+
 // SEO metadata for blog listing page
 useSeoMeta({
   title: () => `${t("blog.title")} | Aboubak'Art`,
@@ -9,11 +14,14 @@ useSeoMeta({
   ogTitle: () => `${t("blog.title")} | Aboubak'Art`,
   ogDescription: () => t("blog.description"),
   ogType: "website",
-  ogUrl: "https://aboubak.art/blog",
-  ogImage: "https://aboubak.art/images/blog-og.png",
+  ogUrl: () => getLocalizedUrl("/blog"),
+  ogImage: "https://aboubak.art/images/blog-og.webp",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   twitterCard: "summary_large_image",
   twitterTitle: () => `${t("blog.title")} | Aboubak'Art`,
   twitterDescription: () => t("blog.description"),
+  twitterImage: "https://aboubak.art/images/blog-og.webp",
 });
 
 // Structured data for blog listing (WebPage + Blog)

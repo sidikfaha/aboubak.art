@@ -38,6 +38,16 @@ const getLocalizedUrl = (path: string) => {
   return `https://aboubak.art${localePath(path)}`;
 };
 
+// Get absolute URL for images (required for OG meta tags)
+const getAbsoluteImageUrl = (imagePath: string | undefined) => {
+  const defaultImage = "https://aboubak.art/images/blog-og.webp";
+  if (!imagePath) return defaultImage;
+  // If already absolute URL, return as-is
+  if (imagePath.startsWith("http")) return imagePath;
+  // Convert relative path to absolute URL
+  return `https://aboubak.art${imagePath}`;
+};
+
 // Copy link to clipboard
 const copyLink = () => {
   if (import.meta.client) {
@@ -53,15 +63,16 @@ useSeoMeta({
   ogDescription: () => post.value?.description,
   ogType: "article",
   ogUrl: () => getLocalizedUrl(`/blog/${slug}`),
-  ogImage: () => post.value?.image || "https://aboubak.art/images/blog-og.png",
+  ogImage: () => getAbsoluteImageUrl(post.value?.image),
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   articlePublishedTime: () => post.value?.date,
   articleModifiedTime: () => post.value?.updatedAt || post.value?.date,
   articleSection: () => post.value?.category || "Technology",
   twitterCard: "summary_large_image",
   twitterTitle: () => `${post.value?.title} | Aboubak'Art Blog`,
   twitterDescription: () => post.value?.description,
-  twitterImage: () =>
-    post.value?.image || "https://aboubak.art/images/blog-og.png",
+  twitterImage: () => getAbsoluteImageUrl(post.value?.image),
 });
 
 // Structured data for article (Article + BreadcrumbList)
@@ -78,7 +89,7 @@ useHead({
               "@id": `${getLocalizedUrl(`/blog/${slug}`)}#article`,
               headline: post.value?.title,
               description: post.value?.description,
-              image: post.value?.image || "https://aboubak.art/images/blog-og.png",
+              image: getAbsoluteImageUrl(post.value?.image),
               datePublished: post.value?.date,
               dateModified: post.value?.updatedAt || post.value?.date,
               author: {
