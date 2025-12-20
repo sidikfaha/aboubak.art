@@ -151,5 +151,12 @@
       "title": "No articles yet",
       "description": "New content is coming soon. Stay tuned!"
     }
+  },
+  "home": {
+    "meta": {
+      "title": "Aboubakar Sidik Faha | Digital Consultant & Tech Entrepreneur",
+      "description": "Transform your digital vision into reality with innovative and custom-made solutions. Expertise in web development, digital strategy, and artificial intelligence.",
+      "keywords": "digital consultant, tech entrepreneur, web development, artificial intelligence, digital strategy, Vue.js, Nuxt, React, Node.js, mobile apps"
+    }
   }
 }
