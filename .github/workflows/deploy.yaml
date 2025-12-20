@@ -1,54 +1,29 @@
-name: Deploy Website
+name: Deploy to Development
+concurrency:
+  group: deploy-development
+  cancel-in-progress: true
 on:
   push:
-    branches: [master]
-
-env:
-  node-version: "22.18.0"
-  cache-name: npm-cache
+    branches:
+      - master
 
 jobs:
-  deploy:
-    environment: 
-      name: Production
-      url: https://aboubak.art
-    name: Build and deploy to cloufront
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.node-version }}
-      - name: Caching dependencies
-        id: npm-cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.npm
-            node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
-        name: List the state of node modules
-        continue-on-error: true
-        run: npm list
-      - name: Installing dependencies
-        run: npm ci
-      - name: Build
-        run: |
-          cat <<EOF > .env
-            ${{ secrets.ENV }}
-          EOF
-          npm run generate
-      - name: Configure AWS credentials
-        run: |
-          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws configure set default.region ${{ secrets.AWS_DEFAULT_REGION }}
-      - name: Deploy
-        run: |
-          aws s3 sync dist/ s3://${{ secrets.S3_PATH }}/
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
+  build-and-deploy:
+    uses: aboubak-art/wk-lib/.github/workflows/deploy-docker.yaml@v1.6.3
+    with:
+      app_name: aboubak-art
+      image_tag: latest
+      context: aws
+      deploy_stage: Production
+      deploy_port: 3000
+      dns_name: aboubak.art
+      with_commit_image: false
+    secrets:
+      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      aws_default_region: ${{ secrets.AWS_DEFAULT_REGION }}
+      registry: ${{ secrets.AWS_ECR_REGISTRY }}
+      ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
+      ssh_user: ${{ secrets.SSH_USER }}
+      ssh_host: ${{ secrets.SSH_HOST }}
+      ssh_port: ${{ secrets.SSH_PORT }}
