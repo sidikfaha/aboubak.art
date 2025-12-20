@@ -61,7 +61,7 @@ const stats = computed(() => [
       </h1>
 
       <!-- Title with dividers -->
-      <div class="flex items-center justify-center gap-4 mb-6">
+      <div class="flex items-center justify-center gap-4 mb-4">
         <div
           class="w-16 h-px"
           style="background: linear-gradient(to right, transparent, #06b6d4)"
@@ -73,6 +73,14 @@ const stats = computed(() => [
           class="w-16 h-px"
           style="background: linear-gradient(to left, transparent, #ec4899)"
         />
+      </div>
+
+      <!-- Location -->
+      <div class="flex items-center justify-center gap-2 mb-6">
+        <Icon name="heroicons:map-pin" class="size-4 text-primary" />
+        <span class="font-inter text-sm text-text-muted">
+          {{ t("hero.location") }}
+        </span>
       </div>
 
       <!-- Description -->

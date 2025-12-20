@@ -22,7 +22,7 @@ const clients = [
       </p>
 
       <!-- Logos Grid -->
-      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
         <div
           v-for="client in clients"
           :key="client.name"
