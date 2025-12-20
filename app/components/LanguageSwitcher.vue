@@ -8,6 +8,8 @@ import {
 } from "reka-ui";
 
 const { locale, setLocale } = useI18n();
+const route = useRoute();
+const router = useRouter();
 
 type LocaleCode = "en" | "fr";
 
@@ -27,7 +29,11 @@ const currentLanguage = computed(
 );
 
 const selectLanguage = (code: LocaleCode) => {
+  const isBlogPostPage = route.name === "blog-slug";
   setLocale(code);
+  if (isBlogPostPage) {
+    router.push("/blog");
+  }
 };
 </script>
 

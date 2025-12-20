@@ -179,5 +179,16 @@
       "description": "Transform your digital vision into reality with innovative and custom-made solutions. Expertise in web development, digital strategy, and artificial intelligence.",
       "keywords": "digital consultant, tech entrepreneur, web development, artificial intelligence, digital strategy, Vue.js, Nuxt, React, Node.js, mobile apps"
     }
+  },
+  "error": {
+    "notFound": "Page Not Found",
+    "notFoundDesc": "Oops! The page you're looking for seems to have wandered off into the digital void.",
+    "serverError": "Server Error",
+    "serverErrorDesc": "Something went wrong on our end. We're working to fix it!",
+    "generic": "Something Went Wrong",
+    "genericDesc": "An unexpected error occurred. Please try again later.",
+    "backHome": "Back to Home",
+    "goBack": "Go Back",
+    "searching": "Still searching the digital realm..."
   }
 }

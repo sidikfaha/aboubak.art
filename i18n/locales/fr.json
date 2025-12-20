@@ -179,5 +179,16 @@
       "description": "Transformez votre vision digitale en réalité avec des solutions innovantes et sur-mesure. Expertise en développement web, stratégie digitale et intelligence artificielle.",
       "keywords": "consultant digital, entrepreneur tech, développement web, intelligence artificielle, stratégie digitale, Vue.js, Nuxt, React, Node.js, applications mobiles"
     }
+  },
+  "error": {
+    "notFound": "Page Introuvable",
+    "notFoundDesc": "Oups ! La page que vous recherchez semble s'être perdue dans le vide numérique.",
+    "serverError": "Erreur Serveur",
+    "serverErrorDesc": "Quelque chose s'est mal passé de notre côté. Nous travaillons à le corriger !",
+    "generic": "Une Erreur Est Survenue",
+    "genericDesc": "Une erreur inattendue s'est produite. Veuillez réessayer plus tard.",
+    "backHome": "Retour à l'Accueil",
+    "goBack": "Retour",
+    "searching": "Toujours en recherche dans le monde numérique..."
   }
 }
