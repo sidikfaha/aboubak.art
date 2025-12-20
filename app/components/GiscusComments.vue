@@ -37,6 +37,7 @@ const loadGiscus = () => {
   script.setAttribute("data-input-position", giscusConfig.inputPosition);
   script.setAttribute("data-lang", giscusConfig.lang.value);
   script.setAttribute("data-loading", giscusConfig.loading);
+  script.setAttribute("data-theme", "preferred_color_scheme");
   script.crossOrigin = "anonymous";
   script.async = true;
 
