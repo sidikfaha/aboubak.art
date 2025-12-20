@@ -62,15 +62,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "Aboubak'Art - Consultant Digital & Entrepreneur Tech",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        {
-          name: "description",
-          content:
-            "Transformez votre vision digitale en réalité avec des solutions innovantes et sur-mesure.",
-        },
       ],
       link: [
         {
