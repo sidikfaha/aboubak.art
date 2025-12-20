@@ -94,17 +94,37 @@
     }
   },
   "testimonials": {
-    "title": "Témoignages Clients",
-    "subtitle": "Ce que disent ceux qui m'ont fait confiance",
-    "client1": {
-      "name": "Marc Dubois",
-      "role": "CEO, TechStart Inc.",
-      "text": "Aboubakar a transformé notre vision en une plateforme exceptionnelle. Son expertise technique et sa compréhension business sont remarquables."
+    "title": "Témoignages",
+    "subtitle": "Ce que disent ceux qui ont travaillé avec moi",
+    "osaigbovo": {
+      "name": "Osaigbovo Idada",
+      "role": "Software Engineer | Web Development | DevOps",
+      "text": "Sa capacité à traduire des exigences complexes en interfaces fluides et conviviales était vraiment impressionnante. Il a un sens aigu du design, une compréhension profonde des technologies frontend et un esprit de résolution de problèmes."
     },
-    "client2": {
-      "name": "Sophie Martin",
-      "role": "Directrice Marketing",
-      "text": "Collaboration fluide, résultats au-delà de nos attentes. L'application développée a boosté notre engagement de 300%."
+    "david": {
+      "name": "David Ben Otto",
+      "role": "Ingénieur Cloud AWS chez KodeCloud Inc",
+      "text": "J'ai travaillé avec Aboubakar sur un projet très innovant autour des véhicules connectés. Côté technique, Aboubakar était un vrai guru : nous avons travaillé des heures sur les pipelines CI-CD avec GitHub Actions et l'intégration de microservices via API."
+    },
+    "bruce": {
+      "name": "Kwiringira Bruce Hervé",
+      "role": "Architecte Cloud | Ingénieur Cloud | DevOps",
+      "text": "Il est rare de rencontrer un talent aussi remarquable qu'Aboubakar. Incroyablement polyvalent, un ingénieur full stack accompli capable de coder dans plusieurs frameworks JavaScript et un ingénieur DevOps accompli."
+    },
+    "jim": {
+      "name": "Jim Carlson Ngnintedem",
+      "role": "Ingénieur DevOps | Certifié Terraform & Agile | Scrum Master",
+      "text": "Curieux, responsable, très impliqué et naturellement doté d'un esprit critique et de synthèse, Sidik Aboubakar est un moteur qui aime les challenges et s'investir dans de nouveaux projets."
+    },
+    "hermann": {
+      "name": "Jean-François Hermann N'Guessan Angora",
+      "role": "Entrepreneur - Développeur Mobile",
+      "text": "J'ai connu des personnes qui connaissent leur domaine mais Sidik en plus d'être super doué dans le DevOps il s'y connais dans plein d'autres domaines même au mobile. J'adore collaborer avec lui, c'est quelqu'un de serviable et bosseur."
+    },
+    "cabraule": {
+      "name": "Cabraule Ketchanga",
+      "role": "Développeur Full Stack | Co-fondateur {'@'} ZeGuild",
+      "text": "C'est l'une des personnes dynamique que je connaisse en développement. Son sens de l'engagement et sa prise de responsabilité fait qu'il est toujours considérer comme celui qui doit manager les autres."
     }
   },
   "cta": {

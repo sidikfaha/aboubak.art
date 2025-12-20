@@ -3,21 +3,38 @@ const { t } = useI18n();
 
 interface Testimonial {
   key: string;
-  image: string;
   borderColor: string;
   rating: number;
 }
 
 const testimonials = ref<Testimonial[]>([
   {
-    key: "client1",
-    image: "/images/c77156831b24f052cbcb1b0569370f4cb743f299.png",
+    key: "osaigbovo",
     borderColor: "border-primary",
     rating: 5,
   },
   {
-    key: "client2",
-    image: "/images/5b93f62728c7f9ed348b00b53d5fbe64a02cdcf8.png",
+    key: "david",
+    borderColor: "border-secondary",
+    rating: 5,
+  },
+  {
+    key: "bruce",
+    borderColor: "border-primary",
+    rating: 5,
+  },
+  {
+    key: "jim",
+    borderColor: "border-secondary",
+    rating: 5,
+  },
+  {
+    key: "hermann",
+    borderColor: "border-primary",
+    rating: 5,
+  },
+  {
+    key: "cabraule",
     borderColor: "border-secondary",
     rating: 5,
   },
@@ -30,7 +47,7 @@ const testimonials = ref<Testimonial[]>([
     class="py-24"
     style="background: linear-gradient(to bottom, #1e293b, #0f172a)"
   >
-    <div class="container-md px-6 md:px-36">
+    <div class="container-lg px-6 md:px-12">
       <!-- Section Header -->
       <div class="flex flex-col items-center gap-4 mb-16">
         <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-gradient-primary">
@@ -43,45 +60,43 @@ const testimonials = ref<Testimonial[]>([
       </div>
 
       <!-- Testimonials Grid -->
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           v-for="testimonial in testimonials"
           :key="testimonial.key"
-          class="glass-card rounded-2xl p-8"
+          class="glass-card rounded-2xl p-6"
         >
           <!-- Header -->
-          <div class="flex items-center gap-4 mb-6">
+          <div class="flex items-start gap-3 mb-4">
             <div
-              :class="[testimonial.borderColor, 'size-16 rounded-full border-2 overflow-hidden']"
+              :class="[testimonial.borderColor, 'size-12 rounded-full border-2 flex items-center justify-center bg-background-secondary shrink-0']"
             >
-              <img
-                :src="testimonial.image"
-                :alt="t(`testimonials.${testimonial.key}.name`)"
-                class="size-full object-cover"
-              />
+              <span class="font-orbitron font-bold text-lg text-gradient-primary">
+                {{ t(`testimonials.${testimonial.key}.name`).charAt(0) }}
+              </span>
             </div>
-            <div>
-              <h4 class="font-orbitron font-bold text-white">
+            <div class="min-w-0">
+              <h4 class="font-orbitron font-bold text-white text-sm leading-tight">
                 {{ t(`testimonials.${testimonial.key}.name`) }}
               </h4>
-              <p class="font-inter text-sm text-text-muted">
+              <p class="font-inter text-xs text-text-muted mt-1">
                 {{ t(`testimonials.${testimonial.key}.role`) }}
               </p>
             </div>
           </div>
 
           <!-- Rating -->
-          <div class="flex gap-1 mb-4">
+          <div class="flex gap-1 mb-3">
             <Icon
               v-for="i in testimonial.rating"
               :key="i"
               name="heroicons:star-solid"
-              class="size-4 text-yellow-400"
+              class="size-3 text-yellow-400"
             />
           </div>
 
           <!-- Quote -->
-          <p class="font-inter text-text-secondary leading-relaxed">
+          <p class="font-inter text-sm text-text-secondary leading-relaxed line-clamp-5">
             "{{ t(`testimonials.${testimonial.key}.text`) }}"
           </p>
         </div>
