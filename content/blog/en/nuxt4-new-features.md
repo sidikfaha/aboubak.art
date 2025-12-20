@@ -1,7 +1,7 @@
 ---
 title: "Nuxt 4: Game-Changing New Features"
 description: "Discover the new features of Nuxt 4, from the new project structure to performance improvements."
-date: "2025-12-18"
+date: "2025-12-18T09:00:00+01:00"
 image: "/images/blog/en/nuxt4-new-features.png"
 tags: ["Nuxt", "Vue.js", "SSR", "Performance"]
 category: "Web Development"

@@ -1,7 +1,7 @@
 ---
 title: "Les Fondamentaux de Vue 3 Composition API"
 description: "Découvrez comment maîtriser la Composition API de Vue 3 et améliorer la réutilisabilité de votre code avec les composables."
-date: "2025-12-15"
+date: "2025-12-15T14:00:00+01:00"
 image: "/images/blog/fr/vue3-composition-api-fondamentaux.png"
 tags: ["Vue.js", "JavaScript", "Frontend"]
 category: "Développement Web"

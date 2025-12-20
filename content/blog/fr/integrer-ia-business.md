@@ -1,7 +1,7 @@
 ---
 title: "Intelligence Artificielle : Comment l'Intégrer dans Votre Business"
 description: "Guide pratique pour intégrer l'IA dans votre entreprise, des chatbots à l'analyse prédictive."
-date: "2025-12-10"
+date: "2025-12-10T10:00:00+01:00"
 image: "/images/blog/fr/integrer-ia-business.png"
 tags: ["IA", "Business", "Transformation Digitale"]
 category: "Intelligence Artificielle"

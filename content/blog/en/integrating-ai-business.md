@@ -1,7 +1,7 @@
 ---
 title: "Artificial Intelligence: How to Integrate It into Your Business"
 description: "Practical guide for integrating AI into your business, from chatbots to predictive analytics."
-date: "2025-12-10"
+date: "2025-12-10T10:00:00+01:00"
 image: "/images/blog/en/integrating-ai-business.png"
 tags: ["AI", "Business", "Digital Transformation"]
 category: "Artificial Intelligence"
