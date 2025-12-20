@@ -1,13 +1,5 @@
 <script setup lang="ts">
 const { locale } = useI18n();
-const config = useRuntimeConfig();
-
-// Custom Giscus theme URL - hosted on your site
-const giscusTheme = computed(() => {
-  // Use the full URL to your custom theme CSS
-  const baseUrl = config.public.siteUrl || "https://aboubak.art";
-  return `${baseUrl}/giscus-theme.css`;
-});
 
 // Giscus configuration
 // You'll need to set up Giscus at https://giscus.app and replace these values
@@ -27,12 +19,10 @@ const giscusConfig = {
 
 // Dynamically load Giscus script
 const giscusContainer = ref<HTMLElement | null>(null);
+const giscusLoaded = ref(false);
 
 const loadGiscus = () => {
-  if (!giscusContainer.value) return;
-
-  // Clear any existing giscus
-  giscusContainer.value.innerHTML = "";
+  if (!giscusContainer.value || giscusLoaded.value) return;
 
   const script = document.createElement("script");
   script.src = "https://giscus.app/client.js";
@@ -45,18 +35,38 @@ const loadGiscus = () => {
   script.setAttribute("data-reactions-enabled", giscusConfig.reactionsEnabled);
   script.setAttribute("data-emit-metadata", giscusConfig.emitMetadata);
   script.setAttribute("data-input-position", giscusConfig.inputPosition);
-  script.setAttribute("data-theme", giscusTheme.value);
   script.setAttribute("data-lang", giscusConfig.lang.value);
   script.setAttribute("data-loading", giscusConfig.loading);
   script.crossOrigin = "anonymous";
   script.async = true;
 
   giscusContainer.value.appendChild(script);
+  giscusLoaded.value = true;
 };
 
-// Reload Giscus when locale changes
+// Update Giscus config via postMessage instead of reloading
+// This preserves the authentication state
+const updateGiscusConfig = () => {
+  const iframe = document.querySelector<HTMLIFrameElement>(
+    "iframe.giscus-frame"
+  );
+  if (!iframe?.contentWindow) return;
+
+  iframe.contentWindow.postMessage(
+    {
+      giscus: {
+        setConfig: {
+          lang: giscusConfig.lang.value,
+        },
+      },
+    },
+    "https://giscus.app"
+  );
+};
+
+// Update Giscus config when locale changes (without reloading)
 watch(locale, () => {
-  loadGiscus();
+  updateGiscusConfig();
 });
 
 onMounted(() => {
@@ -70,15 +80,4 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
-.giscus-wrapper {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-border);
-}
 
-/* Style Giscus iframe container */
-.giscus-wrapper :deep(.giscus-frame) {
-  width: 100%;
-}
-</style>
