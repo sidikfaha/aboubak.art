@@ -33,10 +33,15 @@ const formatDate = (date: string) => {
   });
 };
 
+// Get localized full URL
+const getLocalizedUrl = (path: string) => {
+  return `https://aboubak.art${localePath(path)}`;
+};
+
 // Copy link to clipboard
 const copyLink = () => {
   if (import.meta.client) {
-    navigator.clipboard.writeText(`https://aboubak.art/blog/${slug}`);
+    navigator.clipboard.writeText(getLocalizedUrl(`/blog/${slug}`));
   }
 };
 
@@ -47,7 +52,7 @@ useSeoMeta({
   ogTitle: () => `${post.value?.title} | Aboubak'Art Blog`,
   ogDescription: () => post.value?.description,
   ogType: "article",
-  ogUrl: () => `https://aboubak.art/blog/${slug}`,
+  ogUrl: () => getLocalizedUrl(`/blog/${slug}`),
   ogImage: () => post.value?.image || "https://aboubak.art/images/blog-og.png",
   articlePublishedTime: () => post.value?.date,
   articleModifiedTime: () => post.value?.updatedAt || post.value?.date,
@@ -70,7 +75,7 @@ useHead({
           "@graph": [
             {
               "@type": "Article",
-              "@id": `https://aboubak.art/blog/${slug}#article`,
+              "@id": `${getLocalizedUrl(`/blog/${slug}`)}#article`,
               headline: post.value?.title,
               description: post.value?.description,
               image: post.value?.image || "https://aboubak.art/images/blog-og.png",
@@ -91,7 +96,7 @@ useHead({
               },
               mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": `https://aboubak.art/blog/${slug}`,
+                "@id": getLocalizedUrl(`/blog/${slug}`),
               },
               keywords: post.value?.tags?.join(", "),
               articleSection: post.value?.category || "Technology",
@@ -103,19 +108,19 @@ useHead({
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://aboubak.art",
+                  item: getLocalizedUrl("/"),
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Blog",
-                  item: "https://aboubak.art/blog",
+                  item: getLocalizedUrl("/blog"),
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: post.value?.title,
-                  item: `https://aboubak.art/blog/${slug}`,
+                  item: getLocalizedUrl(`/blog/${slug}`),
                 },
               ],
             },
@@ -127,7 +132,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: `https://aboubak.art/blog/${slug}`,
+      href: getLocalizedUrl(`/blog/${slug}`),
     },
   ],
 });
