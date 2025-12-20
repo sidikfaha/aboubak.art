@@ -15,7 +15,7 @@ jobs:
       image_tag: latest
       context: aws
       deploy_stage: Production
-      deploy_port: 3000
+      deploy_port: 3003
       dns_name: aboubak.art
       with_commit_image: false
     secrets:
