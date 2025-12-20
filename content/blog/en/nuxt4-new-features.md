@@ -2,7 +2,7 @@
 title: "Nuxt 4: Game-Changing New Features"
 description: "Discover the new features of Nuxt 4, from the new project structure to performance improvements."
 date: "2025-12-18"
-image: "https://picsum.photos/seed/nuxt4/800/450"
+image: "/images/blog/en/nuxt4-new-features.png"
 tags: ["Nuxt", "Vue.js", "SSR", "Performance"]
 category: "Web Development"
 author: "Aboubakar Sidik Faha"

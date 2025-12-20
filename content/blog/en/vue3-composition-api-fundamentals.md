@@ -2,7 +2,7 @@
 title: "Vue 3 Composition API Fundamentals"
 description: "Discover how to master Vue 3's Composition API and improve code reusability with composables."
 date: "2025-12-15"
-image: "https://picsum.photos/seed/vue3/800/450"
+image: "/images/blog/en/vue3-composition-api-fundamentals.png"
 tags: ["Vue.js", "JavaScript", "Frontend"]
 category: "Web Development"
 author: "Aboubakar Sidik Faha"

@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/icon",
+    "@nuxt/image",
     "@nuxtjs/i18n",
     "@nuxtjs/sitemap",
   ],

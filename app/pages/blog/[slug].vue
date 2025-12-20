@@ -249,9 +249,13 @@ const { data: relatedPosts } = await useAsyncData(
         v-if="post.image"
         class="max-w-5xl mx-auto mb-12 rounded-2xl overflow-hidden"
       >
-        <img
+        <NuxtImg
           :src="post.image"
           :alt="post.title"
+          width="1200"
+          height="675"
+          format="webp"
+          quality="85"
           class="w-full h-auto aspect-video object-cover"
           loading="eager"
         />
@@ -320,10 +324,14 @@ const { data: relatedPosts } = await useAsyncData(
         >
           <NuxtLink :to="localePath(`/blog/${relatedPost.slug}`)">
             <div class="relative aspect-video overflow-hidden">
-              <img
+              <NuxtImg
                 v-if="relatedPost.image"
                 :src="relatedPost.image"
                 :alt="relatedPost.title"
+                width="800"
+                height="450"
+                format="webp"
+                quality="80"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />

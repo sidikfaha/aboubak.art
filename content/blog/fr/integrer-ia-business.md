@@ -2,7 +2,7 @@
 title: "Intelligence Artificielle : Comment l'Intégrer dans Votre Business"
 description: "Guide pratique pour intégrer l'IA dans votre entreprise, des chatbots à l'analyse prédictive."
 date: "2025-12-10"
-image: "https://picsum.photos/seed/ai-business/800/450"
+image: "/images/blog/fr/integrer-ia-business.png"
 tags: ["IA", "Business", "Transformation Digitale"]
 category: "Intelligence Artificielle"
 author: "Aboubakar Sidik Faha"

@@ -2,7 +2,7 @@
 title: "Nuxt 4 : Les Nouveautés qui Changent la Donne"
 description: "Découvrez les nouvelles fonctionnalités de Nuxt 4, de la nouvelle structure de projet aux améliorations de performance."
 date: "2025-12-18"
-image: "https://picsum.photos/seed/nuxt4/800/450"
+image: "/images/blog/fr/nuxt4-nouveautes.png"
 tags: ["Nuxt", "Vue.js", "SSR", "Performance"]
 category: "Développement Web"
 author: "Aboubakar Sidik Faha"

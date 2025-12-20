@@ -104,10 +104,14 @@ const formatDate = (date: string) => {
           <!-- Featured Image -->
           <NuxtLink :to="localePath(`/blog/${post.slug}`)">
             <div class="relative aspect-video overflow-hidden">
-              <img
+              <NuxtImg
                 v-if="post.image"
                 :src="post.image"
                 :alt="post.title"
+                width="800"
+                height="450"
+                format="webp"
+                quality="80"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />

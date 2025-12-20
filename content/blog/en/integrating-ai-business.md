@@ -2,7 +2,7 @@
 title: "Artificial Intelligence: How to Integrate It into Your Business"
 description: "Practical guide for integrating AI into your business, from chatbots to predictive analytics."
 date: "2025-12-10"
-image: "https://picsum.photos/seed/ai-business/800/450"
+image: "/images/blog/en/integrating-ai-business.png"
 tags: ["AI", "Business", "Digital Transformation"]
 category: "Artificial Intelligence"
 author: "Aboubakar Sidik Faha"
