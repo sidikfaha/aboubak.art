@@ -87,10 +87,10 @@ const errorDescription = computed(() => {
       <!-- Error Icon with Pulse -->
       <div class="relative inline-flex mb-6">
         <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping" />
-        <div class="relative glass-card rounded-full p-4">
+        <div class="relative glass-card rounded-full p-4 size-16 flex items-center justify-center">
           <Icon
             :name="error.statusCode === 404 ? 'heroicons:map' : 'heroicons:exclamation-triangle'"
-            class="size-12 text-primary animate-bounce-slow"
+            class="size-12 text-primary"
           />
         </div>
       </div>
