@@ -35,7 +35,7 @@ const values = computed(() => [
       <!-- Content Grid -->
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left: Image Card -->
-        <div class="glass-card-strong rounded-2xl p-8 space-y-6">
+        <div class="glass-card-strong rounded-2xl p-8 space-y-6 flex flex-col items-stretch">
           <div class="aspect-square rounded-xl overflow-hidden">
             <img
               src="/images/ec5a3dd22ad2d6706e807c2a11c95e845211383d.png"
@@ -45,7 +45,7 @@ const values = computed(() => [
           </div>
 
           <!-- Skills Badges -->
-          <div class="flex justify-center gap-4">
+          <div class="grid gap-4 grid-cols-3">
             <div
               v-for="skill in skills"
               :key="skill.key"

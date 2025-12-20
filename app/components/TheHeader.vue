@@ -3,11 +3,11 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 
 const navItems = computed(() => [
-  { key: "home", href: "/#home", isRoute: false },
-  { key: "services", href: "/#services", isRoute: false },
-  { key: "portfolio", href: "/#portfolio", isRoute: false },
-  { key: "blog", href: localePath("/blog"), isRoute: true },
-  { key: "contact", href: localePath("/contact"), isRoute: true },
+  { key: "home", href: localePath("/#home") },
+  { key: "services", href: localePath("/#services") },
+  { key: "portfolio", href: localePath("/#portfolio") },
+  { key: "blog", href: localePath("/blog") },
+  { key: "contact", href: localePath("/contact") },
 ]);
 
 const isMobileMenuOpen = ref(false);
@@ -31,19 +31,11 @@ const isMobileMenuOpen = ref(false);
         <nav class="hidden lg:flex items-center gap-8">
           <template v-for="item in navItems" :key="item.key">
             <NuxtLink
-              v-if="item.isRoute"
               :to="item.href"
               class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
             >
               {{ t(`nav.${item.key}`) }}
             </NuxtLink>
-            <a
-              v-else
-              :href="item.href"
-              class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
-            >
-              {{ t(`nav.${item.key}`) }}
-            </a>
           </template>
         </nav>
 
@@ -90,25 +82,19 @@ const isMobileMenuOpen = ref(false);
         leave-from-class="opacity-100 translate-y-0"
         leave-to-class="opacity-0 -translate-y-2"
       >
-        <nav v-if="isMobileMenuOpen" class="lg:hidden py-4 border-t border-border mt-4">
+        <nav
+          v-if="isMobileMenuOpen"
+          class="lg:hidden py-4 border-t border-border mt-4"
+        >
           <div class="flex flex-col gap-4">
             <template v-for="item in navItems" :key="item.key">
               <NuxtLink
-                v-if="item.isRoute"
                 :to="item.href"
                 class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
                 @click="isMobileMenuOpen = false"
               >
                 {{ t(`nav.${item.key}`) }}
               </NuxtLink>
-              <a
-                v-else
-                :href="item.href"
-                class="font-inter font-medium text-text-secondary hover:text-primary transition-colors py-2"
-                @click="isMobileMenuOpen = false"
-              >
-                {{ t(`nav.${item.key}`) }}
-              </a>
             </template>
             <a
               href="https://calendar.app.google/DeCnXF86SxmiLF6M6"

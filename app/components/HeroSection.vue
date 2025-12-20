@@ -11,7 +11,7 @@ const stats = computed(() => [
 <template>
   <section
     id="home"
-    class="relative min-h-screen flex items-center justify-center pt-24 pb-0 overflow-hidden"
+    class="relative min-h-screen flex items-center justify-center pt-24 pb-20 overflow-hidden"
   >
     <!-- Background Gradient -->
     <div
@@ -117,11 +117,6 @@ const stats = computed(() => [
           />
         </template>
       </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-      <Icon name="heroicons:chevron-down" class="size-6 text-text-muted" />
     </div>
   </section>
 </template>
