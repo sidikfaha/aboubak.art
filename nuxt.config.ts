@@ -15,6 +15,9 @@ export default defineNuxtConfig({
   site: {
     url: "https://aboubak.art",
   },
+  sitemap: {
+    sources: ["/api/_sitemap-urls"],
+  },
   runtimeConfig: {
     public: {
       siteUrl: "https://aboubak.art",
