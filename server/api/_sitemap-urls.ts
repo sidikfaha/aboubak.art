@@ -1,5 +1,3 @@
-import { asSitemapUrl, defineSitemapEventHandler } from "#imports";
-
 export default defineSitemapEventHandler(async (event) => {
   const urls = [];
 
