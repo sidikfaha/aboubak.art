@@ -1,5 +1,5 @@
 import { serverQueryContent } from "#content/server";
-import { asSitemapUrl, defineSitemapEventHandler } from "#sitemap";
+import { asSitemapUrl, defineSitemapEventHandler } from "#imports";
 
 export default defineSitemapEventHandler(async () => {
   const articles = await serverQueryContent("blog")
