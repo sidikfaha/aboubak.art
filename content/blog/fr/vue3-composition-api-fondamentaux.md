@@ -10,6 +10,7 @@ readingTime: "8 min"
 locale: "fr"
 slug: "vue3-composition-api-fondamentaux"
 draft: false
+sitemap: true
 ---
 
 La Composition API de Vue 3 représente une évolution majeure dans la façon dont nous structurons et organisons le code de nos composants. Dans cet article, nous allons explorer les concepts fondamentaux et les meilleures pratiques.

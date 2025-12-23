@@ -10,6 +10,7 @@ readingTime: "10 min"
 locale: "fr"
 slug: "integrer-ia-business"
 draft: false
+sitemap: true
 ---
 
 L'intelligence artificielle n'est plus réservée aux géants de la tech. Découvrez comment les PME peuvent tirer parti de l'IA pour améliorer leurs opérations et leur compétitivité.

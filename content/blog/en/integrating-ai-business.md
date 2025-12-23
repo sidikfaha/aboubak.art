@@ -10,6 +10,7 @@ readingTime: "10 min"
 locale: "en"
 slug: "integrating-ai-business"
 draft: false
+sitemap: true
 ---
 
 Artificial intelligence is no longer reserved for tech giants. Discover how SMBs can leverage AI to improve their operations and competitiveness.

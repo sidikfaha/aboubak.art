@@ -10,6 +10,7 @@ readingTime: "6 min"
 locale: "fr"
 slug: "nuxt4-nouveautes"
 draft: false
+sitemap: true
 ---
 
 Nuxt 4 est arrivé avec son lot d'innovations majeures. Explorons ensemble les changements les plus impactants pour vos projets.
