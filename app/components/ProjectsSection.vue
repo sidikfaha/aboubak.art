@@ -129,30 +129,14 @@ const projects = ref<Project[]>([
             />
             <!-- Overlay on hover -->
             <div
-              class="absolute inset-0 bg-linear-to-t from-background via-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
             >
-              <div class="space-y-2">
-                <h3 class="font-orbitron font-bold text-xl text-white">
-                  {{ t(`projects.${project.key}.title`) }}
-                </h3>
-                <p class="font-inter text-sm text-text-secondary">
-                  {{ t(`projects.${project.key}.description`) }}
-                </p>
-                <div class="flex flex-wrap gap-2 pt-2">
-                  <span
-                    v-for="tag in project.tags"
-                    :key="tag.name"
-                    :class="[tag.bg, tag.color, 'px-3 py-1 rounded-full text-xs font-inter']"
-                  >
-                    {{ tag.name }}
-                  </span>
-                </div>
-              </div>
+              <Icon name="heroicons:arrow-top-right-on-square" class="size-12 text-white" />
             </div>
           </div>
 
-          <!-- Card Content (visible on mobile) -->
-          <div class="p-6 lg:hidden">
+          <!-- Card Content -->
+          <div class="p-6">
             <h3 class="font-orbitron font-bold text-lg text-white mb-2">
               {{ t(`projects.${project.key}.title`) }}
             </h3>
