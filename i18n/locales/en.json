@@ -56,25 +56,25 @@
       "title": "Web Development",
       "description": "Modern and high-performing web applications using the latest technologies: React, Vue.js, Node.js, and cloud-native architectures.",
       "features": ["SPA/PWA Applications", "RESTful & GraphQL APIs", "Performance optimization"],
-      "price": "€2500"
+      "price": "200,000 XOF"
     },
     "ai": {
       "title": "Artificial Intelligence",
       "description": "Integration of AI and Machine Learning solutions to automate and optimize your business processes with measurable results.",
       "features": ["Intelligent chatbots", "Predictive analytics", "Computer vision"],
-      "price": "€3500"
+      "price": "500,000 XOF"
     },
     "strategy": {
       "title": "Digital Strategy",
       "description": "Complete strategic support to transform your digital presence and maximize your ROI with proven methods.",
       "features": ["360° digital audit", "Technology roadmap", "Digital transformation"],
-      "price": "€1800"
+      "price": "500,000 XOF"
     },
     "mobile": {
       "title": "Mobile Applications",
       "description": "Development of native and cross-platform mobile applications offering a smooth and intuitive user experience.",
       "features": ["Native iOS & Android", "React Native / Flutter", "Store publishing"],
-      "price": "€4000"
+      "price": "350,000 XOF"
     }
   },
   "projects": {

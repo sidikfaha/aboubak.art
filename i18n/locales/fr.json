@@ -56,25 +56,25 @@
       "title": "Développement Web",
       "description": "Applications web modernes et performantes utilisant les dernières technologies : React, Vue.js, Node.js, et architectures cloud-native.",
       "features": ["Applications SPA/PWA", "APIs RESTful & GraphQL", "Optimisation performances"],
-      "price": "2500€"
+      "price": "200 000 FCFA"
     },
     "ai": {
       "title": "Intelligence Artificielle",
       "description": "Intégration de solutions IA et Machine Learning pour automatiser et optimiser vos processus métier avec des résultats mesurables.",
       "features": ["Chatbots intelligents", "Analyse prédictive", "Vision par ordinateur"],
-      "price": "3500€"
+      "price": "500 000 FCFA"
     },
     "strategy": {
       "title": "Stratégie Digitale",
       "description": "Accompagnement stratégique complet pour transformer votre présence digitale et maximiser votre ROI avec des méthodes éprouvées.",
       "features": ["Audit digital 360°", "Roadmap technologique", "Transformation digitale"],
-      "price": "1800€"
+      "price": "500 000 FCFA"
     },
     "mobile": {
       "title": "Applications Mobile",
       "description": "Développement d'applications mobiles natives et cross-platform offrant une expérience utilisateur fluide et intuitive.",
       "features": ["iOS & Android natif", "React Native / Flutter", "Publication stores"],
-      "price": "4000€"
+      "price": "350 000 FCFA"
     }
   },
   "projects": {

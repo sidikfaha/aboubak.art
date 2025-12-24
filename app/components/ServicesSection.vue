@@ -124,7 +124,7 @@ const scrollTo = (direction: "prev" | "next") => {
 
             <!-- Price -->
             <p
-              :class="[service.priceColor, 'font-orbitron font-bold text-2xl md:text-3xl mb-6']"
+              :class="[service.priceColor, 'font-orbitron font-bold text-xl mb-6']"
             >
               {{ t("services.startingFrom") }} {{ t(`services.${service.key}.price`) }}
             </p>
