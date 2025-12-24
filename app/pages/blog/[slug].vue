@@ -2,6 +2,7 @@
 const { t, locale } = useI18n();
 const route = useRoute();
 const localePath = useLocalePath();
+const $img = useImage();
 
 const slug = route.params.slug as string;
 
@@ -38,14 +39,27 @@ const getLocalizedUrl = (path: string) => {
   return `https://aboubak.art${localePath(path)}`;
 };
 
-// Get absolute URL for images (required for OG meta tags)
+// Build a crawler-friendly OG image (optimized size and absolute URL)
 const getAbsoluteImageUrl = (imagePath: string | undefined) => {
-  const defaultImage = "https://aboubak.art/images/blog-og.webp";
-  if (!imagePath) return defaultImage;
-  // If already absolute URL, return as-is
-  if (imagePath.startsWith("http")) return imagePath;
-  // Convert relative path to absolute URL
-  return `https://aboubak.art${imagePath}`;
+  const basePath = imagePath || "/images/blog-og.webp";
+
+  // If external URL, do not try to transform
+  if (basePath.startsWith("http")) {
+    return basePath;
+  }
+
+  // Use Nuxt Image to serve a ~1200x630 WebP that stays under scraper limits
+  const optimized = $img(basePath, {
+    width: 1200,
+    height: 630,
+    format: "webp",
+    quality: 80,
+  });
+
+  // Ensure absolute URL for social crawlers
+  return optimized.startsWith("http")
+    ? optimized
+    : `https://aboubak.art${optimized}`;
 };
 
 // Copy link to clipboard
@@ -263,12 +277,12 @@ const { data: relatedPosts } = await useAsyncData(
         <NuxtImg
           :src="post.image"
           :alt="post.title"
-          width="1200"
-          height="675"
+          width="1024"
+          height="576"
           format="webp"
           quality="85"
           class="w-full h-auto aspect-video object-cover"
-          loading="eager"
+          loading="lazy"
         />
       </div>
 
