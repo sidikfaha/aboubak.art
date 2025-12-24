@@ -4,32 +4,93 @@ const { t } = useI18n();
 interface Project {
   key: string;
   image: string;
+  link: string;
   tags: { name: string; color: string; bg: string }[];
 }
 
 const projects = ref<Project[]>([
   {
-    key: "ecommerce",
+    key: "dukify",
     image: "/images/644a626d62f687623f771b718eda33628314b4ef.png",
+    link: "https://dukify.com",
     tags: [
-      { name: "React", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Nuxt.js", color: "text-primary", bg: "bg-primary/20" },
       { name: "Node.js", color: "text-secondary", bg: "bg-secondary/20" },
+      { name: "Owner", color: "text-accent", bg: "bg-accent/20" },
     ],
   },
   {
-    key: "analytics",
+    key: "kika",
     image: "/images/ec5a3dd22ad2d6706e807c2a11c95e845211383d.png",
+    link: "https://kika.africa",
     tags: [
-      { name: "Vue.js", color: "text-primary", bg: "bg-primary/20" },
-      { name: "Python", color: "text-accent", bg: "bg-accent/20" },
+      { name: "Mobile", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Web", color: "text-secondary", bg: "bg-secondary/20" },
+      { name: "Full Stack", color: "text-accent", bg: "bg-accent/20" },
     ],
   },
   {
-    key: "fintech",
+    key: "copaa",
     image: "/images/644a626d62f687623f771b718eda33628314b4ef.png",
+    link: "https://copaa.africa",
     tags: [
-      { name: "Flutter", color: "text-primary", bg: "bg-primary/20" },
-      { name: "Firebase", color: "text-secondary", bg: "bg-secondary/20" },
+      { name: "Mobile", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Web", color: "text-secondary", bg: "bg-secondary/20" },
+      { name: "Social Network", color: "text-accent", bg: "bg-accent/20" },
+    ],
+  },
+  {
+    key: "jackwestin",
+    image: "/images/ec5a3dd22ad2d6706e807c2a11c95e845211383d.png",
+    link: "https://jackwestin.com",
+    tags: [
+      { name: "Nuxt.js", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Education", color: "text-secondary", bg: "bg-secondary/20" },
+    ],
+  },
+  {
+    key: "drbalcony",
+    image: "/images/644a626d62f687623f771b718eda33628314b4ef.png",
+    link: "https://drbalcony.com",
+    tags: [
+      { name: "Frontend", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Web", color: "text-secondary", bg: "bg-secondary/20" },
+    ],
+  },
+  {
+    key: "zawajsounnah",
+    image: "/images/ec5a3dd22ad2d6706e807c2a11c95e845211383d.png",
+    link: "https://zawaj-sounnah.com",
+    tags: [
+      { name: "DevOps", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Web", color: "text-secondary", bg: "bg-secondary/20" },
+    ],
+  },
+  {
+    key: "paynah",
+    image: "/images/644a626d62f687623f771b718eda33628314b4ef.png",
+    link: "https://paynah.com",
+    tags: [
+      { name: "DevOps", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Fintech", color: "text-secondary", bg: "bg-secondary/20" },
+    ],
+  },
+  {
+    key: "schoolgood",
+    image: "/images/ec5a3dd22ad2d6706e807c2a11c95e845211383d.png",
+    link: "https://schoolgood.cm",
+    tags: [
+      { name: "Nuxt.js", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Education", color: "text-secondary", bg: "bg-secondary/20" },
+    ],
+  },
+  {
+    key: "jemoovfree",
+    image: "/images/644a626d62f687623f771b718eda33628314b4ef.png",
+    link: "https://jemoovfree.africa",
+    tags: [
+      { name: "Mobile", color: "text-primary", bg: "bg-primary/20" },
+      { name: "Telecom", color: "text-secondary", bg: "bg-secondary/20" },
     ],
   },
 ]);
@@ -51,10 +112,13 @@ const projects = ref<Project[]>([
 
       <!-- Projects Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div
+        <a
           v-for="project in projects"
           :key="project.key"
-          class="group glass-card rounded-2xl overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+          :href="project.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group glass-card rounded-2xl overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300 block"
         >
           <!-- Image -->
           <div class="relative h-64 overflow-hidden">
@@ -105,7 +169,7 @@ const projects = ref<Project[]>([
               </span>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>

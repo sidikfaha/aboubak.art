@@ -80,17 +80,41 @@
   "projects": {
     "title": "Projets Réalisés",
     "subtitle": "Une sélection de mes réalisations les plus innovantes",
-    "ecommerce": {
-      "title": "E-Commerce Platform",
-      "description": "Solution complète avec IA de recommandation"
+    "dukify": {
+      "title": "Dukify",
+      "description": "Plateforme e-commerce tout-en-un pour créer, gérer et développer votre activité en ligne."
     },
-    "analytics": {
-      "title": "Analytics Dashboard",
-      "description": "Tableau de bord IA temps réel"
+    "kika": {
+      "title": "Kika",
+      "description": "Plateforme de tontine digitale pour une épargne collective sécurisée et transparente en Afrique."
     },
-    "fintech": {
-      "title": "FinTech Mobile App",
-      "description": "Application bancaire sécurisée"
+    "copaa": {
+      "title": "Copaa",
+      "description": "Le premier réseau social africain basé sur l'honneur, la souveraineté et la solidarité."
+    },
+    "jackwestin": {
+      "title": "Jack Westin",
+      "description": "Plateforme éducative pour la préparation au MCAT avec des outils d'apprentissage avancés."
+    },
+    "drbalcony": {
+      "title": "Dr. Balcony",
+      "description": "Plateforme web pour les services d'inspection et de réparation de balcons."
+    },
+    "zawajsounnah": {
+      "title": "Zawaj Sounnah",
+      "description": "Plateforme matrimoniale éthique connectant les musulmans pour le mariage."
+    },
+    "paynah": {
+      "title": "Paynah",
+      "description": "Solution Fintech pour la sérénité financière et les paiements sécurisés."
+    },
+    "schoolgood": {
+      "title": "SchoolGood",
+      "description": "Plateforme éducative connectant élèves et enseignants."
+    },
+    "jemoovfree": {
+      "title": "Jemoov Free",
+      "description": "Plateforme fournissant un accès internet abordable et des services digitaux."
     }
   },
   "testimonials": {

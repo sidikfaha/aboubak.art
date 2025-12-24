@@ -80,17 +80,41 @@
   "projects": {
     "title": "Completed Projects",
     "subtitle": "A selection of my most innovative achievements",
-    "ecommerce": {
-      "title": "E-Commerce Platform",
-      "description": "Complete solution with AI recommendation"
+    "dukify": {
+      "title": "Dukify",
+      "description": "All-in-one e-commerce platform to build, manage, and scale online businesses."
     },
-    "analytics": {
-      "title": "Analytics Dashboard",
-      "description": "Real-time AI dashboard"
+    "kika": {
+      "title": "Kika",
+      "description": "Digital tontine platform for secure and transparent group savings in Africa."
     },
-    "fintech": {
-      "title": "FinTech Mobile App",
-      "description": "Secure banking application"
+    "copaa": {
+      "title": "Copaa",
+      "description": "The first African social network based on honor, sovereignty, and solidarity."
+    },
+    "jackwestin": {
+      "title": "Jack Westin",
+      "description": "Educational platform for MCAT preparation with advanced learning tools."
+    },
+    "drbalcony": {
+      "title": "Dr. Balcony",
+      "description": "Web platform for balcony inspection and repair services."
+    },
+    "zawajsounnah": {
+      "title": "Zawaj Sounnah",
+      "description": "Ethical matrimonial platform connecting Muslims for marriage."
+    },
+    "paynah": {
+      "title": "Paynah",
+      "description": "Fintech solution for financial serenity and secure payments."
+    },
+    "schoolgood": {
+      "title": "SchoolGood",
+      "description": "Educational platform connecting students and teachers."
+    },
+    "jemoovfree": {
+      "title": "Jemoov Free",
+      "description": "Platform providing affordable internet access and digital services."
     }
   },
   "testimonials": {
