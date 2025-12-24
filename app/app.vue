@@ -1,5 +1,6 @@
 <template>
   <div class="bg-background min-h-screen">
+    <NuxtLoadingIndicator />
     <NuxtRouteAnnouncer />
     <TheHeader />
     <main>

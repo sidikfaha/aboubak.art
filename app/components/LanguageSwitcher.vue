@@ -10,6 +10,7 @@ import {
 const { locale, setLocale } = useI18n();
 const route = useRoute();
 const router = useRouter();
+const localePath = useLocalePath();
 
 type LocaleCode = "en" | "fr";
 
@@ -29,10 +30,12 @@ const currentLanguage = computed(
 );
 
 const selectLanguage = (code: LocaleCode) => {
-  const isBlogPostPage = route.name === "blog-slug";
-  setLocale(code);
+  const isBlogPostPage = String(route.name).includes("blog-slug");
+
   if (isBlogPostPage) {
-    router.push("/blog");
+    router.push(localePath("blog", code));
+  } else {
+    setLocale(code);
   }
 };
 </script>
