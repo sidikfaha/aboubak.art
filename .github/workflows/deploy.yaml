@@ -27,3 +27,4 @@ jobs:
       ssh_user: ${{ secrets.SSH_USER }}
       ssh_host: ${{ secrets.SSH_HOST }}
       ssh_port: ${{ secrets.SSH_PORT }}
+      deploy_env: ${{ secrets.ENV }}
