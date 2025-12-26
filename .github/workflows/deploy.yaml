@@ -28,3 +28,4 @@ jobs:
       ssh_host: ${{ secrets.SSH_HOST }}
       ssh_port: ${{ secrets.SSH_PORT }}
       deploy_env: ${{ secrets.ENV }}
+      build_env: ${{ secrets.ENV }}
