@@ -176,6 +176,14 @@ const { data: relatedPosts } = await useAsyncData(
   },
   { watch: [locale] }
 );
+
+// Article Views Tracking
+const { incrementViews, getViews } = useArticleViews();
+const views = getViews(slug);
+
+onMounted(() => {
+  incrementViews(slug);
+});
 </script>
 
 <template>
@@ -241,9 +249,13 @@ const { data: relatedPosts } = await useAsyncData(
         >
           <!-- Author -->
           <div class="flex items-center gap-3">
-            <img
+            <NuxtImg
               src="/images/40f2530e23e53f99d2ca8a1288a99418ce79bd7f.webp"
               alt="Aboubakar Sidik Faha"
+              width="40"
+              height="40"
+              format="webp"
+              quality="80"
               class="size-10 rounded-full object-cover"
               loading="lazy"
             />
@@ -265,6 +277,12 @@ const { data: relatedPosts } = await useAsyncData(
           <span class="flex items-center gap-2">
             <Icon name="heroicons:clock" class="size-4" />
             {{ post.readingTime || "5 min" }}
+          </span>
+
+          <!-- Views -->
+          <span v-if="views !== null" class="flex items-center gap-2">
+            <Icon name="heroicons:eye" class="size-4" />
+            {{ views }} {{ t("blog.views") }}
           </span>
         </div>
       </header>
