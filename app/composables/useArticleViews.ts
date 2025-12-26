@@ -4,7 +4,10 @@ export const useArticleViews = () => {
   const { $db } = useNuxtApp();
 
   const incrementViews = async (slug: string) => {
-    if (!$db) return;
+    if (!$db) {
+        console.error("Firestore is not initialized.");
+        return;
+    };
     
     const docRef = doc($db, "article_views", slug);
     
