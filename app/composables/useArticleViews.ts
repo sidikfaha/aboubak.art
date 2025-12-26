@@ -4,20 +4,16 @@ export const useArticleViews = () => {
   const { $db } = useNuxtApp();
 
   const incrementViews = async (slug: string) => {
-    if (!$db) {
-      console.error("Firestore is not initialized.");
-      return;
-    }
+    if (!$db) return;
 
     const docRef = doc($db, "article_views", slug);
 
     try {
-      // Use setDoc with merge to create or update in one operation
       await setDoc(docRef, {
         views: increment(1)
       }, { merge: true });
     } catch (e: any) {
-      console.error("Error incrementing views:", e.code, e.message);
+      console.error("Error incrementing views:", e.message);
     }
   };
 
