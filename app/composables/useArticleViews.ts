@@ -1,30 +1,23 @@
-import { doc, getDoc, setDoc, updateDoc, increment, onSnapshot } from "firebase/firestore";
+import { doc, setDoc, increment, onSnapshot } from "firebase/firestore";
 
 export const useArticleViews = () => {
   const { $db } = useNuxtApp();
 
   const incrementViews = async (slug: string) => {
     if (!$db) {
-        console.error("Firestore is not initialized.");
-        return;
-    };
-    
+      console.error("Firestore is not initialized.");
+      return;
+    }
+
     const docRef = doc($db, "article_views", slug);
-    
+
     try {
-      // Try to update first
-      await updateDoc(docRef, {
+      // Use setDoc with merge to create or update in one operation
+      await setDoc(docRef, {
         views: increment(1)
-      });
+      }, { merge: true });
     } catch (e: any) {
-      // If document doesn't exist, create it
-      if (e.code === 'not-found') {
-        await setDoc(docRef, {
-          views: 1
-        });
-      } else {
-        console.error("Error incrementing views:", e);
-      }
+      console.error("Error incrementing views:", e.code, e.message);
     }
   };
 

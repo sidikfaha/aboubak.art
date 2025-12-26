@@ -6,7 +6,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   const firebaseConfig = config.public.firebase;
 
   const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app, "website");
+  // Use default database - remove "website" if you don't have a named database
+  const db = getFirestore(app);
 
   return {
     provide: {
