@@ -71,7 +71,7 @@
             <div class="w-5 h-4 relative flex flex-col justify-between">
               <span 
                 class="w-full h-0.5 bg-white transition-all origin-center"
-                :class="isMenuOpen ? 'rotate-45 translate-y-[7px]' : ''"
+                :class="isMenuOpen ? 'rotate-45 translate-y-1.75' : ''"
               ></span>
               <span 
                 class="w-full h-0.5 bg-white transition-all"
@@ -79,7 +79,7 @@
               ></span>
               <span 
                 class="w-full h-0.5 bg-white transition-all origin-center"
-                :class="isMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''"
+                :class="isMenuOpen ? '-rotate-45 -translate-y-1.75' : ''"
               ></span>
             </div>
           </button>

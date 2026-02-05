@@ -2,7 +2,7 @@
   <ClientOnly>
     <div 
       v-if="!isTouchDevice"
-      class="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference"
+      class="fixed top-0 left-0 pointer-events-none z-9999 mix-blend-difference"
       :style="cursorStyle"
     >
       <!-- Outer ring -->

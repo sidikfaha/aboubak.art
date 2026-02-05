@@ -71,7 +71,7 @@
           <h2 class="text-xl font-bold mb-4">Results & Impact</h2>
           <ul class="space-y-3">
             <li v-for="(result, i) in project.results" :key="i" class="flex items-start gap-3">
-              <Icon name="lucide:trending-up" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+              <Icon name="lucide:trending-up" class="w-5 h-5 text-accent shrink-0 mt-0.5" />
               <span>{{ result }}</span>
             </li>
           </ul>

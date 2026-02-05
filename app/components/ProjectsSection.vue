@@ -37,7 +37,7 @@
         >
           <NuxtLink :to="localePath(`/projects/${project.slug}`)" class="block">
             <!-- Image container -->
-            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-4">
+            <div class="relative aspect-4/3 rounded-2xl overflow-hidden mb-4">
               <img 
                 :src="project.image" 
                 :alt="project.title"
@@ -45,7 +45,7 @@
               />
               
               <!-- Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/20 to-transparent opacity-60"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-bg-primary via-bg-primary/20 to-transparent opacity-60"></div>
               
               <!-- Hover overlay -->
               <div class="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

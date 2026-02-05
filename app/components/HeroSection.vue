@@ -3,8 +3,8 @@
     <!-- Animated background -->
     <div class="absolute inset-0 z-0">
       <!-- Gradient orbs -->
-      <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px] animate-pulse-glow"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] animate-pulse-glow" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/4 left-1/4 w-150 h-150 bg-accent/10 rounded-full blur-[150px] animate-pulse-glow"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-100 h-100 bg-accent/5 rounded-full blur-[120px] animate-pulse-glow" style="animation-delay: 1s;"></div>
       
       <!-- Grid pattern -->
       <div class="absolute inset-0 bg-grid opacity-50"></div>
@@ -128,7 +128,7 @@
                   class="w-full h-full object-cover"
                 />
                 <!-- Overlay gradient -->
-                <div class="absolute inset-0 bg-gradient-to-t from-bg-primary/50 to-transparent"></div>
+                <div class="absolute inset-0 bg-linear-to-t from-bg-primary/50 to-transparent"></div>
               </div>
               
               <!-- Floating badges -->
@@ -152,7 +152,7 @@
     <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in" style="animation-delay: 1.2s; animation-fill-mode: forwards;">
       <span class="text-xs text-text-muted font-mono uppercase tracking-widest">Scroll</span>
-      <div class="w-px h-8 bg-gradient-to-b from-accent to-transparent"></div>
+      <div class="w-px h-8 bg-linear-to-b from-accent to-transparent"></div>
     </div>
   </section>
 </template>

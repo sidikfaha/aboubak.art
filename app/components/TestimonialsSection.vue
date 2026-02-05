@@ -33,7 +33,7 @@
         </button>
         
         <!-- Cards container -->
-        <div class="relative h-[400px] md:h-[350px]">
+        <div class="relative h-100 md:h-87.5">
           <div 
             v-for="(testimonial, i) in testimonials" 
             :key="i"

@@ -12,6 +12,12 @@ export default defineNuxtConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    css: {
+      devSourcemap: false
+    },
+    build: {
+      sourcemap: false
+    }
   },
   css: ["~/assets/css/tailwind.css"],
   i18n: {

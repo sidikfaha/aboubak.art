@@ -22,7 +22,7 @@
         <!-- Left: Image and quick info -->
         <div class="space-y-8">
           <div class="relative">
-            <div class="aspect-[4/5] rounded-2xl overflow-hidden">
+            <div class="aspect-4/5 rounded-2xl overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&crop=face"
                 alt="Aboubakar Sidik Faha"
@@ -80,7 +80,7 @@
             <h2 class="text-2xl font-bold mb-4">What I Do</h2>
             <ul class="space-y-3">
               <li v-for="(item, i) in expertise" :key="i" class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div class="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5">
                   <Icon name="lucide:check" class="w-3.5 h-3.5 text-accent" />
                 </div>
                 <span class="text-text-secondary">{{ item }}</span>
@@ -93,7 +93,7 @@
             <h2 class="text-2xl font-bold mb-4">Experience</h2>
             <div class="space-y-6">
               <div v-for="(job, i) in experience" :key="i" class="relative pl-6 border-l border-border">
-                <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-accent -translate-x-[5px]"></div>
+                <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-accent -translate-x-1.25"></div>
                 <div class="mb-1">
                   <span class="text-accent font-mono text-sm">{{ job.period }}</span>
                 </div>

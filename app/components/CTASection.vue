@@ -2,7 +2,7 @@
   <section ref="sectionRef" class="py-24 lg:py-32 relative overflow-hidden">
     <!-- Background effects -->
     <div class="absolute inset-0">
-      <div ref="glowRef" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px] opacity-0"></div>
+      <div ref="glowRef" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-accent/10 rounded-full blur-[150px] opacity-0"></div>
     </div>
     
     <Container class="relative z-10">

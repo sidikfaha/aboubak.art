@@ -40,12 +40,12 @@
           <div 
             class="relative p-6 lg:p-8 rounded-2xl border transition-all duration-500 overflow-hidden"
             :class="activeService === i 
-              ? 'bg-white/[0.03] border-accent/30' 
+              ? 'bg-white/3 border-accent/30' 
               : 'bg-transparent border-border hover:border-white/20'"
           >
             <!-- Background gradient on hover -->
             <div 
-              class="absolute inset-0 bg-gradient-to-r from-accent/5 to-transparent opacity-0 transition-opacity duration-500"
+              class="absolute inset-0 bg-linear-to-r from-accent/5 to-transparent opacity-0 transition-opacity duration-500"
               :class="{ 'opacity-100': activeService === i }"
             ></div>
             

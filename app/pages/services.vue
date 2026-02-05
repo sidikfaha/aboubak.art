@@ -36,7 +36,7 @@
           <!-- Features -->
           <ul class="space-y-2 mb-6">
             <li v-for="(feature, fi) in service.features" :key="fi" class="flex items-center gap-2 text-sm text-text-secondary">
-              <Icon name="lucide:check-circle" class="w-4 h-4 text-accent flex-shrink-0" />
+              <Icon name="lucide:check-circle" class="w-4 h-4 text-accent shrink-0" />
               <span>{{ feature }}</span>
             </li>
           </ul>
@@ -62,7 +62,7 @@
               <span class="text-2xl font-bold text-accent">0{{ i + 1 }}</span>
             </div>
             <!-- Connector line -->
-            <div v-if="i < 3" class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-accent/50 to-transparent"></div>
+            <div v-if="i < 3" class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-linear-to-r from-accent/50 to-transparent"></div>
             <!-- Content -->
             <h3 class="font-semibold mb-2">{{ step.title }}</h3>
             <p class="text-sm text-text-secondary">{{ step.desc }}</p>
