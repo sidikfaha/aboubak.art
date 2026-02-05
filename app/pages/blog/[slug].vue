@@ -41,7 +41,7 @@
         </div>
         
         <!-- Content -->
-        <div class="prose prose-invert prose-lg max-w-none">
+        <div class="prose">
           <ContentRenderer :value="post" />
         </div>
         
@@ -84,13 +84,14 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 
-const { data: post } = await useAsyncData(`blog-${route.params.slug}`, () => 
-  queryContent('blog')
-    .where({ 
-      _locale: locale.value,
-      _path: { $contains: route.params.slug }
-    })
-    .findOne()
+const collectionName = computed(() => `blog_${locale.value}`)
+
+const { data: post } = await useAsyncData(
+  `blog-${locale.value}-${route.params.slug}`,
+  () => queryCollection(collectionName.value)
+    .where('stem', 'LIKE', `%${route.params.slug}%`)
+    .first(),
+  { watch: [locale] }
 )
 
 useHead({

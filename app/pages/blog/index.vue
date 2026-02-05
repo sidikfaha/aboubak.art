@@ -19,7 +19,7 @@
       
       <!-- Featured post -->
       <div v-if="featuredPost" class="mb-16">
-        <NuxtLink :to="localePath(`/blog/${featuredPost._path.split('/').pop()}`)" class="group block">
+        <NuxtLink :to="localePath(`/blog/${featuredPost.stem.split('/').pop()}`)" class="group block">
           <div class="grid lg:grid-cols-2 gap-8 items-center">
             <div class="aspect-video rounded-2xl overflow-hidden">
               <img 
@@ -56,10 +56,10 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <article 
           v-for="post in posts" 
-          :key="post._path"
+          :key="post.stem"
           class="group"
         >
-          <NuxtLink :to="localePath(`/blog/${post._path.split('/').pop()}`)">
+          <NuxtLink :to="localePath(`/blog/${post.stem.split('/').pop()}`)">
             <div class="aspect-video rounded-xl overflow-hidden mb-4">
               <img 
                 :src="post.image" 
@@ -96,11 +96,12 @@ useHead({
   title: `${t('nav.blog')} | Aboubakar Sidik Faha`,
 })
 
-const { data: allPosts } = await useAsyncData('blog-posts', () => 
-  queryContent('blog')
-    .where({ _locale: locale.value })
-    .sort({ date: -1 })
-    .find()
+const collectionName = computed(() => `blog_${locale.value}`)
+
+const { data: allPosts } = await useAsyncData(
+  `blog-posts-${locale.value}`,
+  () => queryCollection(collectionName.value).order('date', 'DESC').all(),
+  { watch: [locale] }
 )
 
 const featuredPost = computed(() => allPosts.value?.[0])
