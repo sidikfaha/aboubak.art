@@ -1,6 +1,6 @@
 <template>
   <section ref="sectionRef" class="py-24 lg:py-32 relative overflow-hidden">
-    <div class="w-full px-6 lg:px-12">
+    <Container>
       <!-- Section header -->
       <div ref="headerRef" class="text-center max-w-2xl mx-auto mb-16 opacity-0">
         <div class="flex items-center justify-center gap-3 mb-4">
@@ -76,7 +76,7 @@
           ></button>
         </div>
       </div>
-    </div>
+    </Container>
   </section>
 </template>
 

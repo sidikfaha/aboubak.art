@@ -1,6 +1,6 @@
 <template>
   <section id="about" ref="sectionRef" class="py-24 lg:py-32">
-    <div class="w-full px-6 lg:px-12">
+    <Container>
       <!-- Section header -->
       <div ref="headerRef" class="max-w-3xl mb-16 opacity-0">
         <div class="flex items-center gap-3 mb-4">
@@ -62,7 +62,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   </section>
 </template>
 

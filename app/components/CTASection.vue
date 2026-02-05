@@ -5,7 +5,7 @@
       <div ref="glowRef" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px] opacity-0"></div>
     </div>
     
-    <div class="relative z-10 w-full px-6 lg:px-12">
+    <Container class="relative z-10">
       <div ref="contentRef" class="max-w-4xl mx-auto text-center opacity-0">
         <!-- Label -->
         <div class="flex items-center justify-center gap-3 mb-6">
@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   </section>
 </template>
 

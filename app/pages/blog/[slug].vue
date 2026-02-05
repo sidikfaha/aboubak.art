@@ -1,6 +1,6 @@
 <template>
   <div class="pt-32 pb-20">
-    <div class="w-full px-6 lg:px-12">
+    <Container>
       <!-- Back button -->
       <NuxtLink 
         :to="localePath('/blog')"
@@ -75,7 +75,7 @@
           <span>View All Articles</span>
         </NuxtLink>
       </div>
-    </div>
+    </Container>
   </div>
 </template>
 

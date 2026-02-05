@@ -1,6 +1,6 @@
 <template>
   <div class="pt-32 pb-20">
-    <div class="w-full px-6 lg:px-12">
+    <Container>
       <!-- Header -->
       <div class="max-w-4xl mb-16">
         <div class="flex items-center gap-3 mb-4">
@@ -154,7 +154,7 @@
           </form>
         </div>
       </div>
-    </div>
+    </Container>
   </div>
 </template>
 

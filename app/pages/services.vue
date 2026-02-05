@@ -1,6 +1,6 @@
 <template>
   <div class="pt-32 pb-20">
-    <div class="w-full px-6 lg:px-12">
+    <Container>
       <!-- Header -->
       <div class="max-w-4xl mb-20">
         <div class="flex items-center gap-3 mb-4">
@@ -82,7 +82,7 @@
           <Icon name="lucide:calendar" class="w-5 h-5" />
         </NuxtLink>
       </div>
-    </div>
+    </Container>
   </div>
 </template>
 

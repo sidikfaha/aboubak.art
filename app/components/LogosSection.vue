@@ -1,10 +1,10 @@
 <template>
   <section class="py-16 border-y border-border overflow-hidden">
-    <div class="w-full px-6 lg:px-12 mb-8">
-      <p class="text-center text-text-muted text-sm font-mono uppercase tracking-widest">
+    <Container>
+      <p class="text-center text-text-muted text-sm font-mono uppercase tracking-widest mb-8">
         {{ $t('logos.title') }}
       </p>
-    </div>
+    </Container>
     
     <!-- Infinite marquee -->
     <div class="relative">

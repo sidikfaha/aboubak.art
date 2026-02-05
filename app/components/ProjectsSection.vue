@@ -1,6 +1,6 @@
 <template>
   <section id="projects" ref="sectionRef" class="py-24 lg:py-32">
-    <div class="w-full px-6 lg:px-12">
+    <Container>
       <!-- Section header -->
       <div ref="headerRef" class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 opacity-0">
         <div class="max-w-2xl">
@@ -88,7 +88,7 @@
           </NuxtLink>
         </div>
       </div>
-    </div>
+    </Container>
   </section>
 </template>
 
