@@ -4,29 +4,33 @@
       <!-- Back button - Pill -->
       <NuxtLink 
         :to="localePath('/projects')"
-        class="inline-flex items-center gap-2 px-4 py-2 text-text-secondary hover:text-white hover:bg-slate-800/50 rounded-full transition-all mb-8 border border-transparent hover:border-slate-700/50"
+        class="inline-flex items-center gap-2 px-4 py-2 text-text-secondary hover:text-white hover:bg-slate-800/50 rounded-full transition-all mb-8 border border-transparent hover:border-slate-700/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
+        aria-label="Back to all projects"
       >
-        <Icon name="lucide:arrow-left" class="w-4 h-4" />
+        <Icon name="lucide:arrow-left" class="w-4 h-4" aria-hidden="true" />
         <span>Back to Projects</span>
       </NuxtLink>
       
       <!-- Project content -->
       <article v-if="project" class="max-w-4xl mx-auto">
         <!-- Header -->
-        <div class="mb-8">
+        <header class="mb-8">
           <span class="inline-block px-4 py-1.5 bg-accent/10 text-accent text-sm font-medium rounded-full border border-accent/20 mb-4">
             {{ project.category }}
           </span>
           <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ project.title }}</h1>
           <p class="text-text-secondary text-lg">{{ project.description }}</p>
-        </div>
+        </header>
         
         <!-- Hero image -->
         <div class="aspect-video rounded-2xl overflow-hidden mb-12">
           <img 
             :src="project.image" 
-            :alt="project.title"
+            :alt="`Screenshot of ${project.title} project`"
             class="w-full h-full object-cover"
+            loading="eager"
+            width="1200"
+            height="675"
           />
         </div>
         
@@ -47,8 +51,8 @@
         </div>
         
         <!-- Tech stack -->
-        <div class="mb-12">
-          <h2 class="text-xl font-bold mb-4">Technologies Used</h2>
+        <section class="mb-12" aria-labelledby="tech-heading">
+          <h2 id="tech-heading" class="text-xl font-bold mb-4">Technologies Used</h2>
           <!-- Tech stack - Pills -->
           <div class="flex flex-wrap gap-2">
             <span 
@@ -59,33 +63,34 @@
               {{ tech }}
             </span>
           </div>
-        </div>
+        </section>
         
         <!-- Full description -->
-        <div class="prose prose-invert prose-lg max-w-none">
+        <section class="prose prose-invert prose-lg max-w-none" aria-labelledby="description-heading">
+          <h2 id="description-heading" class="sr-only">Project Description</h2>
           <div v-html="project.fullDescription"></div>
-        </div>
+        </section>
         
         <!-- Results/Impact -->
-        <div v-if="project.results" class="mt-12 p-8 glass rounded-2xl">
-          <h2 class="text-xl font-bold mb-4">Results & Impact</h2>
+        <section v-if="project.results" class="mt-12 p-8 glass rounded-2xl" aria-labelledby="results-heading">
+          <h2 id="results-heading" class="text-xl font-bold mb-4">Results & Impact</h2>
           <ul class="space-y-3">
             <li v-for="(result, i) in project.results" :key="i" class="flex items-start gap-3">
-              <Icon name="lucide:trending-up" class="w-5 h-5 text-accent shrink-0 mt-0.5" />
+              <Icon name="lucide:trending-up" class="w-5 h-5 text-accent shrink-0 mt-0.5" aria-hidden="true" />
               <span>{{ result }}</span>
             </li>
           </ul>
-        </div>
+        </section>
       </article>
       
       <!-- Not found -->
       <div v-else class="text-center py-20">
-        <Icon name="lucide:file-x" class="w-16 h-16 text-text-muted mx-auto mb-4" />
+        <Icon name="lucide:file-x" class="w-16 h-16 text-text-muted mx-auto mb-4" aria-hidden="true" />
         <h2 class="text-2xl font-bold mb-2">Project Not Found</h2>
         <p class="text-text-secondary mb-6">The project you're looking for doesn't exist.</p>
         <NuxtLink 
           :to="localePath('/projects')"
-          class="inline-flex items-center gap-2 px-8 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
         >
           <span>View All Projects</span>
         </NuxtLink>
@@ -95,7 +100,7 @@
 </template>
 
 <script setup>
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 
@@ -226,7 +231,23 @@ const projects = {
 
 const project = computed(() => projects[route.params.slug])
 
-useHead({
-  title: project.value ? `${project.value.title} | Projects` : 'Project Not Found',
+// SEO for project detail page
+usePageSeo({
+  title: project.value ? `${project.value.title} | Case Study` : 'Project Not Found',
+  description: project.value ? project.value.description : 'The requested project could not be found.',
+  type: 'article',
+  image: project.value ? project.value.image : undefined,
+  imageAlt: project.value ? project.value.title : undefined,
+  publishedTime: project.value ? `${project.value.year}-01-01T00:00:00Z` : undefined,
+  author: 'Aboubakar Sidik Faha',
+  tags: project.value ? project.value.tech : [],
+  locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
 })
+
+// Breadcrumb schema
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Projects', url: '/projects' },
+  { name: project.value ? project.value.title : 'Project', url: project.value ? `/projects/${route.params.slug}` : undefined },
+])
 </script>

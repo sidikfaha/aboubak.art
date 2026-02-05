@@ -4,23 +4,24 @@
       <!-- Back button - Pill -->
       <NuxtLink 
         :to="localePath('/blog')"
-        class="inline-flex items-center gap-2 px-4 py-2 text-text-secondary hover:text-white hover:bg-slate-800/50 rounded-full transition-all mb-8 border border-transparent hover:border-slate-700/50"
+        class="inline-flex items-center gap-2 px-4 py-2 text-text-secondary hover:text-white hover:bg-slate-800/50 rounded-full transition-all mb-8 border border-transparent hover:border-slate-700/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
+        aria-label="Back to all articles"
       >
-        <Icon name="lucide:arrow-left" class="w-4 h-4" />
+        <Icon name="lucide:arrow-left" class="w-4 h-4" aria-hidden="true" />
         <span>Back to Blog</span>
       </NuxtLink>
       
       <article v-if="post" class="max-w-3xl mx-auto">
         <!-- Header -->
         <header class="mb-12">
-          <div class="flex items-center gap-3 mb-6">
+          <div class="flex items-center gap-3 mb-6 flex-wrap">
             <span class="px-4 py-1.5 bg-accent/10 text-accent text-sm font-medium rounded-full border border-accent/20">
               {{ post.category }}
             </span>
-            <span class="text-text-muted">
+            <time :datetime="post.date" class="text-text-muted">
               {{ formatDate(post.date) }}
-            </span>
-            <span class="text-text-muted">•</span>
+            </time>
+            <span class="text-text-muted" aria-hidden="true">•</span>
             <span class="text-text-muted">{{ post.readTime }} min read</span>
           </div>
           <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -35,8 +36,11 @@
         <div class="aspect-video rounded-2xl overflow-hidden mb-12">
           <img 
             :src="post.image" 
-            :alt="post.title"
+            :alt="`Featured image for ${post.title}`"
             class="w-full h-full object-cover"
+            loading="eager"
+            width="1200"
+            height="675"
           />
         </div>
         
@@ -46,13 +50,15 @@
         </div>
         
         <!-- Author section -->
-        <div class="mt-16 p-8 glass rounded-2xl">
+        <footer class="mt-16 p-8 glass rounded-2xl">
           <div class="flex items-center gap-4">
             <div class="w-16 h-16 rounded-full overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
                 alt="Aboubakar Sidik Faha"
                 class="w-full h-full object-cover"
+                width="64"
+                height="64"
               />
             </div>
             <div>
@@ -60,17 +66,17 @@
               <div class="text-text-secondary">DevOps Engineer & Software Architect</div>
             </div>
           </div>
-        </div>
+        </footer>
       </article>
       
       <!-- Not found -->
       <div v-else class="text-center py-20">
-        <Icon name="lucide:file-x" class="w-16 h-16 text-text-muted mx-auto mb-4" />
+        <Icon name="lucide:file-x" class="w-16 h-16 text-text-muted mx-auto mb-4" aria-hidden="true" />
         <h2 class="text-2xl font-bold mb-2">Article Not Found</h2>
         <p class="text-text-secondary mb-6">The article you're looking for doesn't exist.</p>
         <NuxtLink 
           :to="localePath('/blog')"
-          class="inline-flex items-center gap-2 px-8 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
         >
           <span>View All Articles</span>
         </NuxtLink>
@@ -94,9 +100,25 @@ const { data: post } = await useAsyncData(
   { watch: [locale] }
 )
 
-useHead({
-  title: post.value ? `${post.value.title} | Blog` : 'Article Not Found',
+// SEO for blog post
+usePageSeo({
+  title: post.value ? post.value.title : 'Article Not Found',
+  description: post.value ? post.value.description : 'The requested article could not be found.',
+  type: 'article',
+  image: post.value ? post.value.image : undefined,
+  imageAlt: post.value ? post.value.title : undefined,
+  publishedTime: post.value ? post.value.date : undefined,
+  author: 'Aboubakar Sidik Faha',
+  tags: post.value ? [post.value.category] : [],
+  locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
 })
+
+// Breadcrumb schema
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Blog', url: '/blog' },
+  { name: post.value ? post.value.title : 'Article', url: post.value ? `/blog/${route.params.slug}` : undefined },
+])
 
 const formatDate = (date) => {
   return new Date(date).toLocaleDateString(locale.value === 'fr' ? 'fr-FR' : 'en-US', {

@@ -1,0 +1,10 @@
+/* TEAM */
+Developer: Aboubakar Sidik Faha
+Site: https://aboubak.art
+Location: Abidjan, Ivory Coast
+
+/* SITE */
+Last update: 2026-02-05
+Standards: HTML5, CSS3, ES2022
+Components: Nuxt 3, Vue 3, Tailwind CSS
+Software: VS Code, Node.js

@@ -19,13 +19,13 @@
       
       <!-- Services grid -->
       <div class="grid md:grid-cols-2 gap-6 mb-20">
-        <div 
+        <article 
           v-for="(service, i) in services" 
           :key="i"
           class="group relative p-8 rounded-2xl glass glass-hover transition-all duration-500 hover:-translate-y-2"
         >
           <!-- Icon -->
-          <div class="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
+          <div class="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300" aria-hidden="true">
             <Icon :name="service.icon" class="w-8 h-8 text-accent" />
           </div>
           
@@ -34,9 +34,9 @@
           <p class="text-text-secondary leading-relaxed mb-6">{{ $t(service.desc) }}</p>
           
           <!-- Features -->
-          <ul class="space-y-2 mb-6">
+          <ul class="space-y-2 mb-6" :aria-label="`Features of ${$t(service.title)}`">
             <li v-for="(feature, fi) in service.features" :key="fi" class="flex items-center gap-2 text-sm text-text-secondary">
-              <Icon name="lucide:check-circle" class="w-4 h-4 text-accent shrink-0" />
+              <Icon name="lucide:check-circle" class="w-4 h-4 text-accent shrink-0" aria-hidden="true" />
               <span>{{ feature }}</span>
             </li>
           </ul>
@@ -44,55 +44,67 @@
           <!-- Link - Pill -->
           <NuxtLink 
             :to="localePath('/contact')"
-            class="inline-flex items-center gap-2 px-4 py-2 text-accent hover:text-white hover:bg-accent/10 border border-accent/30 hover:border-accent/50 rounded-full transition-all"
+            class="inline-flex items-center gap-2 px-4 py-2 text-accent hover:text-white hover:bg-accent/10 border border-accent/30 hover:border-accent/50 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
+            :aria-label="`Discuss your ${$t(service.title)} project`"
           >
             <span class="font-medium">Discuss your project</span>
-            <Icon name="lucide:arrow-right" class="w-4 h-4" />
+            <Icon name="lucide:arrow-right" class="w-4 h-4" aria-hidden="true" />
           </NuxtLink>
-        </div>
+        </article>
       </div>
       
       <!-- Process section -->
-      <div class="mb-20">
-        <h2 class="text-3xl font-bold text-center mb-12">How I Work</h2>
+      <section class="mb-20" aria-labelledby="process-heading">
+        <h2 id="process-heading" class="text-3xl font-bold text-center mb-12">How I Work</h2>
         <div class="grid md:grid-cols-4 gap-6">
           <div v-for="(step, i) in process" :key="i" class="relative text-center">
             <!-- Number -->
-            <div class="w-16 h-16 mx-auto rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
+            <div class="w-16 h-16 mx-auto rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4" aria-hidden="true">
               <span class="text-2xl font-bold text-accent">0{{ i + 1 }}</span>
             </div>
             <!-- Connector line -->
-            <div v-if="i < 3" class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-linear-to-r from-accent/50 to-transparent"></div>
+            <div v-if="i < 3" class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-linear-to-r from-accent/50 to-transparent" aria-hidden="true"></div>
             <!-- Content -->
             <h3 class="font-semibold mb-2">{{ step.title }}</h3>
             <p class="text-sm text-text-secondary">{{ step.desc }}</p>
           </div>
         </div>
-      </div>
+      </section>
       
       <!-- CTA -->
-      <div class="text-center">
-        <h2 class="text-2xl font-bold mb-4">Ready to start your project?</h2>
+      <section class="text-center" aria-labelledby="cta-heading">
+        <h2 id="cta-heading" class="text-2xl font-bold mb-4">Ready to start your project?</h2>
         <p class="text-text-secondary mb-8">Let's discuss how I can help you achieve your goals.</p>
         <NuxtLink
           :to="localePath('/contact')"
-          class="inline-flex items-center gap-2 px-10 py-4 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
+          class="inline-flex items-center gap-2 px-10 py-4 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
+          aria-label="Schedule a consultation"
         >
           <span>Schedule a Consultation</span>
-          <Icon name="lucide:calendar" class="w-5 h-5" />
+          <Icon name="lucide:calendar" class="w-5 h-5" aria-hidden="true" />
         </NuxtLink>
-      </div>
+      </section>
     </Container>
   </div>
 </template>
 
 <script setup>
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-useHead({
-  title: `${t('nav.services')} | Aboubakar Sidik Faha`,
+// SEO for services page
+usePageSeo({
+  title: 'Services | DevOps & Software Architecture',
+  description: 'Professional DevOps and software architecture services: Cloud infrastructure, CI/CD automation, AI/ML solutions, and full-stack web development. Based in Abidjan, Ivory Coast, serving clients worldwide.',
+  type: 'website',
+  locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
 })
+
+// Breadcrumb schema
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Services', url: '/services' },
+])
 
 const services = [
   {

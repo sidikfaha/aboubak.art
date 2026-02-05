@@ -11,12 +11,22 @@
 </template>
 
 <script setup>
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
-useHead({
-  title: `${t('hero.name')} | DevOps & Software Architect`,
-  meta: [
-    { name: 'description', content: t('hero.description') }
-  ]
+// SEO for home page
+usePageSeo({
+  title: t('hero.name') + ' | DevOps & Software Architect',
+  description: t('hero.description'),
+  type: 'profile',
+  locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
+  alternateLocales: ['en_US', 'fr_FR'],
 })
+
+// Local business schema for the home page
+useLocalBusinessSchema()
+
+// Breadcrumb schema
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+])
 </script>

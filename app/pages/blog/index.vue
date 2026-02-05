@@ -18,14 +18,17 @@
       </div>
       
       <!-- Featured post -->
-      <div v-if="featuredPost" class="mb-16">
+      <article v-if="featuredPost" class="mb-16">
         <NuxtLink :to="localePath(`/blog/${featuredPost.stem.split('/').pop()}`)" class="group block">
           <div class="grid lg:grid-cols-2 gap-8 items-center">
             <div class="aspect-video rounded-2xl overflow-hidden">
               <img 
                 :src="featuredPost.image" 
-                :alt="featuredPost.title"
+                :alt="`Featured image for ${featuredPost.title}`"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="eager"
+                width="800"
+                height="450"
               />
             </div>
             <div>
@@ -33,9 +36,9 @@
                 <span class="px-4 py-1.5 bg-accent/10 text-accent text-xs font-medium rounded-full border border-accent/20">
                   {{ featuredPost.category }}
                 </span>
-                <span class="text-text-muted text-sm">
+                <time :datetime="featuredPost.date" class="text-text-muted text-sm">
                   {{ formatDate(featuredPost.date) }}
-                </span>
+                </time>
               </div>
               <h2 class="text-2xl md:text-3xl font-bold mb-4 group-hover:text-accent transition-colors">
                 {{ featuredPost.title }}
@@ -45,35 +48,43 @@
               </p>
               <span class="inline-flex items-center gap-2 text-accent font-medium">
                 {{ $t('blog.read_more') }}
-                <Icon name="lucide:arrow-right" class="w-4 h-4" />
+                <Icon name="lucide:arrow-right" class="w-4 h-4" aria-hidden="true" />
               </span>
             </div>
           </div>
         </NuxtLink>
-      </div>
+      </article>
       
       <!-- Blog grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div 
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        role="list"
+        aria-label="Blog posts"
+      >
         <article 
           v-for="post in posts" 
           :key="post.stem"
           class="group"
+          role="listitem"
         >
           <NuxtLink :to="localePath(`/blog/${post.stem.split('/').pop()}`)">
             <div class="aspect-video rounded-xl overflow-hidden mb-4">
               <img 
                 :src="post.image" 
-                :alt="post.title"
+                :alt="`Featured image for ${post.title}`"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+                width="600"
+                height="338"
               />
             </div>
             <div class="flex items-center gap-3 mb-3">
               <span class="text-accent text-xs font-mono">
                 {{ post.category }}
               </span>
-              <span class="text-text-muted text-xs">
+              <time :datetime="post.date" class="text-text-muted text-xs">
                 {{ formatDate(post.date) }}
-              </span>
+              </time>
             </div>
             <h3 class="text-lg font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
               {{ post.title }}
@@ -92,9 +103,19 @@
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-useHead({
-  title: `${t('nav.blog')} | Aboubakar Sidik Faha`,
+// SEO for blog page
+usePageSeo({
+  title: 'Blog | DevOps, Cloud & Architecture Insights',
+  description: 'Explore articles on DevOps practices, cloud architecture, software engineering, AI/ML integration, and modern development strategies. Insights from a seasoned DevOps Engineer.',
+  type: 'website',
+  locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
 })
+
+// Breadcrumb schema
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Blog', url: '/blog' },
+])
 
 const collectionName = computed(() => `blog_${locale.value}`)
 

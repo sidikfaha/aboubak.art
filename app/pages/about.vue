@@ -25,8 +25,11 @@
             <div class="aspect-4/5 rounded-2xl overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&crop=face"
-                alt="Aboubakar Sidik Faha"
+                alt="Aboubakar Sidik Faha - DevOps Engineer and Software Architect"
                 class="w-full h-full object-cover"
+                loading="eager"
+                width="800"
+                height="1000"
               />
             </div>
             <!-- Decorative elements -->
@@ -54,8 +57,8 @@
         <!-- Right: Detailed content -->
         <div class="space-y-12">
           <!-- Bio -->
-          <div>
-            <h2 class="text-2xl font-bold mb-4">My Story</h2>
+          <section aria-labelledby="bio-heading">
+            <h2 id="bio-heading" class="text-2xl font-bold mb-4">My Story</h2>
             <div class="space-y-4 text-text-secondary leading-relaxed">
               <p>
                 Based in Abidjan, Côte d'Ivoire, I'm a passionate DevOps Engineer and Software Architect 
@@ -73,11 +76,11 @@
                 both locally and internationally, delivering enterprise-grade solutions with a personal touch.
               </p>
             </div>
-          </div>
+          </section>
           
           <!-- What I do -->
-          <div>
-            <h2 class="text-2xl font-bold mb-4">What I Do</h2>
+          <section aria-labelledby="expertise-heading">
+            <h2 id="expertise-heading" class="text-2xl font-bold mb-4">What I Do</h2>
             <ul class="space-y-3">
               <li v-for="(item, i) in expertise" :key="i" class="flex items-start gap-3">
                 <div class="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5">
@@ -86,11 +89,11 @@
                 <span class="text-text-secondary">{{ item }}</span>
               </li>
             </ul>
-          </div>
+          </section>
           
           <!-- Experience -->
-          <div>
-            <h2 class="text-2xl font-bold mb-4">Experience</h2>
+          <section aria-labelledby="experience-heading">
+            <h2 id="experience-heading" class="text-2xl font-bold mb-4">Experience</h2>
             <div class="space-y-6">
               <div v-for="(job, i) in experience" :key="i" class="relative pl-6 border-l border-border">
                 <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-accent -translate-x-1.25"></div>
@@ -101,13 +104,14 @@
                 <p class="text-text-muted text-sm">{{ job.company }}</p>
               </div>
             </div>
-          </div>
+          </section>
           
           <!-- CTA - Pills -->
           <div class="flex flex-wrap gap-4 pt-4">
             <NuxtLink
               :to="localePath('/contact')"
-              class="flex items-center gap-2 px-7 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
+              class="flex items-center gap-2 px-7 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
+              aria-label="Get in touch - Contact page"
             >
               <span>Get in Touch</span>
               <Icon name="lucide:arrow-right" class="w-4 h-4" />
@@ -115,7 +119,9 @@
             <a
               href="/cv.pdf"
               target="_blank"
-              class="flex items-center gap-2 px-7 py-3.5 bg-slate-800/50 hover:bg-slate-800 text-white font-medium rounded-full transition-all border border-slate-700/50"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 px-7 py-3.5 bg-slate-800/50 hover:bg-slate-800 text-white font-medium rounded-full transition-all border border-slate-700/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
+              aria-label="Download CV - Opens in new tab"
             >
               <span>Download CV</span>
               <Icon name="lucide:download" class="w-4 h-4" />
@@ -128,12 +134,22 @@
 </template>
 
 <script setup>
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-useHead({
-  title: `${t('nav.about')} | Aboubakar Sidik Faha`,
+// SEO for about page
+usePageSeo({
+  title: 'About Me | Aboubakar Sidik Faha',
+  description: 'Learn about Aboubakar Sidik Faha, a DevOps Engineer and Software Architect with 7+ years of experience in cloud infrastructure, automation, and modern software architecture based in Abidjan, Ivory Coast.',
+  type: 'profile',
+  locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
 })
+
+// Breadcrumb schema
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' },
+])
 
 const expertise = [
   'Design and implement scalable cloud infrastructure on AWS, Azure, and GCP',

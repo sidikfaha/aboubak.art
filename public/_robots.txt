@@ -1,0 +1,15 @@
+# robots.txt for aboubak.art
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow specific paths
+Disallow: /_nuxt
+Disallow: /api
+Disallow: /error
+
+# Sitemap location
+Sitemap: https://aboubak.art/sitemap.xml
+
+# Crawl delay (optional, remove if not needed)
+# Crawl-delay: 10

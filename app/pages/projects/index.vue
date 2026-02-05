@@ -18,34 +18,47 @@
       </div>
       
       <!-- Filters -->
-      <div class="flex flex-wrap gap-2 mb-12">
+      <div 
+        class="flex flex-wrap gap-2 mb-12" 
+        role="group" 
+        aria-label="Filter projects by category"
+      >
         <button
           v-for="filter in filters" 
           :key="filter"
           @click="activeFilter = filter"
-          class="px-4 py-2 rounded-full text-sm font-medium transition-all"
+          class="px-4 py-2 rounded-full text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
           :class="activeFilter === filter 
             ? 'bg-accent text-white' 
             : 'glass text-text-secondary hover:text-white hover:bg-white/5'"
+          :aria-pressed="activeFilter === filter"
         >
           {{ filter }}
         </button>
       </div>
       
       <!-- Projects grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div 
+      <div 
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" 
+        role="list" 
+        aria-label="Portfolio projects"
+      >
+        <article 
           v-for="(project, i) in filteredProjects" 
           :key="i"
           class="group relative"
+          role="listitem"
         >
           <NuxtLink :to="localePath(`/projects/${project.slug}`)" class="block">
             <!-- Image container -->
             <div class="relative aspect-4/3 rounded-2xl overflow-hidden mb-4">
               <img 
                 :src="project.image" 
-                :alt="project.title"
+                :alt="`Screenshot of ${project.title} project`"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+                width="800"
+                height="600"
               />
               <div class="absolute inset-0 bg-linear-to-t from-bg-primary via-bg-primary/20 to-transparent opacity-60"></div>
               <div class="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -66,14 +79,14 @@
             </div>
             
             <!-- Content -->
-            <h3 class="text-xl font-semibold group-hover:text-accent transition-colors mb-2">
+            <h2 class="text-xl font-semibold group-hover:text-accent transition-colors mb-2">
               {{ project.title }}
-            </h3>
+            </h2>
             <p class="text-text-secondary text-sm line-clamp-2 mb-3">
               {{ project.description }}
             </p>
             <!-- Tech stack - Pills -->
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2" aria-label="Technologies used">
               <span 
                 v-for="tech in project.tech" 
                 :key="tech"
@@ -83,19 +96,29 @@
               </span>
             </div>
           </NuxtLink>
-        </div>
+        </article>
       </div>
     </Container>
   </div>
 </template>
 
 <script setup>
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-useHead({
-  title: `${t('nav.projects')} | Aboubakar Sidik Faha`,
+// SEO for projects page
+usePageSeo({
+  title: 'Portfolio | DevOps & Software Projects',
+  description: 'Explore my portfolio of cloud infrastructure, DevOps automation, AI/ML solutions, and full-stack web development projects. Enterprise-grade solutions for global clients.',
+  type: 'website',
+  locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
 })
+
+// Breadcrumb schema
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Projects', url: '/projects' },
+])
 
 const activeFilter = ref('All')
 const filters = ['All', 'Cloud', 'AI/ML', 'DevOps', 'Web']

@@ -5,6 +5,7 @@
       'py-8': !isScrolled, 
       'py-4': isScrolled 
     }"
+    role="banner"
   >
     <Container>
       <div class="flex items-center justify-between lg:justify-center gap-6">
@@ -12,6 +13,7 @@
         <NuxtLink 
           :to="localePath('/')" 
           class="relative z-50 flex items-center gap-2 group lg:hidden"
+          aria-label="Home - Aboubakar Sidik Faha"
         >
           <div class="w-10 h-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
             <span class="text-accent font-bold text-lg font-mono">SF</span>
@@ -22,16 +24,21 @@
         </NuxtLink>
         
         <!-- Desktop Navigation - Pills -->
-        <nav class="hidden lg:flex items-center gap-1 p-1 rounded-full bg-slate-900/50 border border-slate-800/50 backdrop-blur-sm">
+        <nav 
+          class="hidden lg:flex items-center gap-1 p-1 rounded-full bg-slate-900/50 border border-slate-800/50 backdrop-blur-sm"
+          role="navigation"
+          aria-label="Main navigation"
+        >
           <NuxtLink 
             v-for="item in navItems" 
             :key="item.path"
             :to="localePath(item.path)"
-            class="px-5 py-2 text-sm font-medium rounded-full transition-all duration-300"
+            class="px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
             :class="isActiveRoute(item.path)
               ? 'bg-accent text-white shadow-lg shadow-accent/25'
               : 'text-text-secondary hover:text-white hover:bg-slate-800/50'
             "
+            :aria-current="isActiveRoute(item.path) ? 'page' : undefined"
           >
             {{ $t(item.label) }}
           </NuxtLink>
@@ -40,33 +47,42 @@
         <!-- Right side -->
         <div class="flex items-center gap-3">
           <!-- Language switcher - Pills -->
-          <div class="hidden sm:flex items-center gap-1 p-1 rounded-full bg-slate-900/50 border border-slate-800/50 backdrop-blur-sm">
+          <nav 
+            class="hidden sm:flex items-center gap-1 p-1 rounded-full bg-slate-900/50 border border-slate-800/50 backdrop-blur-sm"
+            role="navigation"
+            aria-label="Language switcher"
+          >
             <button
-              v-for="locale in availableLocales"
-              :key="locale.code"
-              @click="switchLocale(locale.code)"
-              class="px-3 py-1.5 text-xs font-medium rounded-full transition-all"
-              :class="currentLocale === locale.code 
+              v-for="loc in availableLocales"
+              :key="loc.code"
+              @click="switchLocale(loc.code)"
+              class="px-3 py-1.5 text-xs font-medium rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
+              :class="currentLocale === loc.code 
                 ? 'bg-slate-700 text-white' 
                 : 'text-text-muted hover:text-white hover:bg-slate-800/50'"
+              :aria-label="`Switch to ${loc.name}`"
+              :aria-pressed="currentLocale === loc.code"
             >
-              {{ locale.code.toUpperCase() }}
+              {{ loc.code.toUpperCase() }}
             </button>
-          </div>
+          </nav>
           
           <!-- CTA Button - Pill -->
           <NuxtLink
             :to="localePath('/contact')"
-            class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-dark text-white text-sm font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
+            class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-dark text-white text-sm font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
           >
             <span>{{ $t('hero.cta_primary') }}</span>
-            <Icon name="lucide:arrow-right" class="w-4 h-4" />
+            <Icon name="lucide:arrow-right" class="w-4 h-4" aria-hidden="true" />
           </NuxtLink>
           
           <!-- Mobile menu button -->
           <button 
-            class="lg:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-800/50 transition-colors"
+            class="lg:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-800/50 transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
             @click="isMenuOpen = !isMenuOpen"
+            :aria-expanded="isMenuOpen"
+            aria-controls="mobile-menu"
+            aria-label="Toggle navigation menu"
           >
             <div class="w-5 h-4 relative flex flex-col justify-between">
               <span 
@@ -98,17 +114,22 @@
     >
       <div 
         v-if="isMenuOpen" 
+        id="mobile-menu"
         class="fixed inset-0 bg-bg-primary/98 backdrop-blur-xl z-40 lg:hidden"
+        role="dialog"
+        aria-label="Mobile navigation"
       >
-        <div class="flex flex-col items-center justify-center h-full gap-3">
+        <nav class="flex flex-col items-center justify-center h-full gap-3" role="navigation" aria-label="Mobile menu">
           <NuxtLink 
             v-for="item in navItems" 
             :key="item.path"
             :to="localePath(item.path)"
-            class="px-8 py-3 text-lg font-medium rounded-full transition-all"
+            class="px-8 py-3 text-lg font-medium rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
             :class="isActiveRoute(item.path)
               ? 'bg-accent text-white shadow-lg shadow-accent/25'
-              : 'text-white hover:text-accent hover:bg-slate-800/50'"
+              : 'text-white hover:text-accent hover:bg-slate-800/50'
+            "
+            :aria-current="isActiveRoute(item.path) ? 'page' : undefined"
             @click="isMenuOpen = false"
           >
             {{ $t(item.label) }}
@@ -116,7 +137,7 @@
           
           <NuxtLink
             :to="localePath('/contact')"
-            class="mt-4 px-8 py-3 bg-accent text-white font-medium rounded-full shadow-lg shadow-accent/25"
+            class="mt-4 px-8 py-3 bg-accent text-white font-medium rounded-full shadow-lg shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
             @click="isMenuOpen = false"
           >
             {{ $t('hero.cta_primary') }}
@@ -125,18 +146,20 @@
           <!-- Language switcher - Pills -->
           <div class="flex items-center gap-2 mt-8 p-1 rounded-full bg-slate-900/50 border border-slate-800/50">
             <button
-              v-for="locale in availableLocales"
-              :key="locale.code"
-              @click="switchLocale(locale.code)"
-              class="px-4 py-2 text-sm font-medium rounded-full transition-all"
-              :class="currentLocale === locale.code 
+              v-for="loc in availableLocales"
+              :key="loc.code"
+              @click="switchLocale(loc.code)"
+              class="px-4 py-2 text-sm font-medium rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
+              :class="currentLocale === loc.code 
                 ? 'bg-slate-700 text-white' 
                 : 'text-text-muted hover:text-white'"
+              :aria-label="`Switch to ${loc.name}`"
+              :aria-pressed="currentLocale === loc.code"
             >
-              {{ locale.name }}
+              {{ loc.name }}
             </button>
           </div>
-        </div>
+        </nav>
       </div>
     </Transition>
   </header>

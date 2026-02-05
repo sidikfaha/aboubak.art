@@ -14,6 +14,10 @@
     "@nuxt/eslint": "^1.13.0",
     "@nuxt/icon": "^2.2.1",
     "@nuxtjs/i18n": "^10.2.1",
+    "@nuxtjs/robots": "^5.7.0",
+    "@nuxtjs/seo": "^3.4.0",
+    "@nuxtjs/sitemap": "^7.6.0",
+    "@nuxtjs/web-vitals": "^0.2.7",
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.1.18",
     "better-sqlite3": "^12.6.2",
@@ -21,6 +25,7 @@
     "gsap": "^3.14.2",
     "lucide-vue-next": "^0.563.0",
     "nuxt": "^4.3.0",
+    "nuxt-og-image": "^5.1.13",
     "tailwindcss": "^4.1.18",
     "vue": "^3.5.27",
     "vue-router": "^4.6.4"
