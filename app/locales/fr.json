@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "projects": "Projets",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Aboubakar Sidik Faha",
+    "title": "Ingénieur DevOps & Architecte Logiciel",
+    "location": "Abidjan, Côte d'Ivoire",
+    "description": "Transformer les visions digitales en réalité avec des solutions innovantes et sur mesure. Expertise en infrastructure cloud, pratiques DevOps et architecture logicielle évolutive.",
+    "cta_primary": "Discutons",
+    "cta_secondary": "Voir Mes Réalisations",
+    "stats_projects": "Projets Réalisés",
+    "stats_satisfaction": "Satisfaction Client",
+    "stats_experience": "Années d'Expérience"
+  },
+  "logos": {
+    "title": "Fait Confiance par des Entreprises Innovantes"
+  },
+  "about": {
+    "title": "Innovateur Digital & Architecte de Solutions",
+    "subtitle": "À Propos",
+    "description": "Passionné par l'innovation technologique, je transforme les défis complexes en solutions élégantes et performantes. Mon approche combine une expertise technique de pointe avec une vision stratégique pour créer des expériences digitales exceptionnelles.",
+    "cards": {
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Technologies de pointe et solutions avant-gardistes"
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "desc": "Approche agile et communication transparente"
+      },
+      "development": {
+        "title": "Développement",
+        "desc": "Applications web modernes avec les meilleures pratiques"
+      },
+      "ai_ml": {
+        "title": "IA & ML",
+        "desc": "Systèmes intelligents et automatisation"
+      },
+      "strategy": {
+        "title": "Stratégie",
+        "desc": "Conseil en transformation digitale"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "desc": "Livraison et support axés sur la qualité"
+      }
+    }
+  },
+  "services": {
+    "title": "Services Premium",
+    "subtitle": "Ce Que Je Fais",
+    "description": "Des solutions technologiques personnalisées pour propulser votre entreprise",
+    "items": {
+      "web_dev": {
+        "title": "Développement Web",
+        "desc": "Développement full-stack d'applications web modernes utilisant des technologies de pointe comme Nuxt, Next.js et Node.js. Du concept au déploiement."
+      },
+      "cloud": {
+        "title": "Architecture Cloud",
+        "desc": "Conception et mise en œuvre d'infrastructure cloud évolutive sur AWS, Azure et GCP. Architecture microservices et solutions serverless."
+      },
+      "ai": {
+        "title": "Solutions IA",
+        "desc": "Intégration de l'intelligence artificielle et du machine learning dans vos produits. Automatisation, analyse prédictive et systèmes intelligents."
+      },
+      "devops": {
+        "title": "Automatisation DevOps",
+        "desc": "Mise en place de pipelines CI/CD, infrastructure as code, conteneurisation avec Docker/Kubernetes et solutions de monitoring pour des performances optimales."
+      }
+    }
+  },
+  "projects": {
+    "title": "Réalisations Sélectionnées",
+    "subtitle": "Portfolio",
+    "description": "Une sélection de mes réalisations les plus innovantes",
+    "view_project": "Voir le Projet",
+    "view_all": "Voir Tous les Projets"
+  },
+  "testimonials": {
+    "title": "Témoignages Clients",
+    "subtitle": "Avis"
+  },
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Transformons ensemble votre vision en réalité digitale",
+    "button": "Planifier un Appel",
+    "response": "Réponse sous 24h",
+    "nda": "NDA disponible"
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "designed": "Conçu & Développé avec passion"
+  },
+  "contact": {
+    "title": "Prenons Contact",
+    "subtitle": "Contact",
+    "description": "Vous avez un projet en tête ? Discutons de comment nous pouvons collaborer pour donner vie à vos idées.",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "subject": "Sujet",
+      "message": "Votre Message",
+      "send": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "info": {
+      "email": "Email",
+      "location": "Localisation",
+      "availability": "Disponibilité"
+    }
+  },
+  "blog": {
+    "title": "Dernières Perspectives",
+    "subtitle": "Blog",
+    "description": "Réflexions sur la technologie, l'architecture et l'innovation digitale",
+    "read_more": "Lire la Suite",
+    "published_on": "Publié le",
+    "categories": {
+      "devops": "DevOps",
+      "architecture": "Architecture",
+      "ai": "IA & ML",
+      "web": "Web Dev"
+    }
+  }
+}

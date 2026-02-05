@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Aboubakar Sidik Faha",
+    "title": "DevOps Engineer & Software Architect",
+    "location": "Abidjan, Ivory Coast",
+    "description": "Transforming digital visions into reality with innovative and custom-made solutions. Expertise in cloud infrastructure, DevOps practices, and scalable software architecture.",
+    "cta_primary": "Let's Talk",
+    "cta_secondary": "View My Work",
+    "stats_projects": "Projects Completed",
+    "stats_satisfaction": "Client Satisfaction",
+    "stats_experience": "Years Experience"
+  },
+  "logos": {
+    "title": "Trusted by Innovative Companies"
+  },
+  "about": {
+    "title": "Digital Innovator & Solutions Architect",
+    "subtitle": "About Me",
+    "description": "Passionate about technological innovation, I transform complex challenges into elegant and high-performing solutions. My approach combines cutting-edge technical expertise with strategic vision to create exceptional digital experiences.",
+    "cards": {
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Cutting-edge technologies and avant-garde solutions"
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "desc": "Agile approach and transparent communication"
+      },
+      "development": {
+        "title": "Development",
+        "desc": "Modern web applications with best practices"
+      },
+      "ai_ml": {
+        "title": "AI & ML",
+        "desc": "Intelligent systems and automation"
+      },
+      "strategy": {
+        "title": "Strategy",
+        "desc": "Digital transformation consulting"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "desc": "Quality-driven delivery and support"
+      }
+    }
+  },
+  "services": {
+    "title": "Premium Services",
+    "subtitle": "What I Do",
+    "description": "Custom technological solutions to propel your business forward",
+    "items": {
+      "web_dev": {
+        "title": "Web Development",
+        "desc": "Full-stack development of modern web applications using cutting-edge technologies like Nuxt, Next.js, and Node.js. From concept to deployment."
+      },
+      "cloud": {
+        "title": "Cloud Architecture",
+        "desc": "Design and implementation of scalable cloud infrastructure on AWS, Azure, and GCP. Microservices architecture and serverless solutions."
+      },
+      "ai": {
+        "title": "AI Solutions",
+        "desc": "Integration of artificial intelligence and machine learning into your products. Automation, predictive analytics, and intelligent systems."
+      },
+      "devops": {
+        "title": "DevOps Automation",
+        "desc": "CI/CD pipeline setup, infrastructure as code, containerization with Docker/Kubernetes, and monitoring solutions for optimal performance."
+      }
+    }
+  },
+  "projects": {
+    "title": "Selected Works",
+    "subtitle": "Portfolio",
+    "description": "A selection of my most innovative achievements",
+    "view_project": "View Project",
+    "view_all": "View All Projects"
+  },
+  "testimonials": {
+    "title": "Client Voices",
+    "subtitle": "Testimonials"
+  },
+  "cta": {
+    "title": "Ready to Start?",
+    "description": "Let's transform your vision into digital reality together",
+    "button": "Schedule a Call",
+    "response": "Response within 24h",
+    "nda": "NDA available"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "designed": "Designed & Built with passion"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Contact",
+    "description": "Have a project in mind? Let's discuss how we can work together to bring your ideas to life.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "email": "Email",
+      "location": "Location",
+      "availability": "Availability"
+    }
+  },
+  "blog": {
+    "title": "Latest Insights",
+    "subtitle": "Blog",
+    "description": "Thoughts on technology, architecture, and digital innovation",
+    "read_more": "Read More",
+    "published_on": "Published on",
+    "categories": {
+      "devops": "DevOps",
+      "architecture": "Architecture",
+      "ai": "AI & ML",
+      "web": "Web Dev"
+    }
+  }
+}
