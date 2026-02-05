@@ -103,11 +103,11 @@
             </div>
           </div>
           
-          <!-- CTA -->
+          <!-- CTA - Pills -->
           <div class="flex flex-wrap gap-4 pt-4">
             <NuxtLink
               :to="localePath('/contact')"
-              class="flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-all"
+              class="flex items-center gap-2 px-7 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
             >
               <span>Get in Touch</span>
               <Icon name="lucide:arrow-right" class="w-4 h-4" />
@@ -115,7 +115,7 @@
             <a
               href="/cv.pdf"
               target="_blank"
-              class="flex items-center gap-2 px-6 py-3 glass text-white font-medium rounded-lg transition-all hover:bg-white/5"
+              class="flex items-center gap-2 px-7 py-3.5 bg-slate-800/50 hover:bg-slate-800 text-white font-medium rounded-full transition-all border border-slate-700/50"
             >
               <span>Download CV</span>
               <Icon name="lucide:download" class="w-4 h-4" />

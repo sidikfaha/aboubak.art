@@ -30,7 +30,7 @@
             </div>
             <div>
               <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-mono rounded-full">
+                <span class="px-4 py-1.5 bg-accent/10 text-accent text-xs font-medium rounded-full border border-accent/20">
                   {{ featuredPost.category }}
                 </span>
                 <span class="text-text-muted text-sm">

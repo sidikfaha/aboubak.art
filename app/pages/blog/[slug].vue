@@ -1,10 +1,10 @@
 <template>
   <div class="pt-32 pb-20">
     <Container>
-      <!-- Back button -->
+      <!-- Back button - Pill -->
       <NuxtLink 
         :to="localePath('/blog')"
-        class="inline-flex items-center gap-2 text-text-secondary hover:text-white transition-colors mb-8"
+        class="inline-flex items-center gap-2 px-4 py-2 text-text-secondary hover:text-white hover:bg-slate-800/50 rounded-full transition-all mb-8 border border-transparent hover:border-slate-700/50"
       >
         <Icon name="lucide:arrow-left" class="w-4 h-4" />
         <span>Back to Blog</span>
@@ -14,7 +14,7 @@
         <!-- Header -->
         <header class="mb-12">
           <div class="flex items-center gap-3 mb-6">
-            <span class="px-3 py-1 bg-accent/10 text-accent text-sm font-mono rounded-full">
+            <span class="px-4 py-1.5 bg-accent/10 text-accent text-sm font-medium rounded-full border border-accent/20">
               {{ post.category }}
             </span>
             <span class="text-text-muted">
@@ -70,7 +70,7 @@
         <p class="text-text-secondary mb-6">The article you're looking for doesn't exist.</p>
         <NuxtLink 
           :to="localePath('/blog')"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-lg"
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
         >
           <span>View All Articles</span>
         </NuxtLink>

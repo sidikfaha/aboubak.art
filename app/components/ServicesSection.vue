@@ -20,7 +20,7 @@
         
         <NuxtLink 
           :to="localePath('/services')"
-          class="group flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+          class="group flex items-center gap-2 px-5 py-2.5 text-accent hover:text-white hover:bg-accent/10 border border-accent/30 hover:border-accent/50 rounded-full transition-all"
         >
           <span class="font-medium">View all services</span>
           <Icon name="lucide:arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1" />

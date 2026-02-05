@@ -1,10 +1,10 @@
 <template>
   <div class="pt-32 pb-20">
     <Container>
-      <!-- Back button -->
+      <!-- Back button - Pill -->
       <NuxtLink 
         :to="localePath('/projects')"
-        class="inline-flex items-center gap-2 text-text-secondary hover:text-white transition-colors mb-8"
+        class="inline-flex items-center gap-2 px-4 py-2 text-text-secondary hover:text-white hover:bg-slate-800/50 rounded-full transition-all mb-8 border border-transparent hover:border-slate-700/50"
       >
         <Icon name="lucide:arrow-left" class="w-4 h-4" />
         <span>Back to Projects</span>
@@ -14,7 +14,7 @@
       <article v-if="project" class="max-w-4xl mx-auto">
         <!-- Header -->
         <div class="mb-8">
-          <span class="inline-block px-3 py-1 glass rounded-full text-sm font-mono text-accent mb-4">
+          <span class="inline-block px-4 py-1.5 bg-accent/10 text-accent text-sm font-medium rounded-full border border-accent/20 mb-4">
             {{ project.category }}
           </span>
           <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ project.title }}</h1>
@@ -49,11 +49,12 @@
         <!-- Tech stack -->
         <div class="mb-12">
           <h2 class="text-xl font-bold mb-4">Technologies Used</h2>
+          <!-- Tech stack - Pills -->
           <div class="flex flex-wrap gap-2">
             <span 
               v-for="tech in project.tech" 
               :key="tech"
-              class="px-4 py-2 glass rounded-lg text-sm"
+              class="px-4 py-2 bg-slate-800/50 text-text-secondary rounded-full text-sm border border-slate-700/50"
             >
               {{ tech }}
             </span>
@@ -84,7 +85,7 @@
         <p class="text-text-secondary mb-6">The project you're looking for doesn't exist.</p>
         <NuxtLink 
           :to="localePath('/projects')"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-lg"
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
         >
           <span>View All Projects</span>
         </NuxtLink>

@@ -1,11 +1,11 @@
 <template>
   <footer class="relative border-t border-border mt-20">
-    <div class="w-full px-6 lg:px-12 py-16">
+    <Container class="py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <!-- Brand -->
         <div class="lg:col-span-2">
           <NuxtLink :to="localePath('/')" class="flex items-center gap-2 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center">
               <span class="text-accent font-bold text-lg font-mono">SF</span>
             </div>
             <span class="text-white font-semibold tracking-tight">
@@ -15,30 +15,31 @@
           <p class="text-text-secondary max-w-sm mb-6">
             {{ $t('hero.description') }}
           </p>
-          <div class="flex items-center gap-4">
+          <!-- Social Links - Pills -->
+          <div class="flex items-center gap-3">
             <a 
               href="https://github.com/sidikfaha" 
               target="_blank" 
               rel="noopener"
-              class="w-10 h-10 rounded-lg glass flex items-center justify-center text-text-secondary hover:text-white hover:bg-white/5 transition-all"
+              class="w-10 h-10 rounded-full bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-text-secondary hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all"
             >
-              <Icon name="lucide:github" class="w-5 h-5" />
+              <Icon name="lucide:github" class="w-4 h-4" />
             </a>
             <a 
               href="https://linkedin.com/in/fahasidik" 
               target="_blank" 
               rel="noopener"
-              class="w-10 h-10 rounded-lg glass flex items-center justify-center text-text-secondary hover:text-white hover:bg-white/5 transition-all"
+              class="w-10 h-10 rounded-full bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-text-secondary hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all"
             >
-              <Icon name="lucide:linkedin" class="w-5 h-5" />
+              <Icon name="lucide:linkedin" class="w-4 h-4" />
             </a>
             <a 
               href="https://twitter.com/fahasidik" 
               target="_blank" 
               rel="noopener"
-              class="w-10 h-10 rounded-lg glass flex items-center justify-center text-text-secondary hover:text-white hover:bg-white/5 transition-all"
+              class="w-10 h-10 rounded-full bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-text-secondary hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all"
             >
-              <Icon name="lucide:twitter" class="w-5 h-5" />
+              <Icon name="lucide:twitter" class="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -89,7 +90,7 @@
           {{ $t('footer.designed') }}
         </p>
       </div>
-    </div>
+    </Container>
   </footer>
 </template>
 

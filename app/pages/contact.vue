@@ -52,26 +52,26 @@
             </p>
           </div>
           
-          <!-- Social links -->
-          <div class="flex items-center gap-4">
+          <!-- Social links - Pills -->
+          <div class="flex items-center gap-3">
             <a 
               href="https://github.com/sidikfaha" 
               target="_blank"
-              class="w-12 h-12 rounded-xl glass flex items-center justify-center text-text-secondary hover:text-white hover:bg-white/5 transition-all"
+              class="w-12 h-12 rounded-full bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-text-secondary hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all"
             >
               <Icon name="lucide:github" class="w-5 h-5" />
             </a>
             <a 
               href="https://linkedin.com/in/fahasidik" 
               target="_blank"
-              class="w-12 h-12 rounded-xl glass flex items-center justify-center text-text-secondary hover:text-white hover:bg-white/5 transition-all"
+              class="w-12 h-12 rounded-full bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-text-secondary hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all"
             >
               <Icon name="lucide:linkedin" class="w-5 h-5" />
             </a>
             <a 
               href="https://twitter.com/fahasidik" 
               target="_blank"
-              class="w-12 h-12 rounded-xl glass flex items-center justify-center text-text-secondary hover:text-white hover:bg-white/5 transition-all"
+              class="w-12 h-12 rounded-full bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-text-secondary hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all"
             >
               <Icon name="lucide:twitter" class="w-5 h-5" />
             </a>
@@ -90,7 +90,7 @@
                   v-model="form.name"
                   type="text"
                   required
-                  class="w-full px-4 py-3 bg-white/5 border border-border rounded-lg focus:border-accent focus:outline-none transition-colors text-white placeholder-text-muted"
+                  class="w-full px-5 py-3.5 bg-white/5 border border-border rounded-full focus:border-accent focus:outline-none transition-colors text-white placeholder-text-muted"
                   :placeholder="$t('contact.form.name')"
                 />
               </div>
@@ -102,7 +102,7 @@
                   v-model="form.email"
                   type="email"
                   required
-                  class="w-full px-4 py-3 bg-white/5 border border-border rounded-lg focus:border-accent focus:outline-none transition-colors text-white placeholder-text-muted"
+                  class="w-full px-5 py-3.5 bg-white/5 border border-border rounded-full focus:border-accent focus:outline-none transition-colors text-white placeholder-text-muted"
                   :placeholder="$t('contact.form.email')"
                 />
               </div>
@@ -116,7 +116,7 @@
                 v-model="form.subject"
                 type="text"
                 required
-                class="w-full px-4 py-3 bg-white/5 border border-border rounded-lg focus:border-accent focus:outline-none transition-colors text-white placeholder-text-muted"
+                class="w-full px-5 py-3.5 bg-white/5 border border-border rounded-full focus:border-accent focus:outline-none transition-colors text-white placeholder-text-muted"
                 :placeholder="$t('contact.form.subject')"
               />
             </div>
@@ -129,7 +129,7 @@
                 v-model="form.message"
                 rows="6"
                 required
-                class="w-full px-4 py-3 bg-white/5 border border-border rounded-lg focus:border-accent focus:outline-none transition-colors text-white placeholder-text-muted resize-none"
+                class="w-full px-5 py-3.5 bg-white/5 border border-border rounded-2xl focus:border-accent focus:outline-none transition-colors text-white placeholder-text-muted resize-none"
                 :placeholder="$t('contact.form.message')"
               ></textarea>
             </div>
@@ -137,7 +137,7 @@
             <button
               type="submit"
               :disabled="isSubmitting"
-              class="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-accent hover:bg-accent-dark disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-all"
+              class="w-full md:w-auto flex items-center justify-center gap-2 px-10 py-4 bg-accent hover:bg-accent-dark disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
             >
               <Icon v-if="isSubmitting" name="lucide:loader-2" class="w-5 h-5 animate-spin" />
               <Icon v-else name="lucide:send" class="w-5 h-5" />

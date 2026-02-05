@@ -79,14 +79,14 @@
           >
             <NuxtLink
               :to="localePath('/contact')"
-              class="group flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-all hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5"
+              class="group flex items-center gap-2 px-7 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5"
             >
               <span>{{ $t('hero.cta_primary') }}</span>
               <Icon name="lucide:arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </NuxtLink>
             <NuxtLink
               :to="localePath('/projects')"
-              class="group flex items-center gap-2 px-6 py-3 glass text-white font-medium rounded-lg transition-all hover:bg-white/5 hover:-translate-y-0.5"
+              class="group flex items-center gap-2 px-7 py-3.5 bg-slate-800/50 hover:bg-slate-800 text-white font-medium rounded-full transition-all hover:-translate-y-0.5 border border-slate-700/50"
             >
               <span>{{ $t('hero.cta_secondary') }}</span>
               <Icon name="lucide:briefcase" class="w-4 h-4" />
@@ -132,15 +132,15 @@
               </div>
               
               <!-- Floating badges -->
-              <div class="absolute -top-4 -right-4 px-3 py-1.5 glass rounded-full flex items-center gap-2 animate-float">
+              <div class="absolute -top-4 -right-4 px-4 py-2 bg-slate-900/80 backdrop-blur-sm rounded-full flex items-center gap-2 animate-float border border-slate-700/50 shadow-lg">
                 <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span class="text-xs text-text-secondary font-mono">Available</span>
+                <span class="text-xs text-text-secondary font-medium">Available</span>
               </div>
               
-              <div class="absolute -bottom-2 -left-4 px-3 py-1.5 glass rounded-full animate-float" style="animation-delay: 0.5s;">
+              <div class="absolute -bottom-2 -left-4 px-4 py-2 bg-slate-900/80 backdrop-blur-sm rounded-full animate-float border border-slate-700/50 shadow-lg" style="animation-delay: 0.5s;">
                 <div class="flex items-center gap-1.5">
                   <Icon name="lucide:code-2" class="w-3.5 h-3.5 text-accent" />
-                  <span class="text-xs text-text-secondary font-mono">DevOps</span>
+                  <span class="text-xs text-text-secondary font-medium">DevOps</span>
                 </div>
               </div>
             </div>

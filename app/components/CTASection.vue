@@ -26,10 +26,10 @@
           {{ $t('cta.description') }}
         </p>
         
-        <!-- CTA Button -->
+        <!-- CTA Button - Pill -->
         <NuxtLink
           :to="localePath('/contact')"
-          class="group inline-flex items-center gap-3 px-8 py-4 bg-accent hover:bg-accent-dark text-white text-lg font-medium rounded-xl transition-all hover:shadow-2xl hover:shadow-accent/25 hover:-translate-y-1 magnetic-btn"
+          class="group inline-flex items-center gap-3 px-10 py-4 bg-accent hover:bg-accent-dark text-white text-lg font-medium rounded-full transition-all hover:shadow-2xl hover:shadow-accent/25 hover:-translate-y-1"
         >
           <span>{{ $t('cta.button') }}</span>
           <Icon name="lucide:calendar" class="w-5 h-5" />

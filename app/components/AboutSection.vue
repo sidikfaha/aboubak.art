@@ -27,9 +27,9 @@
           :style="{ animationDelay: `${i * 0.1}s` }"
           :data-card-index="i"
         >
-          <!-- Icon -->
-          <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
-            <Icon :name="card.icon" class="w-6 h-6 text-accent" />
+          <!-- Icon - Pill -->
+          <div class="w-12 h-12 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
+            <Icon :name="card.icon" class="w-5 h-5 text-accent" />
           </div>
           
           <!-- Content -->
@@ -51,11 +51,11 @@
         <h3 class="text-center text-text-muted text-sm font-mono uppercase tracking-widest mb-8">
           Technologies & Tools
         </h3>
-        <div class="flex flex-wrap justify-center gap-4">
+        <div class="flex flex-wrap justify-center gap-3">
           <div 
             v-for="(skill, i) in skills" 
             :key="i"
-            class="group flex items-center gap-2 px-4 py-2 rounded-full glass hover:bg-white/5 transition-all cursor-default"
+            class="group flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 hover:border-accent/30 hover:bg-slate-800 transition-all cursor-default"
           >
             <Icon :name="skill.icon" class="w-4 h-4 text-accent" />
             <span class="text-sm text-text-secondary group-hover:text-white transition-colors">{{ skill.name }}</span>

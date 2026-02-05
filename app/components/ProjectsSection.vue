@@ -20,7 +20,7 @@
         
         <NuxtLink 
           :to="localePath('/projects')"
-          class="group flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+          class="group flex items-center gap-2 px-5 py-2.5 text-accent hover:text-white hover:bg-accent/10 border border-accent/30 hover:border-accent/50 rounded-full transition-all"
         >
           <span class="font-medium">{{ $t('projects.view_all') }}</span>
           <Icon name="lucide:arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -57,9 +57,9 @@
                 </div>
               </div>
               
-              <!-- Category badge -->
+              <!-- Category badge - Pill -->
               <div class="absolute top-4 left-4">
-                <span class="px-3 py-1.5 glass rounded-full text-xs font-mono text-text-secondary">
+                <span class="px-4 py-2 bg-slate-900/80 backdrop-blur-sm rounded-full text-xs font-medium text-text-secondary border border-slate-700/50">
                   {{ project.category }}
                 </span>
               </div>
@@ -74,12 +74,12 @@
                 {{ project.description }}
               </p>
               
-              <!-- Tech stack -->
+              <!-- Tech stack - Pills -->
               <div class="flex flex-wrap gap-2 pt-2">
                 <span 
                   v-for="tech in project.tech" 
                   :key="tech"
-                  class="text-xs text-text-muted font-mono"
+                  class="px-3 py-1 text-xs text-text-muted bg-slate-800/50 rounded-full border border-slate-700/30"
                 >
                   {{ tech }}
                 </span>

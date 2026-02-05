@@ -41,10 +41,10 @@
             </li>
           </ul>
           
-          <!-- Link -->
+          <!-- Link - Pill -->
           <NuxtLink 
             :to="localePath('/contact')"
-            class="inline-flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+            class="inline-flex items-center gap-2 px-4 py-2 text-accent hover:text-white hover:bg-accent/10 border border-accent/30 hover:border-accent/50 rounded-full transition-all"
           >
             <span class="font-medium">Discuss your project</span>
             <Icon name="lucide:arrow-right" class="w-4 h-4" />
@@ -76,7 +76,7 @@
         <p class="text-text-secondary mb-8">Let's discuss how I can help you achieve your goals.</p>
         <NuxtLink
           :to="localePath('/contact')"
-          class="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent-dark text-white font-medium rounded-xl transition-all hover:shadow-lg hover:shadow-accent/25"
+          class="inline-flex items-center gap-2 px-10 py-4 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25"
         >
           <span>Schedule a Consultation</span>
           <Icon name="lucide:calendar" class="w-5 h-5" />
