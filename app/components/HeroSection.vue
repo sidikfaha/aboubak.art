@@ -57,11 +57,20 @@
           
           <!-- Location -->
           <div 
-            class="flex items-center gap-2 text-text-muted mb-6 opacity-0 animate-fade-in"
+            class="flex items-center gap-2 text-text-muted mb-2 opacity-0 animate-fade-in"
             style="animation-delay: 0.7s; animation-fill-mode: forwards;"
           >
             <Icon name="lucide:map-pin" class="w-4 h-4" aria-hidden="true" />
             <span class="text-sm">{{ $t('hero.location') }}</span>
+          </div>
+          
+          <!-- RCCM -->
+          <div 
+            class="flex items-center gap-2 text-text-muted mb-6 opacity-0 animate-fade-in"
+            style="animation-delay: 0.75s; animation-fill-mode: forwards;"
+          >
+            <Icon name="lucide:building-2" class="w-4 h-4" aria-hidden="true" />
+            <span class="text-sm">RCCM: CI-ABJ-03-2024-A10-02543</span>
           </div>
           
           <!-- Description -->

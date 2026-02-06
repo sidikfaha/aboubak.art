@@ -10,14 +10,16 @@
     <Container>
       <div class="flex items-center justify-between lg:justify-center gap-6">
         <!-- Logo -->
-        <NuxtLink 
-          :to="localePath('/')" 
+        <NuxtLink
+          :to="localePath('/')"
           class="relative z-50 flex items-center gap-2 group lg:hidden"
           aria-label="Home - Aboubakar Sidik Faha"
         >
-          <div class="w-10 h-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-            <span class="text-accent font-bold text-lg font-mono">SF</span>
-          </div>
+          <img 
+            src="/me.webp" 
+            alt="Aboubakar Sidik Faha" 
+            class="w-10 h-10 rounded-full object-cover border border-accent/20 group-hover:border-accent/40 transition-colors"
+          />
           <span class="hidden sm:block text-white font-semibold tracking-tight">
             Faha
           </span>

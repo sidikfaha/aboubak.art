@@ -52,8 +52,8 @@
               
               <!-- View button -->
               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <div class="w-20 h-20 rounded-full bg-accent flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-300">
-                  <span class="text-white text-sm font-medium">{{ $t('projects.view_project') }}</span>
+                <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-300">
+                  <Icon name="lucide:arrow-right" class="w-6 h-6 text-white" aria-hidden="true" />
                 </div>
               </div>
               

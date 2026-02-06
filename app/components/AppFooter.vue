@@ -5,9 +5,11 @@
         <!-- Brand -->
         <div class="lg:col-span-2">
           <NuxtLink :to="localePath('/')" class="flex items-center gap-2 mb-4" aria-label="Home">
-            <div class="w-10 h-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center">
-              <span class="text-accent font-bold text-lg font-mono">SF</span>
-            </div>
+            <img 
+              src="/me.webp" 
+              alt="Aboubakar Sidik Faha" 
+              class="w-10 h-10 rounded-full object-cover border border-accent/20"
+            />
             <span class="text-white font-semibold tracking-tight">
               Aboubakar Sidik Faha
             </span>
@@ -81,6 +83,10 @@
             <li class="flex items-center gap-2 text-text-secondary text-sm">
               <Icon name="lucide:clock" class="w-4 h-4 text-accent" aria-hidden="true" />
               <span>UTC / GMT</span>
+            </li>
+            <li class="flex items-center gap-2 text-text-secondary text-sm">
+              <Icon name="lucide:building-2" class="w-4 h-4 text-accent" aria-hidden="true" />
+              <span>RCCM: CI-ABJ-03-2024-A10-02543</span>
             </li>
           </ul>
         </section>
