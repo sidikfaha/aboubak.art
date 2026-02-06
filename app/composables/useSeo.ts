@@ -61,8 +61,8 @@ export function usePageSeo(options: SeoOptions) {
     
     // Twitter
     twitterCard: 'summary_large_image',
-    twitterSite: '@fahasidik',
-    twitterCreator: '@fahasidik',
+    twitterSite: '@sidikfaha',
+    twitterCreator: '@sidikfaha',
     twitterTitle: options.title,
     twitterDescription: options.description,
     twitterImageAlt: seoImageAlt,
@@ -84,7 +84,7 @@ export function usePageSeo(options: SeoOptions) {
   if (options.type === 'profile') {
     metaTags.profileFirstName = 'Aboubakar'
     metaTags.profileLastName = 'Sidik Faha'
-    metaTags.profileUsername = 'fahasidik'
+    metaTags.profileUsername = 'sidikfaha'
   }
   
   // Alternate locales - must be string array
@@ -92,10 +92,19 @@ export function usePageSeo(options: SeoOptions) {
     metaTags.ogLocaleAlternate = options.alternateLocales
   }
   
+  // If a custom image is provided, use it directly; otherwise use nuxt-og-image generation
+  if (options.image) {
+    const fullImageUrl = options.image.startsWith('http') ? options.image : `${siteUrl}${options.image}`
+    metaTags.ogImage = fullImageUrl
+    metaTags.twitterImage = fullImageUrl
+  }
+  
   useSeoMeta(metaTags)
   
-  // Use nuxt-og-image for OG image generation
-  defineOgImage(ogImageOptions)
+  // Only use nuxt-og-image for OG image generation if no custom image is provided
+  if (!options.image) {
+    defineOgImage(ogImageOptions)
+  }
   
   // Set canonical URL separately
   useHead({
@@ -154,7 +163,7 @@ function generateStructuredData(options: SeoOptions, pageUrl: string) {
     sameAs: [
       'https://github.com/sidikfaha',
       'https://linkedin.com/in/fahasidik',
-      'https://twitter.com/fahasidik',
+      'https://twitter.com/sidikfaha',
     ],
   }
   
@@ -268,7 +277,7 @@ export function useLocalBusinessSchema() {
     sameAs: [
       'https://github.com/sidikfaha',
       'https://linkedin.com/in/fahasidik',
-      'https://twitter.com/fahasidik',
+      'https://twitter.com/sidikfaha',
     ],
   }
   

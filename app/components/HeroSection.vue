@@ -125,7 +125,7 @@
               <!-- Image -->
               <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-accent/30 glow">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop&crop=face"
+                  src="/me.webp"
                   alt="Aboubakar Sidik Faha - DevOps Engineer and Software Architect based in Abidjan, Ivory Coast"
                   class="w-full h-full object-cover"
                   width="800"

@@ -17,6 +17,7 @@ const { t, locale } = useI18n()
 usePageSeo({
   title: t('hero.name') + ' | DevOps & Software Architect',
   description: t('hero.description'),
+  image: '/me.webp',
   type: 'profile',
   locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
   alternateLocales: ['en_US', 'fr_FR'],

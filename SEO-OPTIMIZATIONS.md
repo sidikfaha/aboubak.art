@@ -34,8 +34,8 @@ This document outlines all the SEO optimizations made to achieve perfect Lightho
 
 ### Twitter Cards
 - `twitter:card: summary_large_image`
-- `twitter:site: @fahasidik`
-- `twitter:creator: @fahasidik`
+- `twitter:site: @sidikfaha`
+- `twitter:creator: @sidikfaha`
 - `twitter:title`
 - `twitter:description`
 - `twitter:image` - Auto-generated
