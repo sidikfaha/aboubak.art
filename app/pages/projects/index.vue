@@ -116,12 +116,12 @@ usePageSeo({
 
 // Breadcrumb schema
 useBreadcrumbSchema([
-  { name: 'Home', url: '/' },
-  { name: 'Projects', url: '/projects' },
+  { name: t('seo.breadcrumb_home'), url: '/' },
+  { name: t('nav.projects'), url: '/projects' },
 ])
 
 const activeFilter = ref('All')
-const filters = ['All', 'Cloud', 'AI/ML', 'DevOps', 'Web']
+const filters = computed(() => [t('projects.filters.all'), t('projects.filters.cloud'), t('projects.filters.ai_ml'), t('projects.filters.devops'), t('projects.filters.web')])
 
 const projects = [
   {

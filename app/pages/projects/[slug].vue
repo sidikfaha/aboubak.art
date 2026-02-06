@@ -8,7 +8,7 @@
         aria-label="Back to all projects"
       >
         <Icon name="lucide:arrow-left" class="w-4 h-4" aria-hidden="true" />
-        <span>Back to Projects</span>
+        <span>{{ $t('projects.detail.back') }}</span>
       </NuxtLink>
       
       <!-- Project content -->
@@ -37,22 +37,22 @@
         <!-- Project details -->
         <div class="grid md:grid-cols-3 gap-8 mb-12">
           <div class="glass rounded-xl p-6">
-            <div class="text-text-muted text-sm mb-2">Client</div>
+            <div class="text-text-muted text-sm mb-2">{{ $t('projects.detail.client') }}</div>
             <div class="font-medium">{{ project.client }}</div>
           </div>
           <div class="glass rounded-xl p-6">
-            <div class="text-text-muted text-sm mb-2">Year</div>
+            <div class="text-text-muted text-sm mb-2">{{ $t('projects.detail.year') }}</div>
             <div class="font-medium">{{ project.year }}</div>
           </div>
           <div class="glass rounded-xl p-6">
-            <div class="text-text-muted text-sm mb-2">Duration</div>
+            <div class="text-text-muted text-sm mb-2">{{ $t('projects.detail.duration') }}</div>
             <div class="font-medium">{{ project.duration }}</div>
           </div>
         </div>
         
         <!-- Tech stack -->
         <section class="mb-12" aria-labelledby="tech-heading">
-          <h2 id="tech-heading" class="text-xl font-bold mb-4">Technologies Used</h2>
+          <h2 id="tech-heading" class="text-xl font-bold mb-4">{{ $t('projects.detail.tech_title') }}</h2>
           <!-- Tech stack - Pills -->
           <div class="flex flex-wrap gap-2">
             <span 
@@ -67,13 +67,13 @@
         
         <!-- Full description -->
         <section class="prose prose-invert prose-lg max-w-none" aria-labelledby="description-heading">
-          <h2 id="description-heading" class="sr-only">Project Description</h2>
+          <h2 id="description-heading" class="sr-only">{{ $t('projects.detail.description_title') }}</h2>
           <div v-html="project.fullDescription"></div>
         </section>
         
         <!-- Results/Impact -->
         <section v-if="project.results" class="mt-12 p-8 glass rounded-2xl" aria-labelledby="results-heading">
-          <h2 id="results-heading" class="text-xl font-bold mb-4">Results & Impact</h2>
+          <h2 id="results-heading" class="text-xl font-bold mb-4">{{ $t('projects.detail.results_title') }}</h2>
           <ul class="space-y-3">
             <li v-for="(result, i) in project.results" :key="i" class="flex items-start gap-3">
               <Icon name="lucide:trending-up" class="w-5 h-5 text-accent shrink-0 mt-0.5" aria-hidden="true" />
@@ -86,13 +86,13 @@
       <!-- Not found -->
       <div v-else class="text-center py-20">
         <Icon name="lucide:file-x" class="w-16 h-16 text-text-muted mx-auto mb-4" aria-hidden="true" />
-        <h2 class="text-2xl font-bold mb-2">Project Not Found</h2>
-        <p class="text-text-secondary mb-6">The project you're looking for doesn't exist.</p>
+        <h2 class="text-2xl font-bold mb-2">{{ $t('projects.detail.not_found') }}</h2>
+        <p class="text-text-secondary mb-6">{{ $t('projects.detail.not_found_desc') }}</p>
         <NuxtLink 
           :to="localePath('/projects')"
           class="inline-flex items-center gap-2 px-8 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
         >
-          <span>View All Projects</span>
+          <span>{{ $t('projects.view_all') }}</span>
         </NuxtLink>
       </div>
     </Container>
@@ -246,8 +246,8 @@ usePageSeo({
 
 // Breadcrumb schema
 useBreadcrumbSchema([
-  { name: 'Home', url: '/' },
-  { name: 'Projects', url: '/projects' },
-  { name: project.value ? project.value.title : 'Project', url: project.value ? `/projects/${route.params.slug}` : undefined },
+  { name: t('seo.breadcrumb_home'), url: '/' },
+  { name: t('nav.projects'), url: '/projects' },
+  { name: project.value ? project.value.title : t('nav.projects'), url: project.value ? `/projects/${route.params.slug}` : undefined },
 ])
 </script>

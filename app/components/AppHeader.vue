@@ -13,7 +13,7 @@
         <NuxtLink
           :to="localePath('/')"
           class="relative z-50 flex items-center gap-2 group lg:hidden"
-          aria-label="Home - Aboubakar Sidik Faha"
+          :aria-label="$t('seo.breadcrumb_home') + ' - ' + $t('hero.name')"
         >
           <img 
             src="/me.webp" 
@@ -29,7 +29,7 @@
         <nav 
           class="hidden lg:flex items-center gap-1 p-1 rounded-full bg-slate-900/50 border border-slate-800/50 backdrop-blur-sm"
           role="navigation"
-          aria-label="Main navigation"
+          :aria-label="$t('nav.home') + ' navigation'"
         >
           <NuxtLink 
             v-for="item in navItems" 
@@ -62,7 +62,7 @@
               :class="currentLocale === loc.code 
                 ? 'bg-slate-700 text-white' 
                 : 'text-text-muted hover:text-white hover:bg-slate-800/50'"
-              :aria-label="`Switch to ${loc.name}`"
+              :aria-label="$t('common.learn_more') + ' ' + loc.name"
               :aria-pressed="currentLocale === loc.code"
             >
               {{ loc.code.toUpperCase() }}
@@ -84,7 +84,7 @@
             @click="isMenuOpen = !isMenuOpen"
             :aria-expanded="isMenuOpen"
             aria-controls="mobile-menu"
-            aria-label="Toggle navigation menu"
+            :aria-label="$t('common.open') + ' ' + $t('nav.home') + ' menu'"
           >
             <div class="w-5 h-4 relative flex flex-col justify-between">
               <span 
@@ -119,7 +119,7 @@
         id="mobile-menu"
         class="fixed inset-0 bg-bg-primary/98 backdrop-blur-xl z-40 lg:hidden"
         role="dialog"
-        aria-label="Mobile navigation"
+        :aria-label="$t('nav.home') + ' mobile'"
       >
         <nav class="flex flex-col items-center justify-center h-full gap-3" role="navigation" aria-label="Mobile menu">
           <NuxtLink 

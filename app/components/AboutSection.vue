@@ -49,7 +49,7 @@
       <!-- Skills row -->
       <div class="mt-20">
         <h3 class="text-center text-text-muted text-sm font-mono uppercase tracking-widest mb-8">
-          Technologies & Tools
+          {{ $t('about.tech_title') }}
         </h3>
         <div class="flex flex-wrap justify-center gap-3">
           <div 

@@ -41,15 +41,15 @@
           <div class="grid grid-cols-3 gap-4">
             <div class="text-center p-4 glass rounded-xl">
               <div class="text-2xl font-bold text-accent">150+</div>
-              <div class="text-xs text-text-muted">Projects</div>
+              <div class="text-xs text-text-muted">{{ $t('about.stats_projects') }}</div>
             </div>
             <div class="text-center p-4 glass rounded-xl">
               <div class="text-2xl font-bold text-accent">7+</div>
-              <div class="text-xs text-text-muted">Years Exp.</div>
+              <div class="text-xs text-text-muted">{{ $t('about.stats_years') }}</div>
             </div>
             <div class="text-center p-4 glass rounded-xl">
               <div class="text-2xl font-bold text-accent">50+</div>
-              <div class="text-xs text-text-muted">Clients</div>
+              <div class="text-xs text-text-muted">{{ $t('about.stats_clients') }}</div>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@
         <div class="space-y-12">
           <!-- Bio -->
           <section aria-labelledby="bio-heading">
-            <h2 id="bio-heading" class="text-2xl font-bold mb-4">My Story</h2>
+            <h2 id="bio-heading" class="text-2xl font-bold mb-4">{{ $t('about.story_title') }}</h2>
             <div class="space-y-4 text-text-secondary leading-relaxed">
               <p>
                 Based in Abidjan, Côte d'Ivoire, I'm a passionate DevOps Engineer and Software Architect 
@@ -80,7 +80,7 @@
           
           <!-- What I do -->
           <section aria-labelledby="expertise-heading">
-            <h2 id="expertise-heading" class="text-2xl font-bold mb-4">What I Do</h2>
+            <h2 id="expertise-heading" class="text-2xl font-bold mb-4">{{ $t('about.what_i_do') }}</h2>
             <ul class="space-y-3">
               <li v-for="(item, i) in expertise" :key="i" class="flex items-start gap-3">
                 <div class="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5">
@@ -93,7 +93,7 @@
           
           <!-- Experience -->
           <section aria-labelledby="experience-heading">
-            <h2 id="experience-heading" class="text-2xl font-bold mb-4">Experience</h2>
+            <h2 id="experience-heading" class="text-2xl font-bold mb-4">{{ $t('about.experience_title') }}</h2>
             <div class="space-y-6">
               <div v-for="(job, i) in experience" :key="i" class="relative pl-6 border-l border-border">
                 <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-accent -translate-x-1.25"></div>
@@ -113,7 +113,7 @@
               class="flex items-center gap-2 px-7 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
               aria-label="Get in touch - Contact page"
             >
-              <span>Get in Touch</span>
+              <span>{{ $t('contact.get_in_touch') }}</span>
               <Icon name="lucide:arrow-right" class="w-4 h-4" />
             </NuxtLink>
             <a
@@ -123,7 +123,7 @@
               class="flex items-center gap-2 px-7 py-3.5 bg-slate-800/50 hover:bg-slate-800 text-white font-medium rounded-full transition-all border border-slate-700/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
               aria-label="Download CV - Opens in new tab"
             >
-              <span>Download CV</span>
+              <span>{{ $t('contact.download_cv') }}</span>
               <Icon name="lucide:download" class="w-4 h-4" />
             </a>
           </div>
@@ -139,16 +139,16 @@ const localePath = useLocalePath()
 
 // SEO for about page
 usePageSeo({
-  title: 'About Me | Aboubakar Sidik Faha',
-  description: 'Learn about Aboubakar Sidik Faha, a DevOps Engineer and Software Architect with 7+ years of experience in cloud infrastructure, automation, and modern software architecture based in Abidjan, Ivory Coast.',
+  title: t('seo.about_title'),
+  description: t('seo.about_desc'),
   type: 'profile',
   locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
 })
 
 // Breadcrumb schema
 useBreadcrumbSchema([
-  { name: 'Home', url: '/' },
-  { name: 'About', url: '/about' },
+  { name: t('seo.breadcrumb_home'), url: '/' },
+  { name: t('nav.about'), url: '/about' },
 ])
 
 const expertise = [

@@ -28,6 +28,6 @@ useLocalBusinessSchema()
 
 // Breadcrumb schema
 useBreadcrumbSchema([
-  { name: 'Home', url: '/' },
+  { name: t('seo.breadcrumb_home'), url: '/' },
 ])
 </script>

@@ -17,7 +17,9 @@
     "cta_secondary": "Voir Mes Réalisations",
     "stats_projects": "Projets Réalisés",
     "stats_satisfaction": "Satisfaction Client",
-    "stats_experience": "Années d'Expérience"
+    "stats_experience": "Années d'Expérience",
+    "available": "Disponible",
+    "scroll": "Défiler"
   },
   "logos": {
     "title": "Fait Confiance par des Entreprises Innovantes"
@@ -51,12 +53,25 @@
         "title": "Excellence",
         "desc": "Livraison et support axés sur la qualité"
       }
-    }
+    },
+    "tech_title": "Technologies & Outils",
+    "story_title": "Mon Parcours",
+    "what_i_do": "Ce Que Je Fais",
+    "experience_title": "Expérience",
+    "stats_projects": "Projets",
+    "stats_years": "Années Exp.",
+    "stats_clients": "Clients"
   },
   "services": {
     "title": "Services Premium",
     "subtitle": "Ce Que Je Fais",
     "description": "Des solutions technologiques personnalisées pour propulser votre entreprise",
+    "view_all": "Voir tous les services",
+    "discuss_project": "Discuter de votre projet",
+    "how_i_work": "Comment Je Travaille",
+    "ready_title": "Prêt à démarrer votre projet ?",
+    "ready_desc": "Discutons de comment je peux vous aider à atteindre vos objectifs.",
+    "schedule_consultation": "Planifier une Consultation",
     "items": {
       "web_dev": {
         "title": "Développement Web",
@@ -74,6 +89,42 @@
         "title": "Automatisation DevOps",
         "desc": "Mise en place de pipelines CI/CD, infrastructure as code, conteneurisation avec Docker/Kubernetes et solutions de monitoring pour des performances optimales."
       }
+    },
+    "process": {
+      "discovery": "Découverte",
+      "discovery_desc": "Comprendre vos besoins, objectifs et contraintes via une consultation approfondie.",
+      "strategy": "Stratégie",
+      "strategy_desc": "Conception d'une architecture de solution adaptée à vos objectifs.",
+      "implementation": "Implémentation",
+      "implementation_desc": "Construction de votre solution avec mises à jour régulières et feedback itératif.",
+      "support": "Support",
+      "support_desc": "Maintenance continue, optimisation et transfert de connaissances."
+    },
+    "features": {
+      "web_dev": [
+        "Développement full-stack d'applications web",
+        "Conception et développement d'APIs",
+        "Architecture de bases de données",
+        "Frontend avec frameworks modernes"
+      ],
+      "cloud": [
+        "Stratégie multi-cloud (AWS, Azure, GCP)",
+        "Infrastructure as Code (Terraform)",
+        "Architecture serverless",
+        "Optimisation des coûts"
+      ],
+      "ai": [
+        "Intégration de modèles Machine Learning",
+        "Traitement du langage naturel",
+        "Analyses prédictives",
+        "Automatisation par IA"
+      ],
+      "devops": [
+        "Implémentation de pipelines CI/CD",
+        "Conteneurisation (Docker, K8s)",
+        "Monitoring & observabilité",
+        "Bonnes pratiques de sécurité"
+      ]
     }
   },
   "projects": {
@@ -81,7 +132,25 @@
     "subtitle": "Portfolio",
     "description": "Une sélection de mes réalisations les plus innovantes",
     "view_project": "Voir le Projet",
-    "view_all": "Voir Tous les Projets"
+    "view_all": "Voir Tous les Projets",
+    "filters": {
+      "all": "Tous",
+      "cloud": "Cloud",
+      "ai_ml": "IA/ML",
+      "devops": "DevOps",
+      "web": "Web"
+    },
+    "detail": {
+      "back": "Retour aux Projets",
+      "client": "Client",
+      "year": "Année",
+      "duration": "Durée",
+      "tech_title": "Technologies Utilisées",
+      "description_title": "Description du Projet",
+      "results_title": "Résultats & Impact",
+      "not_found": "Projet Non Trouvé",
+      "not_found_desc": "Le projet que vous recherchez n'existe pas."
+    }
   },
   "testimonials": {
     "title": "Témoignages Clients",
@@ -92,16 +161,21 @@
     "description": "Transformons ensemble votre vision en réalité digitale",
     "button": "Planifier un Appel",
     "response": "Réponse sous 24h",
-    "nda": "NDA disponible"
+    "nda": "NDA disponible",
+    "connect": "Restons en Contact",
+    "remote": "Télétravail Mondial"
   },
   "footer": {
     "rights": "Tous droits réservés",
-    "designed": "Conçu & Développé avec passion"
+    "designed": "Conçu & Développé avec passion",
+    "quick_links": "Liens Rapides"
   },
   "contact": {
     "title": "Prenons Contact",
     "subtitle": "Contact",
     "description": "Vous avez un projet en tête ? Discutons de comment nous pouvons collaborer pour donner vie à vos idées.",
+    "get_in_touch": "Me Contacter",
+    "download_cv": "Télécharger le CV",
     "form": {
       "name": "Votre Nom",
       "email": "Votre Email",
@@ -129,6 +203,40 @@
       "architecture": "Architecture",
       "ai": "IA & ML",
       "web": "Web Dev"
+    },
+    "detail": {
+      "back": "Retour au Blog",
+      "min_read": "min de lecture",
+      "author_role": "Ingénieur DevOps & Architecte Logiciel",
+      "not_found": "Article Non Trouvé",
+      "not_found_desc": "L'article que vous recherchez n'existe pas.",
+      "view_all": "Voir Tous les Articles"
     }
+  },
+  "error": {
+    "page_not_found": "Page non trouvée",
+    "back_home": "Retour à l'Accueil",
+    "title": "Erreur - Page Non Trouvée"
+  },
+  "common": {
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "learn_more": "En Savoir Plus",
+    "see_more": "Voir Plus",
+    "loading": "Chargement..."
+  },
+  "seo": {
+    "home_title": "Aboubakar Sidik Faha | Ingénieur DevOps & Architecte",
+    "about_title": "À Propos | Aboubakar Sidik Faha",
+    "about_desc": "Découvrez Aboubakar Sidik Faha, Ingénieur DevOps et Architecte Logiciel avec plus de 7 ans d'expérience en infrastructure cloud, automatisation et architecture logicielle moderne basé à Abidjan, Côte d'Ivoire.",
+    "services_title": "Services | DevOps & Architecture Logicielle",
+    "services_desc": "Services professionnels DevOps et architecture logicielle : Infrastructure cloud, automatisation CI/CD, solutions IA/ML et développement web full-stack. Basé à Abidjan, Côte d'Ivoire, au service de clients mondiaux.",
+    "projects_title": "Portfolio | Projets DevOps & Logiciels",
+    "projects_desc": "Explorez mon portfolio de projets d'infrastructure cloud, d'automatisation DevOps, de solutions IA/ML et de développement web full-stack. Des solutions d'entreprise pour des clients internationaux.",
+    "blog_title": "Blog | Perspectives DevOps, Cloud & Architecture",
+    "blog_desc": "Explorez des articles sur les pratiques DevOps, l'architecture cloud, l'ingénierie logicielle, l'intégration IA/ML et les stratégies de développement moderne. Perspectives d'un ingénieur DevOps expérimenté.",
+    "contact_title": "Contact | Prenons Contact",
+    "contact_desc": "Contactez Aboubakar Sidik Faha pour des conseils DevOps, des projets d'architecture cloud ou des demandes de développement logiciel. Basé à Abidjan, Côte d'Ivoire.",
+    "breadcrumb_home": "Accueil"
   }
 }

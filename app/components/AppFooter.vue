@@ -53,7 +53,7 @@
         
         <!-- Quick Links -->
         <nav aria-labelledby="quick-links-heading">
-          <h4 id="quick-links-heading" class="text-white font-semibold mb-4">{{ $t('nav.home') }}</h4>
+          <h4 id="quick-links-heading" class="text-white font-semibold mb-4">{{ $t('footer.quick_links') }}</h4>
           <ul class="space-y-3">
             <li v-for="item in quickLinks" :key="item.path">
               <NuxtLink 

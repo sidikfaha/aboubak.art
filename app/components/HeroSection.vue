@@ -149,13 +149,13 @@
               <!-- Floating badges -->
               <div class="absolute -top-4 -right-4 px-4 py-2 bg-slate-900/80 backdrop-blur-sm rounded-full flex items-center gap-2 animate-float border border-slate-700/50 shadow-lg">
                 <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse" aria-hidden="true"></div>
-                <span class="text-xs text-text-secondary font-medium">Available</span>
+                <span class="text-xs text-text-secondary font-medium">{{ $t('hero.available') }}</span>
               </div>
               
               <div class="absolute -bottom-2 -left-4 px-4 py-2 bg-slate-900/80 backdrop-blur-sm rounded-full animate-float border border-slate-700/50 shadow-lg" style="animation-delay: 0.5s;">
                 <div class="flex items-center gap-1.5">
                   <Icon name="lucide:code-2" class="w-3.5 h-3.5 text-accent" aria-hidden="true" />
-                  <span class="text-xs text-text-secondary font-medium">DevOps</span>
+                  <span class="text-xs text-text-secondary font-medium">{{ $t('hero.title').split(' ')[0] }}</span>
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@
     
     <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in" style="animation-delay: 1.2s; animation-fill-mode: forwards;" aria-hidden="true">
-      <span class="text-xs text-text-muted font-mono uppercase tracking-widest">Scroll</span>
+      <span class="text-xs text-text-muted font-mono uppercase tracking-widest">{{ $t('hero.scroll') }}</span>
       <div class="w-px h-8 bg-linear-to-b from-accent to-transparent"></div>
     </div>
   </section>

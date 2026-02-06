@@ -47,7 +47,7 @@
             class="inline-flex items-center gap-2 px-4 py-2 text-accent hover:text-white hover:bg-accent/10 border border-accent/30 hover:border-accent/50 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
             :aria-label="`Discuss your ${$t(service.title)} project`"
           >
-            <span class="font-medium">Discuss your project</span>
+            <span class="font-medium">{{ $t('services.discuss_project') }}</span>
             <Icon name="lucide:arrow-right" class="w-4 h-4" aria-hidden="true" />
           </NuxtLink>
         </article>
@@ -55,7 +55,7 @@
       
       <!-- Process section -->
       <section class="mb-20" aria-labelledby="process-heading">
-        <h2 id="process-heading" class="text-3xl font-bold text-center mb-12">How I Work</h2>
+        <h2 id="process-heading" class="text-3xl font-bold text-center mb-12">{{ $t('services.how_i_work') }}</h2>
         <div class="grid md:grid-cols-4 gap-6">
           <div v-for="(step, i) in process" :key="i" class="relative text-center">
             <!-- Number -->
@@ -73,14 +73,14 @@
       
       <!-- CTA -->
       <section class="text-center" aria-labelledby="cta-heading">
-        <h2 id="cta-heading" class="text-2xl font-bold mb-4">Ready to start your project?</h2>
-        <p class="text-text-secondary mb-8">Let's discuss how I can help you achieve your goals.</p>
+        <h2 id="cta-heading" class="text-2xl font-bold mb-4">{{ $t('services.ready_title') }}</h2>
+        <p class="text-text-secondary mb-8">{{ $t('services.ready_desc') }}</p>
         <NuxtLink
           :to="localePath('/contact')"
           class="inline-flex items-center gap-2 px-10 py-4 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
-          aria-label="Schedule a consultation"
+          :aria-label="$t('services.schedule_consultation')"
         >
-          <span>Schedule a Consultation</span>
+          <span>{{ $t('services.schedule_consultation') }}</span>
           <Icon name="lucide:calendar" class="w-5 h-5" aria-hidden="true" />
         </NuxtLink>
       </section>
@@ -102,8 +102,8 @@ usePageSeo({
 
 // Breadcrumb schema
 useBreadcrumbSchema([
-  { name: 'Home', url: '/' },
-  { name: 'Services', url: '/services' },
+  { name: t('seo.breadcrumb_home'), url: '/' },
+  { name: t('nav.services'), url: '/services' },
 ])
 
 const services = [
@@ -155,20 +155,20 @@ const services = [
 
 const process = [
   {
-    title: 'Discovery',
-    desc: 'Understanding your needs, goals, and constraints through in-depth consultation.'
+    title: 'services.process.discovery',
+    desc: 'services.process.discovery_desc'
   },
   {
-    title: 'Strategy',
-    desc: 'Designing a tailored solution architecture that aligns with your objectives.'
+    title: 'services.process.strategy',
+    desc: 'services.process.strategy_desc'
   },
   {
-    title: 'Implementation',
-    desc: 'Building your solution with regular updates and iterative feedback.'
+    title: 'services.process.implementation',
+    desc: 'services.process.implementation_desc'
   },
   {
-    title: 'Support',
-    desc: 'Ongoing maintenance, optimization, and knowledge transfer.'
+    title: 'services.process.support',
+    desc: 'services.process.support_desc'
   }
 ]
 </script>

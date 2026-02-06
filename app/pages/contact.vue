@@ -227,17 +227,16 @@ const { t, locale } = useI18n();
 
 // SEO for contact page
 usePageSeo({
-  title: "Contact | Get in Touch",
-  description:
-    "Get in touch with Aboubakar Sidik Faha for DevOps consulting, cloud architecture projects, or software development inquiries. Based in Abidjan, Ivory Coast.",
+  title: t("seo.contact_title"),
+  description: t("seo.contact_desc"),
   type: "website",
   locale: locale.value === "fr" ? "fr_FR" : "en_US",
 });
 
 // Breadcrumb schema
 useBreadcrumbSchema([
-  { name: "Home", url: "/" },
-  { name: "Contact", url: "/contact" },
+  { name: t("seo.breadcrumb_home"), url: "/" },
+  { name: t("nav.contact"), url: "/contact" },
 ]);
 
 const form = reactive({

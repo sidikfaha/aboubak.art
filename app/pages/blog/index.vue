@@ -113,8 +113,8 @@ usePageSeo({
 
 // Breadcrumb schema
 useBreadcrumbSchema([
-  { name: 'Home', url: '/' },
-  { name: 'Blog', url: '/blog' },
+  { name: t('seo.breadcrumb_home'), url: '/' },
+  { name: t('nav.blog'), url: '/blog' },
 ])
 
 const collectionName = computed(() => `blog_${locale.value}`)

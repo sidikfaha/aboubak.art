@@ -8,7 +8,7 @@
         aria-label="Back to all articles"
       >
         <Icon name="lucide:arrow-left" class="w-4 h-4" aria-hidden="true" />
-        <span>Back to Blog</span>
+        <span>{{ $t('blog.detail.back') }}</span>
       </NuxtLink>
       
       <article v-if="post" class="max-w-3xl mx-auto">
@@ -22,7 +22,7 @@
               {{ formatDate(post.date) }}
             </time>
             <span class="text-text-muted" aria-hidden="true">•</span>
-            <span class="text-text-muted">{{ post.readTime }} min read</span>
+            <span class="text-text-muted">{{ post.readTime }} {{ $t('blog.detail.min_read') }}</span>
           </div>
           <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             {{ post.title }}
@@ -74,7 +74,7 @@
             </div>
             <div>
               <div class="font-semibold text-lg">{{ post.author || 'Aboubakar Sidik Faha' }}</div>
-              <div class="text-text-secondary">DevOps Engineer & Software Architect</div>
+              <div class="text-text-secondary">{{ $t('blog.detail.author_role') }}</div>
             </div>
           </div>
         </footer>
@@ -83,13 +83,13 @@
       <!-- Not found -->
       <div v-else class="text-center py-20">
         <Icon name="lucide:file-x" class="w-16 h-16 text-text-muted mx-auto mb-4" aria-hidden="true" />
-        <h2 class="text-2xl font-bold mb-2">Article Not Found</h2>
-        <p class="text-text-secondary mb-6">The article you're looking for doesn't exist.</p>
+        <h2 class="text-2xl font-bold mb-2">{{ $t('blog.detail.not_found') }}</h2>
+        <p class="text-text-secondary mb-6">{{ $t('blog.detail.not_found_desc') }}</p>
         <NuxtLink 
           :to="localePath('/blog')"
           class="inline-flex items-center gap-2 px-8 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
         >
-          <span>View All Articles</span>
+          <span>{{ $t('blog.detail.view_all') }}</span>
         </NuxtLink>
       </div>
     </Container>
@@ -126,9 +126,9 @@ usePageSeo({
 
 // Breadcrumb schema
 useBreadcrumbSchema([
-  { name: 'Home', url: '/' },
-  { name: 'Blog', url: '/blog' },
-  { name: post.value ? post.value.title : 'Article', url: post.value ? `/blog/${route.params.slug}` : undefined },
+  { name: t('seo.breadcrumb_home'), url: '/' },
+  { name: t('nav.blog'), url: '/blog' },
+  { name: post.value ? post.value.title : t('blog.subtitle'), url: post.value ? `/blog/${route.params.slug}` : undefined },
 ])
 
 const formatDate = (date) => {

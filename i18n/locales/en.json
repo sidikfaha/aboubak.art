@@ -17,7 +17,9 @@
     "cta_secondary": "View My Work",
     "stats_projects": "Projects Completed",
     "stats_satisfaction": "Client Satisfaction",
-    "stats_experience": "Years Experience"
+    "stats_experience": "Years Experience",
+    "available": "Available",
+    "scroll": "Scroll"
   },
   "logos": {
     "title": "Trusted by Innovative Companies"
@@ -51,12 +53,25 @@
         "title": "Excellence",
         "desc": "Quality-driven delivery and support"
       }
-    }
+    },
+    "tech_title": "Technologies & Tools",
+    "story_title": "My Story",
+    "what_i_do": "What I Do",
+    "experience_title": "Experience",
+    "stats_projects": "Projects",
+    "stats_years": "Years Exp.",
+    "stats_clients": "Clients"
   },
   "services": {
     "title": "Premium Services",
     "subtitle": "What I Do",
     "description": "Custom technological solutions to propel your business forward",
+    "view_all": "View all services",
+    "discuss_project": "Discuss your project",
+    "how_i_work": "How I Work",
+    "ready_title": "Ready to start your project?",
+    "ready_desc": "Let's discuss how I can help you achieve your goals.",
+    "schedule_consultation": "Schedule a Consultation",
     "items": {
       "web_dev": {
         "title": "Web Development",
@@ -74,6 +89,42 @@
         "title": "DevOps Automation",
         "desc": "CI/CD pipeline setup, infrastructure as code, containerization with Docker/Kubernetes, and monitoring solutions for optimal performance."
       }
+    },
+    "process": {
+      "discovery": "Discovery",
+      "discovery_desc": "Understanding your needs, goals, and constraints through in-depth consultation.",
+      "strategy": "Strategy",
+      "strategy_desc": "Designing a tailored solution architecture that aligns with your objectives.",
+      "implementation": "Implementation",
+      "implementation_desc": "Building your solution with regular updates and iterative feedback.",
+      "support": "Support",
+      "support_desc": "Ongoing maintenance, optimization, and knowledge transfer."
+    },
+    "features": {
+      "web_dev": [
+        "Full-stack web application development",
+        "API design and development",
+        "Database architecture",
+        "Frontend with modern frameworks"
+      ],
+      "cloud": [
+        "Multi-cloud strategy (AWS, Azure, GCP)",
+        "Infrastructure as Code (Terraform)",
+        "Serverless architecture",
+        "Cost optimization"
+      ],
+      "ai": [
+        "Machine Learning model integration",
+        "Natural Language Processing",
+        "Predictive analytics",
+        "AI-powered automation"
+      ],
+      "devops": [
+        "CI/CD pipeline implementation",
+        "Containerization (Docker, K8s)",
+        "Monitoring & observability",
+        "Security best practices"
+      ]
     }
   },
   "projects": {
@@ -81,7 +132,25 @@
     "subtitle": "Portfolio",
     "description": "A selection of my most innovative achievements",
     "view_project": "View Project",
-    "view_all": "View All Projects"
+    "view_all": "View All Projects",
+    "filters": {
+      "all": "All",
+      "cloud": "Cloud",
+      "ai_ml": "AI/ML",
+      "devops": "DevOps",
+      "web": "Web"
+    },
+    "detail": {
+      "back": "Back to Projects",
+      "client": "Client",
+      "year": "Year",
+      "duration": "Duration",
+      "tech_title": "Technologies Used",
+      "description_title": "Project Description",
+      "results_title": "Results & Impact",
+      "not_found": "Project Not Found",
+      "not_found_desc": "The project you're looking for doesn't exist."
+    }
   },
   "testimonials": {
     "title": "Client Voices",
@@ -92,16 +161,21 @@
     "description": "Let's transform your vision into digital reality together",
     "button": "Schedule a Call",
     "response": "Response within 24h",
-    "nda": "NDA available"
+    "nda": "NDA available",
+    "connect": "Let's Connect",
+    "remote": "Remote Worldwide"
   },
   "footer": {
     "rights": "All rights reserved",
-    "designed": "Designed & Built with passion"
+    "designed": "Designed & Built with passion",
+    "quick_links": "Quick Links"
   },
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Contact",
     "description": "Have a project in mind? Let's discuss how we can work together to bring your ideas to life.",
+    "get_in_touch": "Get in Touch",
+    "download_cv": "Download CV",
     "form": {
       "name": "Your Name",
       "email": "Your Email",
@@ -129,6 +203,40 @@
       "architecture": "Architecture",
       "ai": "AI & ML",
       "web": "Web Dev"
+    },
+    "detail": {
+      "back": "Back to Blog",
+      "min_read": "min read",
+      "author_role": "DevOps Engineer & Software Architect",
+      "not_found": "Article Not Found",
+      "not_found_desc": "The article you're looking for doesn't exist.",
+      "view_all": "View All Articles"
     }
+  },
+  "error": {
+    "page_not_found": "Page not found",
+    "back_home": "Back to Home",
+    "title": "Error - Page Not Found"
+  },
+  "common": {
+    "close": "Close",
+    "open": "Open",
+    "learn_more": "Learn More",
+    "see_more": "See More",
+    "loading": "Loading..."
+  },
+  "seo": {
+    "home_title": "Aboubakar Sidik Faha | DevOps & Solution Architect",
+    "about_title": "About Me | Aboubakar Sidik Faha",
+    "about_desc": "Learn about Aboubakar Sidik Faha, a DevOps Engineer and Software Architect with 7+ years of experience in cloud infrastructure, automation, and modern software architecture based in Abidjan, Ivory Coast.",
+    "services_title": "Services | DevOps & Software Architecture",
+    "services_desc": "Professional DevOps and software architecture services: Cloud infrastructure, CI/CD automation, AI/ML solutions, and full-stack web development. Based in Abidjan, Ivory Coast, serving clients worldwide.",
+    "projects_title": "Portfolio | DevOps & Software Projects",
+    "projects_desc": "Explore my portfolio of cloud infrastructure, DevOps automation, AI/ML solutions, and full-stack web development projects. Enterprise-grade solutions for global clients.",
+    "blog_title": "Blog | DevOps, Cloud & Architecture Insights",
+    "blog_desc": "Explore articles on DevOps practices, cloud architecture, software engineering, AI/ML integration, and modern development strategies. Insights from a seasoned DevOps Engineer.",
+    "contact_title": "Contact | Get in Touch",
+    "contact_desc": "Get in touch with Aboubakar Sidik Faha for DevOps consulting, cloud architecture projects, or software development inquiries. Based in Abidjan, Ivory Coast.",
+    "breadcrumb_home": "Home"
   }
 }

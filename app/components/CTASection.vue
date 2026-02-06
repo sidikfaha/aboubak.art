@@ -11,7 +11,7 @@
         <div class="flex items-center justify-center gap-3 mb-6">
           <div class="w-12 h-px bg-accent"></div>
           <span class="text-accent font-mono text-sm uppercase tracking-widest">
-            Let's Connect
+            {{ $t('cta.connect') }}
           </span>
           <div class="w-12 h-px bg-accent"></div>
         </div>
@@ -47,7 +47,7 @@
           </div>
           <div class="flex items-center gap-2 text-text-secondary">
             <Icon name="lucide:globe" class="w-5 h-5 text-accent" />
-            <span class="text-sm">Remote Worldwide</span>
+            <span class="text-sm">{{ $t('cta.remote') }}</span>
           </div>
         </div>
       </div>
