@@ -40,7 +40,7 @@
           <!-- Quick stats -->
           <div class="grid grid-cols-3 gap-4">
             <div class="text-center p-4 glass rounded-xl">
-              <div class="text-2xl font-bold text-accent">150+</div>
+              <div class="text-2xl font-bold text-accent">20+</div>
               <div class="text-xs text-text-muted">{{ $t('about.stats_projects') }}</div>
             </div>
             <div class="text-center p-4 glass rounded-xl">
@@ -48,7 +48,7 @@
               <div class="text-xs text-text-muted">{{ $t('about.stats_years') }}</div>
             </div>
             <div class="text-center p-4 glass rounded-xl">
-              <div class="text-2xl font-bold text-accent">50+</div>
+              <div class="text-2xl font-bold text-accent">10+</div>
               <div class="text-xs text-text-muted">{{ $t('about.stats_clients') }}</div>
             </div>
           </div>
@@ -63,17 +63,19 @@
               <p>
                 Based in Abidjan, Côte d'Ivoire, I'm a passionate DevOps Engineer and Software Architect 
                 with over 7 years of experience transforming complex technical challenges into elegant, 
-                scalable solutions.
+                scalable solutions. I hold a Professional Bachelor's degree in Software Engineering from 
+                Institut Universitaire de la Côte (IUC), Douala, Cameroon.
               </p>
               <p>
                 My journey began with a fascination for how things work under the hood, which led me 
-                to specialize in cloud infrastructure, automation, and modern software architecture. 
-                Today, I help businesses of all sizes—from innovative startups to established enterprises—
-                leverage technology to achieve their goals.
+                to specialize in cloud infrastructure (AWS, GCP), Kubernetes orchestration, CI/CD automation, 
+                and modern software architecture. Today, I help businesses of all sizes—from innovative 
+                startups to established enterprises in the USA and Africa—leverage technology to achieve their goals.
               </p>
               <p>
-                With an RCCM-registered business in Abidjan, I offer professional freelance services 
-                both locally and internationally, delivering enterprise-grade solutions with a personal touch.
+                I currently work as a Backend DevOps Engineer at Everest Consulting (USA) while also 
+                serving as a part-time DevOps Instructor at Primus Learning, mentoring the next generation 
+                of engineers. I'm also a regular contributor to open-source projects with OSS Cameroon.
               </p>
             </div>
           </section>
@@ -152,34 +154,50 @@ useBreadcrumbSchema([
 ])
 
 const expertise = [
-  'Design and implement scalable cloud infrastructure on AWS, Azure, and GCP',
-  'Build and optimize CI/CD pipelines for faster, more reliable deployments',
-  'Architect microservices and distributed systems for enterprise applications',
-  'Integrate AI/ML solutions into existing business workflows',
-  'Provide technical consulting and digital transformation strategy',
-  'Lead development teams and establish engineering best practices',
+  'Design and implement scalable cloud infrastructure on AWS and GCP (IAC with Terraform, Pulumi, Ansible)',
+  'Build and optimize CI/CD pipelines using GitLab CI, GitHub Actions, and Jenkins',
+  'Orchestrate containerized applications with Kubernetes (EKS, GKE)',
+  'Architect microservices and distributed systems using NestJS, FastAPI, and Go',
+  'Develop full-stack applications with Vue.js, React, Flutter, and Node.js',
+  'Lead development teams as Scrum Master and establish engineering best practices',
+  'Provide technical consulting, training, and digital transformation strategy',
 ]
 
 const experience = [
   {
-    period: '2022 - Present',
-    role: 'Senior DevOps Engineer & Architect',
-    company: 'Freelance / Consultant'
+    period: 'Aug 2023 - Aug 2025',
+    role: 'Backend DevOps Engineer',
+    company: 'Everest Consulting, Abidjan'
   },
   {
-    period: '2020 - 2022',
-    role: 'Cloud Architect',
-    company: 'Tech Solutions Company'
+    period: 'Jun 2023 - Present',
+    role: 'Part-time DevOps Instructor',
+    company: 'Primus Learning, USA'
   },
   {
-    period: '2018 - 2020',
-    role: 'Full Stack Developer',
-    company: 'Digital Agency'
+    period: 'Jan 2023 - July 2023',
+    role: 'DevOps Engineer & R&D Manager',
+    company: 'AFRIQASOFT, Abidjan'
   },
   {
-    period: '2017 - 2018',
-    role: 'Junior Developer',
-    company: 'Startup'
+    period: 'June 2022 - August 2022',
+    role: 'Development Team Lead',
+    company: "L'Agence Digitale, Douala"
+  },
+  {
+    period: 'July 2020 - December 2022',
+    role: 'DevOps Engineer',
+    company: 'GEOSPACE AFRICA LTD, Douala'
+  },
+  {
+    period: 'February 2021 - March 2022',
+    role: 'IT Specialist | DevOps Engineer',
+    company: 'SAAMEA SARL, Douala'
+  },
+  {
+    period: 'November 2019 - December 2021',
+    role: 'Junior DevOps Engineer',
+    company: 'GOHZE, Douala'
   }
 ]
 </script>

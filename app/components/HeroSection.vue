@@ -179,7 +179,7 @@ const localePath = useLocalePath()
 const nameWords = computed(() => t('hero.name').split(' '))
 
 const stats = [
-  { value: '150+', label: 'hero.stats_projects' },
+  { value: '20+', label: 'hero.stats_projects' },
   { value: '98%', label: 'hero.stats_satisfaction' },
   { value: '7+', label: 'hero.stats_experience' },
 ]

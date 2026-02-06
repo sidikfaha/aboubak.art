@@ -26,6 +26,12 @@
     "title": "Innovateur Digital & Architecte de Solutions",
     "subtitle": "À Propos",
     "description": "Passionné par l'innovation technologique, je transforme les défis complexes en solutions élégantes et performantes. Mon approche combine une expertise technique de pointe avec une vision stratégique pour créer des expériences digitales exceptionnelles.",
+    "stats_projects": "Projets Réalisés",
+    "stats_years": "Années d'Expérience",
+    "stats_clients": "Clients Servis",
+    "story_title": "Mon Parcours",
+    "what_i_do": "Ce Que Je Fais",
+    "experience_title": "Expérience",
     "cards": {
       "innovation": {
         "title": "Innovation",

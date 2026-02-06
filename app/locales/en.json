@@ -26,6 +26,12 @@
     "title": "Digital Innovator & Solutions Architect",
     "subtitle": "About Me",
     "description": "Passionate about technological innovation, I transform complex challenges into elegant and high-performing solutions. My approach combines cutting-edge technical expertise with strategic vision to create exceptional digital experiences.",
+    "stats_projects": "Projects Completed",
+    "stats_years": "Years Experience",
+    "stats_clients": "Clients Served",
+    "story_title": "My Story",
+    "what_i_do": "What I Do",
+    "experience_title": "Experience",
     "cards": {
       "innovation": {
         "title": "Innovation",
