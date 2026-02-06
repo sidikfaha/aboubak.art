@@ -27,9 +27,20 @@
           <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             {{ post.title }}
           </h1>
-          <p class="text-text-secondary text-lg md:text-xl">
+          <p class="text-text-secondary text-lg md:text-xl mb-6">
             {{ post.description }}
           </p>
+          
+          <!-- Tags -->
+          <div v-if="post.tags && post.tags.length" class="flex flex-wrap gap-2">
+            <span 
+              v-for="tag in post.tags" 
+              :key="tag"
+              class="px-3 py-1 bg-slate-800/50 text-text-secondary text-sm rounded-full border border-slate-700/50 hover:border-accent/30 hover:text-accent transition-colors"
+            >
+              #{{ tag }}
+            </span>
+          </div>
         </header>
         
         <!-- Featured image -->
@@ -54,15 +65,15 @@
           <div class="flex items-center gap-4">
             <div class="w-16 h-16 rounded-full overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
-                alt="Aboubakar Sidik Faha"
+                src="/me.webp"
+                :alt="post.author || 'Aboubakar Sidik Faha'"
                 class="w-full h-full object-cover"
                 width="64"
                 height="64"
               />
             </div>
             <div>
-              <div class="font-semibold text-lg">Aboubakar Sidik Faha</div>
+              <div class="font-semibold text-lg">{{ post.author || 'Aboubakar Sidik Faha' }}</div>
               <div class="text-text-secondary">DevOps Engineer & Software Architect</div>
             </div>
           </div>
@@ -108,8 +119,8 @@ usePageSeo({
   image: post.value ? post.value.image : undefined,
   imageAlt: post.value ? post.value.title : undefined,
   publishedTime: post.value ? post.value.date : undefined,
-  author: 'Aboubakar Sidik Faha',
-  tags: post.value ? [post.value.category] : [],
+  author: post.value?.author || 'Aboubakar Sidik Faha',
+  tags: post.value?.tags || (post.value ? [post.value.category] : []),
   locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
 })
 

@@ -2,9 +2,15 @@
 title: "Scaling Kubernetes in Production: Lessons Learned"
 description: "A deep dive into the challenges and solutions for running Kubernetes at scale in production environments."
 date: "2024-12-15"
-category: "DevOps"
 image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&h=675&fit=crop"
+tags: ["Kubernetes", "DevOps", "Cloud", "Scaling"]
+category: "DevOps"
+author: "Aboubakar Sidik Faha"
 readTime: 8
+locale: "en"
+slug: "scaling-kubernetes-production"
+draft: false
+sitemap: true
 ---
 
 # Scaling Kubernetes in Production: Lessons Learned

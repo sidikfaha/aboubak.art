@@ -2,9 +2,15 @@
 title: "Challenges of Deploying AI/ML Models in Production"
 description: "Exploring the unique challenges of moving machine learning models from notebooks to production systems."
 date: "2024-10-20"
-category: "AI & ML"
 image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=675&fit=crop"
+tags: ["AI", "Machine Learning", "MLOps", "DevOps"]
+category: "AI & ML"
+author: "Aboubakar Sidik Faha"
 readTime: 7
+locale: "en"
+slug: "ai-ml-production-challenges"
+draft: false
+sitemap: true
 ---
 
 # Challenges of Deploying AI/ML Models in Production

@@ -2,9 +2,15 @@
 title: "Défis du Déploiement de Modèles IA/ML en Production"
 description: "Exploration des défis uniques liés au passage des modèles de machine learning des notebooks aux systèmes de production."
 date: "2024-10-20"
-category: "IA & ML"
 image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=675&fit=crop"
+tags: ["IA", "Machine Learning", "MLOps", "DevOps"]
+category: "IA & ML"
+author: "Aboubakar Sidik Faha"
 readTime: 7
+locale: "fr"
+slug: "ai-ml-production-challenges"
+draft: false
+sitemap: true
 ---
 
 # Défis du Déploiement de Modèles IA/ML en Production

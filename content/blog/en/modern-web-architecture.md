@@ -2,9 +2,15 @@
 title: "Modern Web Architecture Patterns for 2025"
 description: "An overview of architectural patterns shaping the future of web development, from edge computing to serverless."
 date: "2024-09-15"
-category: "Architecture"
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=675&fit=crop"
+tags: ["Architecture", "Web Development", "Edge Computing", "Serverless"]
+category: "Architecture"
+author: "Aboubakar Sidik Faha"
 readTime: 5
+locale: "en"
+slug: "modern-web-architecture"
+draft: false
+sitemap: true
 ---
 
 # Modern Web Architecture Patterns for 2025

@@ -2,9 +2,15 @@
 title: "Bonnes Pratiques Terraform pour l'Infrastructure as Code"
 description: "Patterns et pratiques essentiels pour gérer l'infrastructure à grande échelle avec Terraform."
 date: "2024-11-28"
-category: "DevOps"
 image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=675&fit=crop"
+tags: ["Terraform", "IaC", "DevOps", "Cloud"]
+category: "DevOps"
+author: "Aboubakar Sidik Faha"
 readTime: 6
+locale: "fr"
+slug: "terraform-best-practices"
+draft: false
+sitemap: true
 ---
 
 # Bonnes Pratiques Terraform pour l'Infrastructure as Code

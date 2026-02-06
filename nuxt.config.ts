@@ -57,8 +57,15 @@ export default defineNuxtConfig({
   
   content: {
     renderer: {
-      anchorLinks: false
-    }
+      anchorLinks: false,
+    },
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark',
+        },
+      }
+    },
   },
 
   // SEO Module configuration

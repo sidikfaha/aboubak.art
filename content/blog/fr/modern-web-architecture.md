@@ -2,9 +2,15 @@
 title: "Patterns d'Architecture Web Moderne pour 2025"
 description: "Un aperçu des patterns architecturaux qui façonnent l'avenir du développement web, de l'edge computing au serverless."
 date: "2024-09-15"
-category: "Architecture"
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=675&fit=crop"
+tags: ["Architecture", "Développement Web", "Edge Computing", "Serverless"]
+category: "Architecture"
+author: "Aboubakar Sidik Faha"
 readTime: 5
+locale: "fr"
+slug: "modern-web-architecture"
+draft: false
+sitemap: true
 ---
 
 # Patterns d'Architecture Web Moderne pour 2025
