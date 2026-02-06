@@ -15,7 +15,7 @@ const { t, locale } = useI18n()
 
 // SEO for home page
 usePageSeo({
-  title: t('hero.name') + ' | DevOps & Software Architect',
+  title: t('hero.name') + ' | DevOps & Solution Architect',
   description: t('hero.description'),
   image: '/me.webp',
   type: 'profile',

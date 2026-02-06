@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   // Site configuration for SEO
   site: {
     url: "https://aboubak.art",
-    name: "Aboubakar Sidik Faha | DevOps & Software Architect",
+    name: "Aboubakar Sidik Faha | DevOps & Solution Architect",
     description: "DevOps Engineer & Software Architect based in Abidjan, Ivory Coast. Transforming digital visions into reality with innovative cloud, DevOps, and AI solutions.",
     defaultLocale: "en",
     indexable: true,

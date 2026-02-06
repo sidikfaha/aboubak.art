@@ -27,8 +27,8 @@
               <Icon name="lucide:mail" class="w-6 h-6 text-accent" />
             </div>
             <h3 class="font-semibold mb-1">{{ $t('contact.info.email') }}</h3>
-            <a href="mailto:hello@aboubak.art" class="text-text-secondary hover:text-accent transition-colors">
-              hello@aboubak.art
+            <a href="mailto:me@aboubak.art" class="text-text-secondary hover:text-accent transition-colors">
+              me@aboubak.art
             </a>
           </div>
           

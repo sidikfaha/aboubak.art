@@ -70,8 +70,8 @@
           <ul class="space-y-3">
             <li class="flex items-center gap-2 text-text-secondary text-sm">
               <Icon name="lucide:mail" class="w-4 h-4 text-accent" aria-hidden="true" />
-              <a href="mailto:hello@aboubak.art" class="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary rounded">
-                hello@aboubak.art
+              <a href="mailto:me@aboubak.art" class="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary rounded">
+                me@aboubak.art
               </a>
             </li>
             <li class="flex items-center gap-2 text-text-secondary text-sm">

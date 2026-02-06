@@ -250,7 +250,7 @@ export function useLocalBusinessSchema() {
     name: 'Aboubakar Sidik Faha - DevOps & Software Architecture',
     description: 'Professional DevOps and Software Architecture services based in Abidjan, Ivory Coast.',
     url: 'https://aboubak.art',
-    email: 'hello@aboubak.art',
+    email: 'me@aboubak.art',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Abidjan',

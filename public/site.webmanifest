@@ -1,5 +1,5 @@
 {
-  "name": "Aboubakar Sidik Faha - DevOps & Software Architect",
+  "name": "Aboubakar Sidik Faha - DevOps & Solution Architect",
   "short_name": "ASF Portfolio",
   "description": "DevOps Engineer & Software Architect based in Abidjan, Ivory Coast. Expert in cloud infrastructure, DevOps practices, and scalable software architecture.",
   "start_url": "/",
@@ -10,20 +10,6 @@
   "scope": "/",
   "lang": "en",
   "categories": ["portfolio", "business", "technology"],
-  "icons": [
-    {
-      "src": "/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
   "shortcuts": [
     {
       "name": "Services",

@@ -62,7 +62,7 @@
           marginBottom: '20px',
         }"
       >
-        {{ props.description || 'DevOps & Software Architect' }}
+        {{ props.description || 'DevOps & Solution Architect' }}
       </div>
       
       <h1 
@@ -125,7 +125,7 @@ const props = defineProps({
   },
   description: {
     type: String,
-    default: 'DevOps & Software Architect'
+    default: 'DevOps & Solution Architect'
   }
 })
 </script>
