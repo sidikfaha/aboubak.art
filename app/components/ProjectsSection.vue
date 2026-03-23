@@ -150,36 +150,36 @@ onMounted(() => {
 
 const projects = [
   {
-    slug: 'cloud-infrastructure',
-    title: 'Enterprise Cloud Infrastructure',
-    description: 'Designed and implemented a scalable cloud infrastructure for a fintech company, handling millions of transactions daily with 99.99% uptime.',
-    category: 'Cloud Architecture',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
-    tech: ['AWS', 'Terraform', 'Kubernetes', 'Docker']
+    slug: 'kika',
+    title: 'KIKA',
+    description: 'A pan-African mobile application for managing modern tontines (savings circles) with mobile money integration, automated reminders, and real-time tracking.',
+    category: 'Fintech',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
+    tech: ['React Native', 'Node.js', 'PostgreSQL', 'AWS']
   },
   {
-    slug: 'ai-platform',
-    title: 'AI-Powered Analytics Platform',
-    description: 'Built a comprehensive analytics platform leveraging machine learning to provide actionable insights for e-commerce businesses.',
-    category: 'AI & ML',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
-    tech: ['Python', 'TensorFlow', 'React', 'Node.js']
+    slug: 'fiddeal',
+    title: 'Fiddeal',
+    description: 'Digital loyalty platform connecting merchants and customers through QR code-based rewards. Features Fiddeal Pro for business owners with CRM automation.',
+    category: 'Fintech',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+    tech: ['Vue.js', 'Node.js', 'MongoDB', 'Firebase']
   },
   {
-    slug: 'devops-automation',
-    title: 'DevOps Automation Suite',
-    description: 'Developed a complete CI/CD automation suite reducing deployment time by 80% and improving team productivity significantly.',
+    slug: 'copaa',
+    title: 'COPAA',
+    description: 'Pan-African social network built to connect people across Africa. A sovereign, solidarity-based microblogging platform with exclusive honor-code access.',
+    category: 'Social',
+    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop',
+    tech: ['Nuxt.js', 'Node.js', 'PostgreSQL', 'WebSockets']
+  },
+  {
+    slug: 'zawaj-sounnah',
+    title: 'Zawaj Sounnah',
+    description: 'Islamic matrimonial platform helping Muslims find spouses in accordance with Quran and Sunnah. 24/7 moderation and mahram-protected communication.',
     category: 'DevOps',
-    image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=600&fit=crop',
-    tech: ['GitHub Actions', 'Jenkins', 'Ansible', 'Prometheus']
-  },
-  {
-    slug: 'microservices-platform',
-    title: 'Microservices Platform',
-    description: 'Architected a microservices-based platform enabling rapid feature deployment and improved system resilience for a logistics company.',
-    category: 'Architecture',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
-    tech: ['Node.js', 'gRPC', 'Redis', 'PostgreSQL']
+    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop',
+    tech: ['Docker', 'Kubernetes', 'CI/CD', 'AWS']
   }
 ]
 </script>

@@ -109,7 +109,7 @@ const localePath = useLocalePath()
 // SEO for projects page
 usePageSeo({
   title: 'Portfolio | DevOps & Software Projects',
-  description: 'Explore my portfolio of cloud infrastructure, DevOps automation, AI/ML solutions, and full-stack web development projects. Enterprise-grade solutions for global clients.',
+  description: 'Explore my portfolio of cloud infrastructure, DevOps automation, fintech solutions, and full-stack web development projects. Enterprise-grade solutions for global clients.',
   type: 'website',
   locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
 })
@@ -125,52 +125,60 @@ const filters = computed(() => [t('projects.filters.all'), t('projects.filters.c
 
 const projects = [
   {
-    slug: 'cloud-infrastructure',
-    title: 'Enterprise Cloud Infrastructure',
-    description: 'Designed and implemented a scalable cloud infrastructure for a fintech company, handling millions of transactions daily with 99.99% uptime.',
-    category: 'Cloud',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
-    tech: ['AWS', 'Terraform', 'Kubernetes', 'Docker']
+    slug: 'kika',
+    title: 'KIKA',
+    description: 'A pan-African mobile application for managing modern tontines (savings circles) with mobile money integration, automated reminders, and real-time tracking.',
+    category: 'Fintech',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
+    tech: ['React Native', 'Node.js', 'PostgreSQL', 'Mobile Money APIs', 'AWS']
   },
   {
-    slug: 'ai-platform',
-    title: 'AI-Powered Analytics Platform',
-    description: 'Built a comprehensive analytics platform leveraging machine learning to provide actionable insights for e-commerce businesses.',
-    category: 'AI/ML',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
-    tech: ['Python', 'TensorFlow', 'React', 'Node.js']
+    slug: 'fiddeal',
+    title: 'Fiddeal',
+    description: 'Digital loyalty platform connecting merchants and customers through QR code-based rewards. Features Fiddeal Pro for business owners with CRM automation.',
+    category: 'Fintech',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+    tech: ['Vue.js', 'Node.js', 'MongoDB', 'QR Code API', 'Firebase']
   },
   {
-    slug: 'devops-automation',
-    title: 'DevOps Automation Suite',
-    description: 'Developed a complete CI/CD automation suite reducing deployment time by 80% and improving team productivity significantly.',
-    category: 'DevOps',
-    image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=600&fit=crop',
-    tech: ['GitHub Actions', 'Jenkins', 'Ansible', 'Prometheus']
+    slug: 'copaa',
+    title: 'COPAA',
+    description: 'Pan-African social network built to connect people across Africa. A sovereign, solidarity-based microblogging platform with exclusive honor-code access.',
+    category: 'Social',
+    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop',
+    tech: ['Nuxt.js', 'Node.js', 'PostgreSQL', 'Redis', 'WebSockets']
   },
   {
-    slug: 'microservices-platform',
-    title: 'Microservices Platform',
-    description: 'Architected a microservices-based platform enabling rapid feature deployment and improved system resilience for a logistics company.',
-    category: 'Cloud',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
-    tech: ['Node.js', 'gRPC', 'Redis', 'PostgreSQL']
+    slug: 'schoolgood',
+    title: 'SchoolGood',
+    description: 'English learning platform offering intensive coaching with live courses, personalized sessions, and community access for French-speaking students.',
+    category: 'EdTech',
+    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop',
+    tech: ['React', 'Node.js', 'WebRTC', 'Stripe', 'PostgreSQL']
   },
   {
-    slug: 'ecommerce-redesign',
-    title: 'E-commerce Platform Redesign',
-    description: 'Complete overhaul of an e-commerce platform resulting in 40% increase in conversion rates and improved user experience.',
-    category: 'Web',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    tech: ['Nuxt.js', 'Stripe', 'PostgreSQL', 'Redis']
+    slug: 'jackwestin',
+    title: 'Jack Westin',
+    description: 'MCAT exam preparation platform providing daily practice passages, question banks, and personalized learning resources for medical school aspirants.',
+    category: 'EdTech',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop',
+    tech: ['Vue.js', 'Python', 'Django', 'PostgreSQL', 'Redis']
   },
   {
-    slug: 'nlp-chatbot',
-    title: 'Enterprise NLP Chatbot',
-    description: 'Developed an intelligent customer support chatbot using NLP that reduced support ticket volume by 60%.',
-    category: 'AI/ML',
-    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=600&fit=crop',
-    tech: ['Python', 'OpenAI', 'FastAPI', 'MongoDB']
+    slug: 'drbalcony',
+    title: 'DrBalcony',
+    description: 'California balcony inspection platform for SB326 and SB721 compliance. AI-powered inspection management system for HOAs and property managers.',
+    category: 'PropTech',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
+    tech: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'AI/ML']
+  },
+  {
+    slug: 'zawaj-sounnah',
+    title: 'Zawaj Sounnah',
+    description: 'Islamic matrimonial platform helping Muslims find spouses in accordance with Quran and Sunnah. 24/7 moderation and mahram-protected communication.',
+    category: 'Social',
+    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop',
+    tech: ['Docker', 'Kubernetes', 'CI/CD', 'AWS', 'Monitoring']
   }
 ]
 
