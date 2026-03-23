@@ -353,7 +353,7 @@
 
     <!-- Client Testimonial Section -->
     <section v-if="projectTestimonial" ref="testimonialSectionRef" class="py-24 lg:py-32 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent"></div>
+      <div class="absolute inset-0 bg-linear-to-b from-transparent via-accent/5 to-transparent"></div>
       
       <Container class="relative z-10">
         <div ref="testimonialContentRef" class="max-w-4xl mx-auto opacity-0">
@@ -399,7 +399,7 @@
     <section ref="ctaSectionRef" class="py-24 lg:py-32 relative overflow-hidden">
       <!-- Background effects -->
       <div class="absolute inset-0">
-        <div ref="ctaGlowRef" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px] opacity-0"></div>
+        <div ref="ctaGlowRef" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-accent/10 rounded-full blur-[150px] opacity-0"></div>
       </div>
       
       <Container class="relative z-10">

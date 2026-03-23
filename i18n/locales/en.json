@@ -58,6 +58,9 @@
     "story_title": "My Story",
     "what_i_do": "What I Do",
     "experience_title": "Experience",
+    "skills_title": "Skills & Expertise",
+    "education_title": "Education",
+    "notable_projects": "Notable Projects",
     "stats_projects": "Projects",
     "stats_years": "Years Exp.",
     "stats_clients": "Clients"
@@ -268,7 +271,8 @@
     "info": {
       "email": "Email",
       "location": "Location",
-      "availability": "Availability"
+      "availability": "Availability",
+      "phone": "Phone"
     }
   },
   "blog": {

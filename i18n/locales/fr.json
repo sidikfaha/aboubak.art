@@ -58,6 +58,9 @@
     "story_title": "Mon Parcours",
     "what_i_do": "Ce Que Je Fais",
     "experience_title": "Expérience",
+    "skills_title": "Compétences & Expertise",
+    "education_title": "Formation",
+    "notable_projects": "Projets Notables",
     "stats_projects": "Projets",
     "stats_years": "Années Exp.",
     "stats_clients": "Clients"
@@ -268,7 +271,8 @@
     "info": {
       "email": "Email",
       "location": "Localisation",
-      "availability": "Disponibilité"
+      "availability": "Disponibilité",
+      "phone": "Téléphone"
     }
   },
   "blog": {
