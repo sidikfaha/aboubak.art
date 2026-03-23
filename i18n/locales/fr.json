@@ -216,7 +216,19 @@
       "description_title": "Description du Projet",
       "results_title": "Résultats & Impact",
       "not_found": "Projet Non Trouvé",
-      "not_found_desc": "Le projet que vous recherchez n'existe pas."
+      "not_found_desc": "Le projet que vous recherchez n'existe pas.",
+      "challenges_title": "Défis & Solutions",
+      "challenges": "Défis",
+      "solutions": "Solutions",
+      "features_title": "Fonctionnalités Clés",
+      "client_feedback": "Avis Client",
+      "cta": {
+        "subtitle": "Travaillons Ensemble",
+        "title": "Prêt à Construire Quelque Chose d'Incroyable ?",
+        "description": "Discutons de comment je peux vous aider à donner vie à votre prochain projet avec la même qualité et attention aux détails.",
+        "button_primary": "Démarrer un Projet",
+        "button_secondary": "Voir Plus de Projets"
+      }
     }
   },
   "testimonials": {

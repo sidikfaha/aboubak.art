@@ -214,7 +214,7 @@
     <!-- Process Section -->
     <section ref="processSectionRef" class="py-24 lg:py-32 relative overflow-hidden">
       <!-- Background accent -->
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent"></div>
+      <div class="absolute inset-0 bg-linear-to-b from-transparent via-accent/5 to-transparent"></div>
       
       <Container class="relative z-10">
         <!-- Section Header -->
@@ -243,7 +243,7 @@
             :data-step-index="index"
           >
             <!-- Connector Line -->
-            <div v-if="index < processSteps.length - 1" class="hidden lg:block absolute top-12 left-full w-full h-px bg-gradient-to-r from-accent/30 to-transparent z-0"></div>
+            <div v-if="index < processSteps.length - 1" class="hidden lg:block absolute top-12 left-full w-full h-px bg-linear-to-r from-accent/30 to-transparent z-0"></div>
             
             <div class="relative z-10 p-6 lg:p-8 rounded-2xl glass border border-white/10 transition-all duration-300 group-hover:border-accent/30 group-hover:bg-white/5 h-full">
               <!-- Step Number -->
@@ -286,7 +286,7 @@
             <!-- Key Benefits -->
             <div class="space-y-4">
               <div v-for="benefit in impactBenefits" :key="benefit" class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div class="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5">
                   <Icon name="lucide:check" class="w-4 h-4 text-accent" />
                 </div>
                 <span class="text-text-secondary">{{ benefit }}</span>
@@ -349,7 +349,7 @@
           </button>
           
           <!-- Cards container -->
-          <div class="relative h-[400px] md:h-[350px]">
+          <div class="relative h-100 md:h-87.5">
             <div 
               v-for="(testimonial, i) in testimonials" 
               :key="i"
@@ -399,7 +399,7 @@
     <section ref="ctaSectionRef" class="py-24 lg:py-32 relative overflow-hidden">
       <!-- Background effects -->
       <div class="absolute inset-0">
-        <div ref="ctaGlowRef" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px] opacity-0"></div>
+        <div ref="ctaGlowRef" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-accent/10 rounded-full blur-[150px] opacity-0"></div>
       </div>
       
       <Container class="relative z-10">

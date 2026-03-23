@@ -3,7 +3,7 @@
     <main class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden" role="main">
       <!-- Animated Background Grid -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-size-[60px_60px]" />
         <div class="absolute top-1/4 -left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse" />
         <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;" />
       </div>
@@ -28,7 +28,7 @@
               </span>
               <!-- Main code -->
               <h1 
-                class="text-[120px] md:text-[180px] font-bold leading-none bg-gradient-to-b from-white via-white to-white/60 bg-clip-text text-transparent glitch-main"
+                class="text-[120px] md:text-[180px] font-bold leading-none bg-linear-to-b from-white via-white to-white/60 bg-clip-text text-transparent glitch-main"
               >
                 {{ errorCode }}
               </h1>
@@ -138,9 +138,9 @@
 
           <!-- Decorative Elements -->
           <div class="flex items-center justify-center gap-8 mt-12 text-text-muted">
-            <div class="h-px w-16 bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
+            <div class="h-px w-16 bg-linear-to-r from-transparent via-slate-700 to-transparent" />
             <Icon name="lucide:code-2" class="w-5 h-5" aria-hidden="true" />
-            <div class="h-px w-16 bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
+            <div class="h-px w-16 bg-linear-to-r from-transparent via-slate-700 to-transparent" />
           </div>
         </div>
       </Container>

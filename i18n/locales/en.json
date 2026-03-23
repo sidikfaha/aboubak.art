@@ -216,7 +216,19 @@
       "description_title": "Project Description",
       "results_title": "Results & Impact",
       "not_found": "Project Not Found",
-      "not_found_desc": "The project you're looking for doesn't exist."
+      "not_found_desc": "The project you're looking for doesn't exist.",
+      "challenges_title": "Challenges & Solutions",
+      "challenges": "Challenges",
+      "solutions": "Solutions",
+      "features_title": "Key Features",
+      "client_feedback": "Client Feedback",
+      "cta": {
+        "subtitle": "Let's Work Together",
+        "title": "Ready to Build Something Amazing?",
+        "description": "Let's discuss how I can help bring your next project to life with the same quality and attention to detail.",
+        "button_primary": "Start a Project",
+        "button_secondary": "View More Projects"
+      }
     }
   },
   "testimonials": {
