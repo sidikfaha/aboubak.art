@@ -234,8 +234,21 @@
     }
   },
   "error": {
-    "page_not_found": "Page not found",
+    "404_title": "404",
+    "404_heading": "Page not found",
+    "404_message": "The page you're looking for doesn't exist or has been moved.",
+    "500_title": "500",
+    "500_heading": "Server error",
+    "500_message": "Something went wrong on our end. Please try again later.",
+    "default_title": "Error",
+    "default_heading": "An error occurred",
+    "default_message": "We encountered an unexpected issue. Please try again.",
     "back_home": "Back to Home",
+    "try_again": "Try Again",
+    "browse_blog": "Browse Blog",
+    "view_projects": "View Projects",
+    "contact_me": "Contact Me",
+    "useful_links": "Useful Links",
     "title": "Error - Page Not Found"
   },
   "common": {
