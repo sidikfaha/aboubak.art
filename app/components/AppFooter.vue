@@ -1,5 +1,5 @@
 <template>
-  <footer class="relative border-t border-border mt-20" role="contentinfo">
+  <footer class="relative border-t border-border bg-slate-800/30" role="contentinfo">
     <Container class="py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <!-- Brand -->
