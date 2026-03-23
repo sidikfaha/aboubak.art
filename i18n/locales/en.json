@@ -160,6 +160,53 @@
       "devops": "DevOps",
       "proptech": "PropTech"
     },
+    "process": {
+      "subtitle": "How I Work",
+      "title": "My Development Process",
+      "description": "A proven methodology that ensures successful delivery of every project",
+      "steps": {
+        "discovery": {
+          "title": "Discovery",
+          "desc": "Understanding your needs, goals, and constraints through in-depth consultation and research."
+        },
+        "strategy": {
+          "title": "Strategy",
+          "desc": "Designing a tailored solution architecture that aligns with your business objectives."
+        },
+        "development": {
+          "title": "Development",
+          "desc": "Building your solution with regular updates, iterative feedback, and best practices."
+        },
+        "delivery": {
+          "title": "Delivery",
+          "desc": "Deploying to production with monitoring, documentation, and knowledge transfer."
+        }
+      }
+    },
+    "impact": {
+      "subtitle": "Results",
+      "title": "Impact & Results",
+      "description": "Every project is built with a focus on delivering measurable business value and long-term success.",
+      "benefits": {
+        "scalable": "Scalable architecture that grows with your business",
+        "performant": "High-performance solutions optimized for speed",
+        "secure": "Enterprise-grade security best practices",
+        "maintainable": "Clean, maintainable code with documentation"
+      },
+      "stats": {
+        "projects": "Projects Delivered",
+        "satisfaction": "Client Satisfaction",
+        "delivery": "On-Time Delivery",
+        "support": "Support Available"
+      }
+    },
+    "cta": {
+      "subtitle": "Let's Build Together",
+      "title": "Have a Project in Mind?",
+      "description": "Ready to transform your ideas into reality? Let's discuss how I can help you achieve your goals.",
+      "button_primary": "Schedule a Call",
+      "button_secondary": "View Services"
+    },
     "detail": {
       "back": "Back to Projects",
       "client": "Client",

@@ -160,6 +160,53 @@
       "devops": "DevOps",
       "proptech": "PropTech"
     },
+    "process": {
+      "subtitle": "Comment Je Travaille",
+      "title": "Mon Processus de Développement",
+      "description": "Une méthodologie éprouvée qui assure la livraison réussie de chaque projet",
+      "steps": {
+        "discovery": {
+          "title": "Découverte",
+          "desc": "Comprendre vos besoins, objectifs et contraintes grâce à une consultation et une recherche approfondies."
+        },
+        "strategy": {
+          "title": "Stratégie",
+          "desc": "Conception d'une architecture de solution sur mesure alignée avec vos objectifs commerciaux."
+        },
+        "development": {
+          "title": "Développement",
+          "desc": "Construction de votre solution avec des mises à jour régulières, un feedback itératif et les meilleures pratiques."
+        },
+        "delivery": {
+          "title": "Livraison",
+          "desc": "Déploiement en production avec monitoring, documentation et transfert de connaissances."
+        }
+      }
+    },
+    "impact": {
+      "subtitle": "Résultats",
+      "title": "Impact & Résultats",
+      "description": "Chaque projet est construit avec un focus sur la livraison d'une valeur commerciale mesurable et un succès à long terme.",
+      "benefits": {
+        "scalable": "Architecture évolutive qui grandit avec votre entreprise",
+        "performant": "Solutions haute performance optimisées pour la vitesse",
+        "secure": "Meilleures pratiques de sécurité niveau entreprise",
+        "maintainable": "Code propre et maintenable avec documentation"
+      },
+      "stats": {
+        "projects": "Projets Livrés",
+        "satisfaction": "Satisfaction Client",
+        "delivery": "Livraison à Temps",
+        "support": "Support Disponible"
+      }
+    },
+    "cta": {
+      "subtitle": "Construisons Ensemble",
+      "title": "Vous Avez un Projet en Tête ?",
+      "description": "Prêt à transformer vos idées en réalité ? Discutons de comment je peux vous aider à atteindre vos objectifs.",
+      "button_primary": "Planifier un Appel",
+      "button_secondary": "Voir les Services"
+    },
     "detail": {
       "back": "Retour aux Projets",
       "client": "Client",
