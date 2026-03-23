@@ -20,7 +20,7 @@
       <!-- Main Content Grid -->
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         <!-- Left Column: Profile & Quick Info -->
-        <div class="lg:col-span-5 space-y-8">
+        <div class="lg:col-span-5 space-y-8 sticky top-20 self-start">
           <!-- Profile Image -->
           <div ref="imageRef" class="relative opacity-0">
             <div class="aspect-4/5 rounded-2xl overflow-hidden group">
