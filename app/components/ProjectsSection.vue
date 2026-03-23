@@ -27,15 +27,24 @@
         </NuxtLink>
       </div>
       
+      <!-- Loading State -->
+      <div v-if="status === 'pending'" class="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div v-for="i in 4" :key="i" class="animate-pulse">
+          <div class="aspect-16/10 bg-slate-800/50 rounded-2xl mb-4"></div>
+          <div class="h-6 bg-slate-800/50 rounded w-1/2 mb-2"></div>
+          <div class="h-4 bg-slate-800/50 rounded w-3/4"></div>
+        </div>
+      </div>
+      
       <!-- Projects grid -->
-      <div ref="projectsRef" class="grid md:grid-cols-2 gap-6 lg:gap-8">
+      <div v-else ref="projectsRef" class="grid md:grid-cols-2 gap-6 lg:gap-8">
         <div 
-          v-for="(project, i) in projects" 
-          :key="i"
+          v-for="(project, i) in featuredProjects" 
+          :key="getProjectSlug(project)"
           class="group relative opacity-0"
           :data-project-index="i"
         >
-          <NuxtLink :to="localePath(`/projects/${project.slug}`)" class="block h-full">
+          <NuxtLink :to="localePath(`/projects/${getProjectSlug(project)}`)" class="block h-full">
             <div class="relative h-full rounded-2xl overflow-hidden bg-slate-800/30 border border-slate-700/30 transition-all duration-300 group-hover:border-accent/30 group-hover:bg-slate-800/50 group-hover:shadow-xl group-hover:shadow-black/20">
               <!-- Image -->
               <div class="relative aspect-16/10 overflow-hidden">
@@ -102,7 +111,7 @@
           :to="localePath('/projects')"
           class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-all border border-slate-700/50 hover:border-accent/30 group"
         >
-          <span class="font-medium">View All Projects</span>
+          <span class="font-medium">{{ $t('projects.view_all') }}</span>
           <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent transition-colors">
             <Icon name="lucide:arrow-right" class="w-4 h-4 text-accent group-hover:text-white transition-colors" />
           </div>
@@ -117,10 +126,28 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const localePath = useLocalePath()
+const { locale } = useI18n()
 
 const sectionRef = ref(null)
 const headerRef = ref(null)
 const projectsRef = ref(null)
+
+// Helper function to extract slug from path
+const getProjectSlug = (project) => {
+  if (!project || !project.path) return ''
+  const parts = project.path.split('/')
+  return parts[parts.length - 1]
+}
+
+// Fetch projects from Nuxt Content
+const { data: projects, status } = await useAsyncData(`home-projects-${locale.value}`, async () => {
+  const collection = locale.value === 'fr' ? 'projects_fr' : 'projects_en'
+  return await queryCollection(collection)
+    .limit(4)
+    .all()
+})
+
+const featuredProjects = computed(() => projects.value || [])
 
 onMounted(() => {
   if (process.server) return
@@ -143,14 +170,14 @@ onMounted(() => {
   })
   
   // Projects stagger animation
-  const projects = projectsRef.value?.querySelectorAll('[data-project-index]')
-  if (projects) {
+  const projectElements = projectsRef.value?.querySelectorAll('[data-project-index]')
+  if (projectElements) {
     ScrollTrigger.create({
       trigger: projectsRef.value,
       start: 'top 80%',
       once: true,
       onEnter: () => {
-        gsap.to(projects, {
+        gsap.to(projectElements, {
           opacity: 1,
           y: 0,
           duration: 0.6,
@@ -161,49 +188,10 @@ onMounted(() => {
     })
     
     // Set initial state
-    gsap.set(projects, { opacity: 0, y: 40 })
+    gsap.set(projectElements, { opacity: 0, y: 40 })
   }
   
   // Set initial header state
   gsap.set(headerRef.value, { opacity: 0, y: 30 })
 })
-
-const projects = [
-  {
-    slug: 'kika',
-    title: 'KIKA',
-    description: 'A pan-African mobile application for managing modern tontines (savings circles) with mobile money integration, automated reminders, and real-time tracking.',
-    category: 'Fintech',
-    role: 'Full Stack',
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
-    tech: ['React Native', 'Node.js', 'PostgreSQL', 'AWS']
-  },
-  {
-    slug: 'fiddeal',
-    title: 'Fiddeal',
-    description: 'Digital loyalty platform connecting merchants and customers through QR code-based rewards. Features Fiddeal Pro for business owners with CRM automation.',
-    category: 'Fintech',
-    role: 'Owner',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-    tech: ['Vue.js', 'Node.js', 'MongoDB', 'Firebase']
-  },
-  {
-    slug: 'copaa',
-    title: 'COPAA',
-    description: 'Pan-African social network built to connect people across Africa. A sovereign, solidarity-based microblogging platform with exclusive honor-code access.',
-    category: 'Social',
-    role: 'Full Stack',
-    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop',
-    tech: ['Nuxt.js', 'Node.js', 'PostgreSQL', 'WebSockets']
-  },
-  {
-    slug: 'zawaj-sounnah',
-    title: 'Zawaj Sounnah',
-    description: 'Islamic matrimonial platform helping Muslims find spouses in accordance with Quran and Sunnah. 24/7 moderation and mahram-protected communication.',
-    category: 'Social',
-    role: 'DevOps',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop',
-    tech: ['Docker', 'Kubernetes', 'CI/CD', 'AWS']
-  }
-]
 </script>
