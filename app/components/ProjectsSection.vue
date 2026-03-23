@@ -35,58 +35,78 @@
           class="group relative opacity-0"
           :data-project-index="i"
         >
-          <NuxtLink :to="localePath(`/projects/${project.slug}`)" class="block">
-            <!-- Image container -->
-            <div class="relative aspect-4/3 rounded-2xl overflow-hidden mb-4">
-              <img 
-                :src="project.image" 
-                :alt="project.title"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              
-              <!-- Overlay -->
-              <div class="absolute inset-0 bg-linear-to-t from-bg-primary via-bg-primary/20 to-transparent opacity-60"></div>
-              
-              <!-- Hover overlay -->
-              <div class="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              <!-- View button -->
-              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-300">
-                  <Icon name="lucide:arrow-right" class="w-6 h-6 text-white" aria-hidden="true" />
+          <NuxtLink :to="localePath(`/projects/${project.slug}`)" class="block h-full">
+            <div class="relative h-full rounded-2xl overflow-hidden bg-slate-800/30 border border-slate-700/30 transition-all duration-300 group-hover:border-accent/30 group-hover:bg-slate-800/50 group-hover:shadow-xl group-hover:shadow-black/20">
+              <!-- Image -->
+              <div class="relative aspect-16/10 overflow-hidden">
+                <img 
+                  :src="project.image" 
+                  :alt="project.title"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent opacity-90"></div>
+                
+                <!-- Hover Overlay -->
+                <div class="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <!-- View Button -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-300 shadow-2xl">
+                    <Icon name="lucide:arrow-up-right" class="w-6 h-6 text-slate-900" />
+                  </div>
+                </div>
+                
+                <!-- Category Badge -->
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1.5 bg-slate-950/80 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-slate-700/50">
+                    {{ project.category }}
+                  </span>
+                </div>
+                
+                <!-- Role Badge -->
+                <div v-if="project.role" class="absolute top-4 right-4">
+                  <span class="px-3 py-1.5 bg-accent/90 backdrop-blur-sm rounded-full text-xs font-semibold text-white">
+                    {{ project.role }}
+                  </span>
                 </div>
               </div>
               
-              <!-- Category badge - Pill -->
-              <div class="absolute top-4 left-4">
-                <span class="px-4 py-2 bg-slate-900/80 backdrop-blur-sm rounded-full text-xs font-medium text-text-secondary border border-slate-700/50">
-                  {{ project.category }}
-                </span>
-              </div>
-            </div>
-            
-            <!-- Content -->
-            <div class="space-y-2">
-              <h3 class="text-xl font-semibold group-hover:text-accent transition-colors">
-                {{ project.title }}
-              </h3>
-              <p class="text-text-secondary text-sm line-clamp-2">
-                {{ project.description }}
-              </p>
-              
-              <!-- Tech stack - Pills -->
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span 
-                  v-for="tech in project.tech" 
-                  :key="tech"
-                  class="px-3 py-1 text-xs text-text-muted bg-slate-800/50 rounded-full border border-slate-700/30"
-                >
-                  {{ tech }}
-                </span>
+              <!-- Content -->
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
+                  {{ project.title }}
+                </h3>
+                <p class="text-text-secondary text-sm line-clamp-2 mb-4">
+                  {{ project.description }}
+                </p>
+                
+                <!-- Tech stack -->
+                <div class="flex flex-wrap gap-2">
+                  <span 
+                    v-for="tech in project.tech.slice(0, 4)" 
+                    :key="tech"
+                    class="px-2.5 py-1 text-xs text-text-muted bg-slate-900/50 rounded-md border border-slate-700/30"
+                  >
+                    {{ tech }}
+                  </span>
+                </div>
               </div>
             </div>
           </NuxtLink>
         </div>
+      </div>
+      
+      <!-- Bottom CTA -->
+      <div class="mt-16 text-center">
+        <NuxtLink 
+          :to="localePath('/projects')"
+          class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-all border border-slate-700/50 hover:border-accent/30 group"
+        >
+          <span class="font-medium">View All Projects</span>
+          <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent transition-colors">
+            <Icon name="lucide:arrow-right" class="w-4 h-4 text-accent group-hover:text-white transition-colors" />
+          </div>
+        </NuxtLink>
       </div>
     </Container>
   </section>
@@ -154,6 +174,7 @@ const projects = [
     title: 'KIKA',
     description: 'A pan-African mobile application for managing modern tontines (savings circles) with mobile money integration, automated reminders, and real-time tracking.',
     category: 'Fintech',
+    role: 'Full Stack',
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
     tech: ['React Native', 'Node.js', 'PostgreSQL', 'AWS']
   },
@@ -162,6 +183,7 @@ const projects = [
     title: 'Fiddeal',
     description: 'Digital loyalty platform connecting merchants and customers through QR code-based rewards. Features Fiddeal Pro for business owners with CRM automation.',
     category: 'Fintech',
+    role: 'Owner',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
     tech: ['Vue.js', 'Node.js', 'MongoDB', 'Firebase']
   },
@@ -170,6 +192,7 @@ const projects = [
     title: 'COPAA',
     description: 'Pan-African social network built to connect people across Africa. A sovereign, solidarity-based microblogging platform with exclusive honor-code access.',
     category: 'Social',
+    role: 'Full Stack',
     image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop',
     tech: ['Nuxt.js', 'Node.js', 'PostgreSQL', 'WebSockets']
   },
@@ -177,7 +200,8 @@ const projects = [
     slug: 'zawaj-sounnah',
     title: 'Zawaj Sounnah',
     description: 'Islamic matrimonial platform helping Muslims find spouses in accordance with Quran and Sunnah. 24/7 moderation and mahram-protected communication.',
-    category: 'DevOps',
+    category: 'Social',
+    role: 'DevOps',
     image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop',
     tech: ['Docker', 'Kubernetes', 'CI/CD', 'AWS']
   }
