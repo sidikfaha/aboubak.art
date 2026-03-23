@@ -63,7 +63,139 @@
     "notable_projects": "Notable Projects",
     "stats_projects": "Projects",
     "stats_years": "Years Exp.",
-    "stats_clients": "Clients"
+    "stats_clients": "Clients",
+    "available_for_projects": "Available for projects",
+    "current": "Current",
+    "bio": {
+      "p1": "Based in Abidjan, Côte d'Ivoire, I'm a passionate {role} with over 7 years of experience transforming complex technical challenges into elegant, scalable solutions.",
+      "p2": "I hold a {degree} from {school}, Douala, Cameroon. My journey began with a fascination for how things work under the hood, which led me to specialize in cloud infrastructure (AWS, GCP), Kubernetes orchestration, CI/CD automation, and modern software architecture.",
+      "p3": "Currently, I'm a {current_role} while also serving as a part-time DevOps Instructor at Primus Learning, mentoring the next generation of engineers. I'm also a regular contributor to open-source projects with OSS Cameroon.",
+      "role": "DevOps Engineer and Software Architect",
+      "degree": "Professional Bachelor's degree in Software Engineering",
+      "school": "Institut Universitaire de la Côte (IUC)",
+      "current_role": "Backend DevOps Engineer at Everest Consulting (USA)"
+    },
+    "expertise": {
+      "item1": "Design and implement scalable cloud infrastructure on AWS and GCP (IAC with Terraform, Pulumi, Ansible)",
+      "item2": "Build and optimize CI/CD pipelines using GitLab CI, GitHub Actions, and Jenkins",
+      "item3": "Orchestrate containerized applications with Kubernetes (EKS, GKE)",
+      "item4": "Architect microservices and distributed systems using NestJS, FastAPI, and Go",
+      "item5": "Develop full-stack applications with Vue.js, React, Flutter, and Node.js",
+      "item6": "Lead development teams as Scrum Master and establish engineering best practices",
+      "item7": "Provide technical consulting, training, and digital transformation strategy"
+    },
+    "skills": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "cloud_devops": "Cloud & DevOps",
+      "databases": "Databases",
+      "tools": "Tools & Platforms",
+      "methodologies": "Methodologies"
+    },
+    "experience": {
+      "asernum": {
+        "period": "Aug 2025 - Present",
+        "role": "DevOps Engineer & Solution Architect",
+        "company": "ASERNUM, Abidjan",
+        "highlight1": "Infrastructure design and management on AWS (IAC, monitoring, cost optimization)",
+        "highlight2": "Writing CI/CD Pipelines and code quality checks",
+        "highlight3": "Workflow automation and integration with third-party services",
+        "highlight4": "IPSec VPN setup and management for secure connectivity"
+      },
+      "everest": {
+        "period": "Aug 2023 - Aug 2025",
+        "role": "Head of DevOps Engineer",
+        "company": "Everest Consulting, Abidjan",
+        "highlight1": "Backend development with NestJS",
+        "highlight2": "Writing CI/CD Pipelines and code quality checks",
+        "highlight3": "Infrastructure management on AWS (IAC, monitoring, cost optimization)",
+        "highlight4": "Kubernetes orchestration on EKS"
+      },
+      "primus": {
+        "period": "Jun 2023 - Aug 2024",
+        "role": "Part-time DevOps Instructor",
+        "company": "Primus Learning, USA (Remote)",
+        "highlight1": "Live teaching DevOps to students (Docker, CI-CD, Python)",
+        "highlight2": "Mentoring students on best practices"
+      },
+      "afriqasoft": {
+        "period": "Jan 2023 - July 2023",
+        "role": "DevOps Engineer & R&D Manager",
+        "company": "AFRIQASOFT, Abidjan",
+        "highlight1": "Project Management as Scrum Master",
+        "highlight2": "CI/CD on GitLab CI and GitHub Actions",
+        "highlight3": "Kubernetes cluster management (GKE and EKS)",
+        "highlight4": "Mobile Development (Flutter) and microservices (FastAPI, NestJS, Go)"
+      },
+      "lagence": {
+        "period": "June 2022 - August 2022",
+        "role": "Development Team Lead",
+        "company": "L'Agence Digitale, Douala",
+        "highlight1": "Structured source code architecture",
+        "highlight2": "Code review and error correction",
+        "highlight3": "Published app to Play Store (internal test)"
+      },
+      "geospace": {
+        "period": "July 2020 - December 2022",
+        "role": "DevOps Engineer",
+        "company": "GEOSPACE AFRICA LTD, Douala",
+        "highlight1": "Deployed local development environment (GitLab, Docker, Nginx)",
+        "highlight2": "Deployed mail server and private cloud with NextCloud",
+        "highlight3": "Maintained IT infrastructure and SEO optimization"
+      },
+      "saamea": {
+        "period": "February 2021 - March 2022",
+        "role": "IT Specialist | DevOps Engineer",
+        "company": "SAAMEA SARL, Douala",
+        "highlight1": "E-commerce site audit and technical improvements",
+        "highlight2": "Technology consulting and team training",
+        "highlight3": "Infrastructure modeling and CI/CD pipeline setup"
+      },
+      "gohze": {
+        "period": "November 2019 - December 2021",
+        "role": "Junior DevOps Engineer",
+        "company": "GOHZE, Douala",
+        "highlight1": "Agile scrum development environment",
+        "highlight2": "Web application development and Docker containerization",
+        "highlight3": "Data analysis and microservices development"
+      }
+    },
+    "education": {
+      "bachelor": {
+        "degree": "Professional Bachelor's Degree in Software Engineering",
+        "school": "Institut Universitaire de la Côte (IUC)",
+        "location": "Douala, Cameroon",
+        "period": "2020 - 2021"
+      },
+      "hnd": {
+        "degree": "Higher National Diploma (HND) in Information Systems Management",
+        "school": "Institut Universitaire de la Côte (IUC)",
+        "location": "Douala, Cameroon",
+        "period": "2018 - 2020"
+      }
+    },
+    "projects": {
+      "jackwestin": {
+        "name": "Jackwestin",
+        "description": "Web application for medical exam preparation with courses, exercises, and tutoring sessions."
+      },
+      "nkaba": {
+        "name": "Nkaba",
+        "description": "Mobile app for managing social groups, tracking finances, contributions, loans, and savings."
+      },
+      "syotimambay": {
+        "name": "Syo Ti-Mambay",
+        "description": "Mobile app collecting religious songs in Mambay language with 200+ lyrics."
+      },
+      "schoolgood": {
+        "name": "School Good",
+        "description": "E-learning platform for English training and exam preparation classes."
+      },
+      "osscameroon": {
+        "name": "OSS Cameroon",
+        "description": "Regular contributor to Cameroonian developer community open-source projects."
+      }
+    }
   },
   "services": {
     "title": "Premium Services",

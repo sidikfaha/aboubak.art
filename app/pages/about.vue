@@ -25,8 +25,8 @@
           <div ref="imageRef" class="relative opacity-0">
             <div class="aspect-4/5 rounded-2xl overflow-hidden group">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&crop=face"
-                alt="Aboubakar Sidik Faha - DevOps Engineer and Software Architect"
+                src="/me.webp"
+                :alt="$t('hero.name') + ' - ' + $t('hero.title')"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="eager"
                 width="800"
@@ -43,7 +43,7 @@
             <div class="absolute bottom-6 left-6 glass rounded-xl px-4 py-3">
               <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span class="text-sm font-medium">{{ $t('hero.available') }} for projects</span>
+                <span class="text-sm font-medium">{{ $t('about.available_for_projects') }}</span>
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@
               </div>
               <div>
                 <div class="text-sm text-text-muted">{{ $t('contact.info.location') }}</div>
-                <div class="font-medium">Abidjan, Côte d'Ivoire</div>
+                <div class="font-medium">{{ $t('hero.location') }}</div>
               </div>
             </div>
             <div class="flex items-center gap-3">
@@ -104,20 +104,20 @@
             </h2>
             <div class="space-y-4 text-text-secondary leading-relaxed">
               <p>
-                Based in Abidjan, Côte d'Ivoire, I'm a passionate <strong class="text-white">DevOps Engineer and Software Architect</strong> 
-                with over 7 years of experience transforming complex technical challenges into elegant, 
-                scalable solutions.
+                <span v-html="$t('about.bio.p1', { 
+                  role: `<strong class='text-white'>${$t('about.bio.role')}</strong>` 
+                })"></span>
               </p>
               <p>
-                I hold a <strong class="text-white">Professional Bachelor's degree in Software Engineering</strong> from 
-                Institut Universitaire de la Côte (IUC), Douala, Cameroon. My journey began with a fascination 
-                for how things work under the hood, which led me to specialize in cloud infrastructure (AWS, GCP), 
-                Kubernetes orchestration, CI/CD automation, and modern software architecture.
+                <span v-html="$t('about.bio.p2', { 
+                  degree: `<strong class='text-white'>${$t('about.bio.degree')}</strong>`,
+                  school: $t('about.bio.school')
+                })"></span>
               </p>
               <p>
-                Currently, I'm a <strong class="text-white">Backend DevOps Engineer at Everest Consulting (USA)</strong> 
-                while also serving as a part-time DevOps Instructor at Primus Learning, mentoring the next generation 
-                of engineers. I'm also a regular contributor to open-source projects with OSS Cameroon.
+                <span v-html="$t('about.bio.p3', { 
+                  current_role: `<strong class='text-white'>${$t('about.bio.current_role')}</strong>` 
+                })"></span>
               </p>
             </div>
           </section>
@@ -132,14 +132,14 @@
             </h2>
             <div class="grid sm:grid-cols-2 gap-4">
               <div 
-                v-for="(item, i) in expertise" 
+                v-for="i in 7" 
                 :key="i"
                 class="flex items-start gap-3 p-4 rounded-xl bg-slate-800/30 border border-slate-700/30 hover:border-accent/30 hover:bg-slate-800/50 transition-all duration-300 group"
               >
                 <div class="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-accent/20 transition-colors">
                   <Icon name="lucide:check" class="w-3.5 h-3.5 text-accent" />
                 </div>
-                <span class="text-text-secondary text-sm leading-relaxed">{{ item }}</span>
+                <span class="text-text-secondary text-sm leading-relaxed">{{ $t(`about.expertise.item${i}`) }}</span>
               </div>
             </div>
           </section>
@@ -153,11 +153,11 @@
               {{ $t('about.skills_title') }}
             </h2>
             <div class="grid sm:grid-cols-2 gap-6">
-              <div v-for="(category, i) in skillCategories" :key="i" class="space-y-3">
-                <h3 class="text-sm font-medium text-text-muted uppercase tracking-wider">{{ category.name }}</h3>
+              <div v-for="(category, key) in skillCategories" :key="key" class="space-y-3">
+                <h3 class="text-sm font-medium text-text-muted uppercase tracking-wider">{{ $t(`about.skills.${key}`) }}</h3>
                 <div class="flex flex-wrap gap-2">
                   <span 
-                    v-for="(skill, j) in category.skills" 
+                    v-for="(skill, j) in category" 
                     :key="j"
                     class="px-3 py-1.5 text-sm rounded-full bg-slate-800/50 border border-slate-700/50 text-text-secondary hover:border-accent/30 hover:text-white transition-all cursor-default"
                   >
@@ -178,8 +178,8 @@
             </h2>
             <div class="space-y-6">
               <div 
-                v-for="(job, i) in experience" 
-                :key="i" 
+                v-for="(jobKey, i) in experienceKeys" 
+                :key="jobKey"
                 class="relative pl-8 pb-6 border-l border-border last:pb-0 group"
               >
                 <!-- Timeline dot -->
@@ -187,15 +187,17 @@
                 
                 <div class="space-y-2">
                   <div class="flex flex-wrap items-center gap-2">
-                    <span class="text-accent font-mono text-sm px-2 py-0.5 rounded bg-accent/10">{{ job.period }}</span>
-                    <span v-if="job.current" class="text-xs text-green-400 px-2 py-0.5 rounded bg-green-400/10 border border-green-400/20">Current</span>
+                    <span class="text-accent font-mono text-sm px-2 py-0.5 rounded bg-accent/10">{{ $t(`about.experience.${jobKey}.period`) }}</span>
+                    <span v-if="i < 1" class="text-xs text-green-400 px-2 py-0.5 rounded bg-green-400/10 border border-green-400/20">{{ $t('about.current') }}</span>
                   </div>
-                  <h3 class="font-semibold text-lg">{{ job.role }}</h3>
-                  <p class="text-text-muted">{{ job.company }}</p>
-                  <ul v-if="job.highlights" class="space-y-1 mt-3">
-                    <li v-for="(highlight, j) in job.highlights" :key="j" class="text-sm text-text-secondary flex items-start gap-2">
-                      <Icon name="lucide:minus" class="w-3 h-3 text-accent mt-1.5 shrink-0" />
-                      <span>{{ highlight }}</span>
+                  <h3 class="font-semibold text-lg">{{ $t(`about.experience.${jobKey}.role`) }}</h3>
+                  <p class="text-text-muted">{{ $t(`about.experience.${jobKey}.company`) }}</p>
+                  <ul class="space-y-1 mt-3">
+                    <li v-for="h in 4" :key="h" class="text-sm text-text-secondary flex items-start gap-2">
+                      <template v-if="$t(`about.experience.${jobKey}.highlight${h}`) !== `about.experience.${jobKey}.highlight${h}`">
+                        <Icon name="lucide:minus" class="w-3 h-3 text-accent mt-1.5 shrink-0" />
+                        <span>{{ $t(`about.experience.${jobKey}.highlight${h}`) }}</span>
+                      </template>
                     </li>
                   </ul>
                 </div>
@@ -213,16 +215,16 @@
             </h2>
             <div class="space-y-4">
               <div 
-                v-for="(edu, i) in education" 
-                :key="i"
+                v-for="eduKey in educationKeys" 
+                :key="eduKey"
                 class="p-5 rounded-xl glass hover:border-accent/30 transition-all duration-300"
               >
                 <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
-                  <h3 class="font-semibold">{{ edu.degree }}</h3>
-                  <span class="text-xs text-text-muted font-mono">{{ edu.period }}</span>
+                  <h3 class="font-semibold">{{ $t(`about.education.${eduKey}.degree`) }}</h3>
+                  <span class="text-xs text-text-muted font-mono">{{ $t(`about.education.${eduKey}.period`) }}</span>
                 </div>
-                <p class="text-text-secondary text-sm">{{ edu.school }}</p>
-                <p class="text-text-muted text-sm mt-1">{{ edu.location }}</p>
+                <p class="text-text-secondary text-sm">{{ $t(`about.education.${eduKey}.school`) }}</p>
+                <p class="text-text-muted text-sm mt-1">{{ $t(`about.education.${eduKey}.location`) }}</p>
               </div>
             </div>
           </section>
@@ -237,27 +239,27 @@
             </h2>
             <div class="grid sm:grid-cols-2 gap-4">
               <div 
-                v-for="(project, i) in notableProjects" 
-                :key="i"
+                v-for="projKey in projectKeys" 
+                :key="projKey"
                 class="p-5 rounded-xl bg-slate-800/30 border border-slate-700/30 hover:border-accent/30 hover:bg-slate-800/50 transition-all duration-300 group"
               >
                 <div class="flex items-start justify-between gap-2 mb-3">
-                  <h3 class="font-semibold group-hover:text-accent transition-colors">{{ project.name }}</h3>
+                  <h3 class="font-semibold group-hover:text-accent transition-colors">{{ $t(`about.projects.${projKey}.name`) }}</h3>
                   <a 
-                    v-if="project.link" 
-                    :href="project.link" 
+                    v-if="projectLinks[projKey]" 
+                    :href="projectLinks[projKey]" 
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-text-muted hover:text-accent transition-colors"
-                    :aria-label="`Visit ${project.name}`"
+                    :aria-label="`Visit ${$t(`about.projects.${projKey}.name`)}`"
                   >
                     <Icon name="lucide:external-link" class="w-4 h-4" />
                   </a>
                 </div>
-                <p class="text-sm text-text-secondary mb-3 leading-relaxed">{{ project.description }}</p>
+                <p class="text-sm text-text-secondary mb-3 leading-relaxed">{{ $t(`about.projects.${projKey}.description`) }}</p>
                 <div class="flex flex-wrap gap-1.5">
                   <span 
-                    v-for="(tech, j) in project.tech.slice(0, 4)" 
+                    v-for="(tech, j) in projectTechs[projKey]" 
                     :key="j"
                     class="text-xs px-2 py-0.5 rounded bg-accent/5 text-accent"
                   >
@@ -273,7 +275,7 @@
             <NuxtLink
               :to="localePath('/contact')"
               class="flex items-center gap-2 px-7 py-3.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-all hover:shadow-lg hover:shadow-accent/25 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
-              aria-label="Get in touch - Contact page"
+              :aria-label="$t('contact.get_in_touch') + ' - Contact page'"
             >
               <span>{{ $t('contact.get_in_touch') }}</span>
               <Icon name="lucide:arrow-right" class="w-4 h-4" />
@@ -283,7 +285,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center gap-2 px-7 py-3.5 bg-slate-800/50 hover:bg-slate-800 text-white font-medium rounded-full transition-all border border-slate-700/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-primary"
-              aria-label="Download CV - Opens in new tab"
+              :aria-label="$t('contact.download_cv') + ' - Opens in new tab'"
             >
               <span>{{ $t('contact.download_cv') }}</span>
               <Icon name="lucide:download" class="w-4 h-4" />
@@ -335,171 +337,42 @@ const stats = [
   { value: '10+', label: 'about.stats_clients' },
 ]
 
-// Expertise data
-const expertise = [
-  'Design and implement scalable cloud infrastructure on AWS and GCP (IAC with Terraform, Pulumi, Ansible)',
-  'Build and optimize CI/CD pipelines using GitLab CI, GitHub Actions, and Jenkins',
-  'Orchestrate containerized applications with Kubernetes (EKS, GKE)',
-  'Architect microservices and distributed systems using NestJS, FastAPI, and Go',
-  'Develop full-stack applications with Vue.js, React, Flutter, and Node.js',
-  'Lead development teams as Scrum Master and establish engineering best practices',
-  'Provide technical consulting, training, and digital transformation strategy',
-]
+// Skills organized by category
+const skillCategories = {
+  languages: ['Golang (Go)', 'TypeScript', 'Python', 'Dart', 'Shell / Bash', 'HCL'],
+  frameworks: ['Gin', 'Nuxt.js', 'NestJS', 'Flutter', 'Next.js', 'FastAPI'],
+  cloud_devops: ['AWS', 'GCP', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'CI/CD'],
+  databases: ['MongoDB', 'MySQL', 'PostgreSQL', 'SQLite', 'Redis'],
+  tools: ['Git', 'GitHub', 'GitLab', 'Jenkins', 'Firebase'],
+  methodologies: ['Agile/Scrum', 'UML', 'MERISE', 'SOLID', 'Microservices']
+}
 
-// Skills organized by category (from CV)
-const skillCategories = [
-  {
-    name: 'Languages',
-    skills: ['TypeScript', 'Python', 'Go', 'Dart', 'Shell / Bash']
-  },
-  {
-    name: 'Frameworks',
-    skills: ['Vue.js', 'NestJS', 'Flutter', 'React', 'FastAPI']
-  },
-  {
-    name: 'Cloud & DevOps',
-    skills: ['AWS', 'GCP', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'CI/CD']
-  },
-  {
-    name: 'Databases',
-    skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'SQLite', 'Redis']
-  },
-  {
-    name: 'Tools & Platforms',
-    skills: ['Git', 'GitHub', 'GitLab', 'Jenkins', 'Firebase']
-  },
-  {
-    name: 'Methodologies',
-    skills: ['Agile/Scrum', 'UML', 'MERISE', 'SOLID', 'Microservices']
-  }
-]
+// Experience keys for iteration
+const experienceKeys = ['asernum', 'everest', 'primus', 'afriqasoft', 'lagence', 'geospace', 'saamea', 'gohze']
 
-// Experience data (from CV)
-const experience = [
-  {
-    period: 'Aug 2023 - Present',
-    role: 'Backend DevOps Engineer',
-    company: 'Everest Consulting, USA (Remote)',
-    current: true,
-    highlights: [
-      'Backend development with NestJS',
-      'Writing CI/CD Pipelines and code quality checks',
-      'Infrastructure management on AWS (IAC, monitoring, cost optimization)',
-      'Kubernetes orchestration on EKS'
-    ]
-  },
-  {
-    period: 'Jun 2023 - Present',
-    role: 'Part-time DevOps Instructor',
-    company: 'Primus Learning, USA (Remote)',
-    current: true,
-    highlights: [
-      'Live teaching DevOps to students (Docker, CI-CD, Python)',
-      'Mentoring students on best practices'
-    ]
-  },
-  {
-    period: 'Jan 2023 - July 2023',
-    role: 'DevOps Engineer & R&D Manager',
-    company: 'AFRIQASOFT, Abidjan',
-    highlights: [
-      'Project Management as Scrum Master',
-      'CI/CD on GitLab CI and GitHub Actions',
-      'Kubernetes cluster management (GKE and EKS)',
-      'Mobile Development (Flutter) and microservices (FastAPI, NestJS, Go)'
-    ]
-  },
-  {
-    period: 'June 2022 - August 2022',
-    role: 'Development Team Lead',
-    company: "L'Agence Digitale, Douala",
-    highlights: [
-      'Structured source code architecture',
-      'Code review and error correction',
-      'Published app to Play Store (internal test)'
-    ]
-  },
-  {
-    period: 'July 2020 - December 2022',
-    role: 'DevOps Engineer',
-    company: 'GEOSPACE AFRICA LTD, Douala',
-    highlights: [
-      'Deployed local development environment (GitLab, Docker, Nginx)',
-      'Deployed mail server and private cloud with NextCloud',
-      'Maintained IT infrastructure and SEO optimization'
-    ]
-  },
-  {
-    period: 'February 2021 - March 2022',
-    role: 'IT Specialist | DevOps Engineer',
-    company: 'SAAMEA SARL, Douala',
-    highlights: [
-      'E-commerce site audit and technical improvements',
-      'Technology consulting and team training',
-      'Infrastructure modeling and CI/CD pipeline setup'
-    ]
-  },
-  {
-    period: 'November 2019 - December 2021',
-    role: 'Junior DevOps Engineer',
-    company: 'GOHZE, Douala',
-    highlights: [
-      'Agile scrum development environment',
-      'Web application development and Docker containerization',
-      'Data analysis and microservices development'
-    ]
-  }
-]
+// Education keys
+const educationKeys = ['bachelor', 'hnd']
 
-// Education data (from CV)
-const education = [
-  {
-    degree: "Professional Bachelor's Degree in Software Engineering",
-    school: 'Institut Universitaire de la Côte (IUC)',
-    location: 'Douala, Cameroon',
-    period: '2020 - 2021'
-  },
-  {
-    degree: 'Higher National Diploma (HND) in Information Systems Management',
-    school: 'Institut Universitaire de la Côte (IUC)',
-    location: 'Douala, Cameroon',
-    period: '2018 - 2020'
-  }
-]
+// Project keys
+const projectKeys = ['jackwestin', 'nkaba', 'syotimambay', 'schoolgood', 'osscameroon']
 
-// Notable projects from CV
-const notableProjects = [
-  {
-    name: 'Jackwestin',
-    link: 'https://jackwestin.com',
-    description: 'Web application for medical exam preparation with courses, exercises, and tutoring sessions.',
-    tech: ['Vue.js', 'Laravel', 'MongoDB', 'Docker', 'GitLab CI']
-  },
-  {
-    name: 'Nkaba',
-    link: '#',
-    description: 'Mobile app for managing social groups, tracking finances, contributions, loans, and savings.',
-    tech: ['Flutter', 'NestJS', 'MongoDB', 'Cloud Run', 'Docker']
-  },
-  {
-    name: 'Syo Ti-Mambay',
-    link: '#',
-    description: 'Mobile app collecting religious songs in Mambay language with 200+ lyrics.',
-    tech: ['Flutter', 'Firebase', 'Vue.js', 'GCP', 'Cloud Run']
-  },
-  {
-    name: 'School Good',
-    link: 'https://schoolgood.cm',
-    description: 'E-learning platform for English training and exam preparation classes.',
-    tech: ['Vue.js', 'Node.js', 'MongoDB', 'Firebase']
-  },
-  {
-    name: 'OSS Cameroon',
-    link: 'https://osscameroon.com',
-    description: 'Regular contributor to Cameroonian developer community open-source projects.',
-    tech: ['Python', 'TypeScript', 'Go', 'React', 'Vue.js']
-  }
-]
+// Project links
+const projectLinks = {
+  jackwestin: 'https://jackwestin.com',
+  nkaba: '#',
+  syotimambay: '#',
+  schoolgood: 'https://schoolgood.cm',
+  osscameroon: 'https://osscameroon.com'
+}
+
+// Project techs (these are technical terms, keeping as-is)
+const projectTechs = {
+  jackwestin: ['Vue.js', 'Laravel', 'MongoDB', 'Docker', 'GitLab CI'],
+  nkaba: ['Flutter', 'NestJS', 'MongoDB', 'Cloud Run', 'Docker'],
+  syotimambay: ['Flutter', 'Firebase', 'Vue.js', 'GCP', 'Cloud Run'],
+  schoolgood: ['Vue.js', 'Node.js', 'MongoDB', 'Firebase'],
+  osscameroon: ['Python', 'TypeScript', 'Go', 'React', 'Vue.js']
+}
 
 // GSAP Animations
 onMounted(() => {

@@ -63,7 +63,139 @@
     "notable_projects": "Projets Notables",
     "stats_projects": "Projets",
     "stats_years": "Années Exp.",
-    "stats_clients": "Clients"
+    "stats_clients": "Clients",
+    "available_for_projects": "Disponible pour des projets",
+    "current": "Actuel",
+    "bio": {
+      "p1": "Basé à Abidjan, Côte d'Ivoire, je suis un {role} passionné avec plus de 7 ans d'expérience transformant les défis techniques complexes en solutions élégantes et évolutives.",
+      "p2": "Je suis titulaire d'un {degree} de l'{school}, Douala, Cameroun. Mon parcours a commencé par une fascination pour le fonctionnement interne des systèmes, ce qui m'a conduit à me spécialiser dans l'infrastructure cloud (AWS, GCP), l'orchestration Kubernetes, l'automatisation CI/CD et l'architecture logicielle moderne.",
+      "p3": "Actuellement, je suis {current_role} tout en enseignant à temps partiel en tant qu'Instructeur DevOps chez Primus Learning, mentorant la prochaine génération d'ingénieurs. Je contribue également régulièrement à des projets open-source avec OSS Cameroon.",
+      "role": "Ingénieur DevOps et Architecte Logiciel",
+      "degree": "Licence professionnelle en Génie Logiciel",
+      "school": "Institut Universitaire de la Côte (IUC)",
+      "current_role": "Ingénieur Backend DevOps chez Everest Consulting (USA)"
+    },
+    "expertise": {
+      "item1": "Conception et mise en œuvre d'infrastructure cloud évolutive sur AWS et GCP (IAC avec Terraform, Pulumi, Ansible)",
+      "item2": "Construction et optimisation de pipelines CI/CD avec GitLab CI, GitHub Actions et Jenkins",
+      "item3": "Orchestration d'applications conteneurisées avec Kubernetes (EKS, GKE)",
+      "item4": "Architecture de microservices et systèmes distribués avec NestJS, FastAPI et Go",
+      "item5": "Développement d'applications full-stack avec Vue.js, React, Flutter et Node.js",
+      "item6": "Direction d'équipes de développement en tant que Scrum Master et établissement des meilleures pratiques",
+      "item7": "Conseil technique, formation et stratégie de transformation digitale"
+    },
+    "skills": {
+      "languages": "Langages",
+      "frameworks": "Frameworks",
+      "cloud_devops": "Cloud & DevOps",
+      "databases": "Bases de Données",
+      "tools": "Outils & Plateformes",
+      "methodologies": "Méthodologies"
+    },
+    "experience": {
+      "asernum": {
+        "period": "Août 2025 - Présent",
+        "role": "Ingénieur DevOps & Architecte de Solutions",
+        "company": "ASERNUM, Abidjan",
+        "highlight1": "Conception et gestion d'infrastructure sur AWS (IAC, surveillance, optimisation des coûts)",
+        "highlight2": "Automatisation des flux de travail et intégration avec des services tiers",
+        "highlight3": "Mise en place et gestion de VPN IPSec pour une connectivité sécurisée",
+        "highlight4": "Orchestration Kubernetes sur EKS et SWARM"
+      },
+      "everest": {
+        "period": "Août 2023 - Août 2025",
+        "role": "Ingénieur Backend DevOps",
+        "company": "Everest Consulting, Abidjan",
+        "highlight1": "Développement backend avec NestJS",
+        "highlight2": "Écriture de pipelines CI/CD et contrôle qualité",
+        "highlight3": "Gestion d'infrastructure AWS (IAC, monitoring, optimisation des coûts)",
+        "highlight4": "Orchestration Kubernetes sur EKS"
+      },
+      "primus": {
+        "period": "Juin 2023 - Présent",
+        "role": "Instructeur DevOps à temps partiel",
+        "company": "Primus Learning, USA (Remote)",
+        "highlight1": "Enseignement en direct du DevOps aux étudiants (Docker, CI-CD, Python)",
+        "highlight2": "Mentorat des étudiants sur les meilleures pratiques"
+      },
+      "afriqasoft": {
+        "period": "Janv 2023 - Juil 2023",
+        "role": "Ingénieur DevOps & Chef R&D",
+        "company": "AFRIQASOFT, Abidjan",
+        "highlight1": "Gestion de projet en tant que Scrum Master",
+        "highlight2": "CI/CD sur GitLab CI et GitHub Actions",
+        "highlight3": "Gestion de clusters Kubernetes (GKE et EKS)",
+        "highlight4": "Développement mobile (Flutter) et microservices (FastAPI, NestJS, Go)"
+      },
+      "lagence": {
+        "period": "Juin 2022 - Août 2022",
+        "role": "Chef d'Équipe de Développement",
+        "company": "L'Agence Digitale, Douala",
+        "highlight1": "Architecture du code source structurée",
+        "highlight2": "Revue de code et correction d'erreurs",
+        "highlight3": "Publication d'applications sur le Play Store (test interne)"
+      },
+      "geospace": {
+        "period": "Juil 2020 - Déc 2022",
+        "role": "Ingénieur DevOps",
+        "company": "GEOSPACE AFRICA LTD, Douala",
+        "highlight1": "Déploiement d'environnement de développement local (GitLab, Docker, Nginx)",
+        "highlight2": "Déploiement de serveur mail et cloud privé avec NextCloud",
+        "highlight3": "Maintenance de l'infrastructure IT et optimisation SEO"
+      },
+      "saamea": {
+        "period": "Fév 2021 - Mars 2022",
+        "role": "Spécialiste IT | Ingénieur DevOps",
+        "company": "SAAMEA SARL, Douala",
+        "highlight1": "Audit de site e-commerce et améliorations techniques",
+        "highlight2": "Conseil technologique et formation des équipes",
+        "highlight3": "Modélisation d'infrastructure et mise en place de pipelines CI/CD"
+      },
+      "gohze": {
+        "period": "Nov 2019 - Déc 2021",
+        "role": "Ingénieur DevOps Junior",
+        "company": "GOHZE, Douala",
+        "highlight1": "Environnement de développement agile scrum",
+        "highlight2": "Développement d'applications web et conteneurisation Docker",
+        "highlight3": "Analyse de données et développement de microservices"
+      }
+    },
+    "education": {
+      "bachelor": {
+        "degree": "Licence Professionnelle en Génie Logiciel",
+        "school": "Institut Universitaire de la Côte (IUC)",
+        "location": "Douala, Cameroun",
+        "period": "2020 - 2021"
+      },
+      "hnd": {
+        "degree": "BTS en Gestion des Systèmes d'Information",
+        "school": "Institut Universitaire de la Côte (IUC)",
+        "location": "Douala, Cameroun",
+        "period": "2018 - 2020"
+      }
+    },
+    "projects": {
+      "jackwestin": {
+        "name": "Jackwestin",
+        "description": "Application web pour la préparation aux examens médicaux avec cours, exercices et sessions de tutorat."
+      },
+      "nkaba": {
+        "name": "Nkaba",
+        "description": "Application mobile pour la gestion de groupes sociaux, le suivi des finances, contributions, prêts et épargne."
+      },
+      "syotimambay": {
+        "name": "Syo Ti-Mambay",
+        "description": "Application mobile de collecte de chants religieux en langue Mambay avec plus de 200 paroles."
+      },
+      "schoolgood": {
+        "name": "School Good",
+        "description": "Plateforme e-learning pour la formation en anglais et les classes de préparation aux examens."
+      },
+      "osscameroon": {
+        "name": "OSS Cameroon",
+        "description": "Contributeur régulier aux projets open-source de la communauté des développeurs camerounais."
+      }
+    }
   },
   "services": {
     "title": "Services Premium",
