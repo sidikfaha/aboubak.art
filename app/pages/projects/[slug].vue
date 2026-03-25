@@ -480,16 +480,40 @@ const getProjectSlug = (project) => {
   return parts[parts.length - 1]
 }
 
-// Fetch current project
-const { data: project, status } = await useAsyncData(`project-${slug}-${locale.value}`, async () => {
-  const collection = locale.value === 'fr' ? 'projects_fr' : 'projects_en'
-  return await queryCollection(collection).path(`/projects/${locale.value}/${slug}`).first()
+// Fetch current project with server-side rendering enabled
+const { data: project, status, error: projectError } = await useAsyncData(`project-${slug}-${locale.value}`, async () => {
+  try {
+    const collection = locale.value === 'fr' ? 'projects_fr' : 'projects_en'
+    const result = await queryCollection(collection).path(`/projects/${locale.value}/${slug}`).first()
+    return result
+  } catch (err) {
+    console.error('Error fetching project:', err)
+    return null
+  }
+}, {
+  server: true
 })
+
+// Handle 404 for missing projects
+if (!project.value && status.value !== 'pending') {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Project Not Found',
+    message: 'The requested project could not be found.'
+  })
+}
 
 // Fetch all projects for navigation
 const { data: allProjects } = await useAsyncData(`all-projects-${locale.value}`, async () => {
-  const collection = locale.value === 'fr' ? 'projects_fr' : 'projects_en'
-  return await queryCollection(collection).all()
+  try {
+    const collection = locale.value === 'fr' ? 'projects_fr' : 'projects_en'
+    return await queryCollection(collection).all()
+  } catch (err) {
+    console.error('Error fetching all projects:', err)
+    return []
+  }
+}, {
+  server: true
 })
 
 // Get current index based on path

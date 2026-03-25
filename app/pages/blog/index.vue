@@ -121,8 +121,18 @@ const collectionName = computed(() => `blog_${locale.value}`)
 
 const { data: allPosts } = await useAsyncData(
   `blog-posts-${locale.value}`,
-  () => queryCollection(collectionName.value).order('date', 'DESC').all(),
-  { watch: [locale] }
+  async () => {
+    try {
+      return await queryCollection(collectionName.value).order('date', 'DESC').all()
+    } catch (err) {
+      console.error('Error fetching blog posts:', err)
+      return []
+    }
+  },
+  { 
+    server: true,
+    watch: [locale] 
+  }
 )
 
 const featuredPost = computed(() => allPosts.value?.[0])

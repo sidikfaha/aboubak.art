@@ -172,12 +172,18 @@ export default defineNuxtConfig({
   // Build optimization for performance
   nitro: {
     prerender: {
-      routes: ['/sitemap.xml', '/robots.txt'],
+      routes: ['/sitemap.xml', '/robots.txt', '/blog', '/projects'],
       crawlLinks: true,
       failOnError: false,
     },
     compressPublicAssets: true,
     minify: true,
+  },
+  
+  // Route rules for SSR - ensure dynamic routes are server-rendered
+  routeRules: {
+    '/blog/**': { isr: 60, prerender: false },
+    '/projects/**': { isr: 60, prerender: false },
   },
   
   // Experimental features for better performance

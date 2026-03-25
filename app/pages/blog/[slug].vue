@@ -101,37 +101,68 @@ const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 
+const slug = route.params.slug
 const collectionName = computed(() => `blog_${locale.value}`)
 
-const { data: post } = await useAsyncData(
-  `blog-${locale.value}-${route.params.slug}`,
-  () => queryCollection(collectionName.value)
-    .where('stem', 'LIKE', `%${route.params.slug}%`)
-    .first(),
-  { watch: [locale] }
+// Fetch post with server-side rendering enabled and proper error handling
+const { data: post, error } = await useAsyncData(
+  `blog-${locale.value}-${slug}`,
+  async () => {
+    try {
+      const result = await queryCollection(collectionName.value)
+        .path(`/blog/${locale.value}/${slug}`)
+        .first()
+      return result
+    } catch (err) {
+      console.error('Error fetching blog post:', err)
+      return null
+    }
+  },
+  { 
+    server: true,
+    watch: [locale]
+  }
 )
 
-// SEO for blog post
+// Handle 404 for missing posts
+if (!post.value && !error.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Article Not Found',
+    message: 'The requested article could not be found.'
+  })
+}
+
+// SEO for blog post - use computed values for reactivity
+const seoTitle = computed(() => post.value?.title || 'Article Not Found')
+const seoDescription = computed(() => post.value?.description || 'The requested article could not be found.')
+const seoImage = computed(() => post.value?.image)
+const seoImageAlt = computed(() => post.value?.title)
+const seoPublishedTime = computed(() => post.value?.date)
+const seoTags = computed(() => post.value?.tags || (post.value ? [post.value.category] : []))
+const seoLocale = computed(() => locale.value === 'fr' ? 'fr_FR' : 'en_US')
+
 usePageSeo({
-  title: post.value ? post.value.title : 'Article Not Found',
-  description: post.value ? post.value.description : 'The requested article could not be found.',
+  title: seoTitle.value,
+  description: seoDescription.value,
   type: 'article',
-  image: post.value ? post.value.image : undefined,
-  imageAlt: post.value ? post.value.title : undefined,
-  publishedTime: post.value ? post.value.date : undefined,
+  image: seoImage.value,
+  imageAlt: seoImageAlt.value,
+  publishedTime: seoPublishedTime.value,
   author: post.value?.author || 'Aboubakar Sidik Faha',
-  tags: post.value?.tags || (post.value ? [post.value.category] : []),
-  locale: locale.value === 'fr' ? 'fr_FR' : 'en_US',
+  tags: seoTags.value,
+  locale: seoLocale.value,
 })
 
 // Breadcrumb schema
 useBreadcrumbSchema([
   { name: t('seo.breadcrumb_home'), url: '/' },
   { name: t('nav.blog'), url: '/blog' },
-  { name: post.value ? post.value.title : t('blog.subtitle'), url: post.value ? `/blog/${route.params.slug}` : undefined },
+  { name: post.value?.title || t('blog.subtitle'), url: post.value ? `/blog/${slug}` : undefined },
 ])
 
 const formatDate = (date) => {
+  if (!date) return ''
   return new Date(date).toLocaleDateString(locale.value === 'fr' ? 'fr-FR' : 'en-US', {
     year: 'numeric',
     month: 'long',

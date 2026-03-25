@@ -507,11 +507,18 @@ const getProjectSlug = (project) => {
 
 // Fetch projects from Nuxt Content
 const { data: allProjects, status } = await useAsyncData(`projects-${locale.value}`, async () => {
-  const collection = locale.value === 'fr' ? 'projects_fr' : 'projects_en'
-  return await queryCollection(collection)
-    .order('featured', 'DESC')
-    .order('year', 'DESC')
-    .all()
+  try {
+    const collection = locale.value === 'fr' ? 'projects_fr' : 'projects_en'
+    return await queryCollection(collection)
+      .order('featured', 'DESC')
+      .order('year', 'DESC')
+      .all()
+  } catch (err) {
+    console.error('Error fetching projects:', err)
+    return []
+  }
+}, {
+  server: true
 })
 
 const featuredProject = computed(() => 
