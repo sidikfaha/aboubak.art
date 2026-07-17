@@ -1,0 +1,10 @@
+{
+  "error": true,
+  "url": "https://aboubak.art/favicon-32x32.png",
+  "statusCode": 404,
+  "statusMessage": "Page not found: /favicon-32x32.png",
+  "message": "Page not found: /favicon-32x32.png",
+  "data": {
+    "path": "/favicon-32x32.png"
+  }
+}

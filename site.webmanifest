@@ -1,0 +1,14 @@
+{
+  "name": "Aboubakar Sidik Faha — Freelance Software Engineer",
+  "short_name": "Aboubakar.dev",
+  "description": "Freelance software engineer — web & mobile apps, DevOps automation, AI solutions.",
+  "lang": "en",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#04060e",
+  "theme_color": "#04060e",
+  "icons": [
+    { "src": "/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+  ]
+}
