@@ -13,6 +13,53 @@
 
   if (hasGSAP && hasST) gsap.registerPlugin(ScrollTrigger);
 
+  /* ============================================================
+     I18N — bascule EN/FR
+     L'EN est capturé par clé avant toute modification
+     (la duplication du marquee clone ensuite les data-i18n).
+     ============================================================ */
+  const enByKey = new Map();
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    if (!enByKey.has(el.dataset.i18n)) enByKey.set(el.dataset.i18n, el.innerHTML);
+  });
+  const enAttrs = new Map();
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    const [attr, key] = el.dataset.i18nAttr.split(":");
+    enAttrs.set(el, { attr, key, value: el.getAttribute(attr) });
+  });
+  const metaDesc = document.querySelector('meta[name="description"]');
+  const enTitle = document.title;
+  const enDesc = metaDesc ? metaDesc.getAttribute("content") : "";
+
+  const langToggle = document.getElementById("langToggle");
+  const setLang = (lang) => {
+    const fr = lang === "fr" && window.I18N_FR;
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.dataset.i18n;
+      if (fr && window.I18N_FR[key] !== undefined) el.innerHTML = window.I18N_FR[key];
+      else if (enByKey.has(key)) el.innerHTML = enByKey.get(key);
+    });
+    enAttrs.forEach(({ attr, key, value }, el) => {
+      if (fr && window.I18N_FR[key] !== undefined) el.setAttribute(attr, window.I18N_FR[key]);
+      else el.setAttribute(attr, value);
+    });
+    document.documentElement.lang = lang;
+    document.title = fr ? window.I18N_FR.meta_title : enTitle;
+    if (metaDesc) metaDesc.setAttribute("content", fr ? window.I18N_FR.meta_description : enDesc);
+    langToggle.querySelectorAll(".lang-toggle__opt").forEach((opt) => {
+      opt.classList.toggle("is-active", opt.dataset.lang === lang);
+    });
+    langToggle.setAttribute("aria-label", fr ? "Switch to English" : window.I18N_FR.aria_lang);
+    localStorage.setItem("aboubak-lang", lang);
+  };
+  langToggle.addEventListener("click", () => {
+    setLang(document.documentElement.lang === "fr" ? "en" : "fr");
+  });
+  // Langue initiale : choix mémorisé, sinon détection navigateur
+  const savedLang = localStorage.getItem("aboubak-lang");
+  const browserLang = (navigator.language || "en").toLowerCase().startsWith("fr") ? "fr" : "en";
+  if ((savedLang || browserLang) === "fr") setLang("fr");
+
   if (!hasGSAP || prefersReducedMotion) {
     document.body.classList.add("anim-off");
     document.body.removeAttribute("data-loading");

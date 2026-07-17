@@ -82,7 +82,7 @@
           <defs><linearGradient id="plg" x1="0" y1="0" x2="80" y2="80"><stop stop-color="#8b7bff"/><stop offset="1" stop-color="#5ad7ff"/></linearGradient></defs>
         </svg>
       </span>
-      <span class="preloader__label">Initializing orbit</span>
+      <span class="preloader__label" data-i18n="preloader">Initializing orbit</span>
       <span class="preloader__bar"><span id="preloaderBar"></span></span>
       <span class="preloader__count" id="preloaderCount">0</span>
     </div>
@@ -99,17 +99,22 @@
     <div class="header__pill">
       <a href="#top" class="header__brand" data-cursor="hover" aria-label="Aboubakar Sidik Faha — Home">
         <span class="header__mark">A<i>✦</i></span>
-        <span class="header__name">Aboubakar<em>.dev</em></span>
+        <span class="header__name">aboubakar<em>.art</em></span>
       </a>
       <nav class="header__nav" aria-label="Main navigation">
-        <a href="#services" class="nav-link" data-cursor="hover">Services</a>
-        <a href="#work" class="nav-link" data-cursor="hover">Work</a>
-        <a href="#process" class="nav-link" data-cursor="hover">Process</a>
-        <a href="#about" class="nav-link" data-cursor="hover">About</a>
+        <a href="#services" class="nav-link" data-cursor="hover" data-i18n="nav_services">Services</a>
+        <a href="#work" class="nav-link" data-cursor="hover" data-i18n="nav_work">Work</a>
+        <a href="#process" class="nav-link" data-cursor="hover" data-i18n="nav_process">Process</a>
+        <a href="#about" class="nav-link" data-cursor="hover" data-i18n="nav_about">About</a>
       </nav>
       <div class="header__actions">
-        <a href="#contact" class="btn btn--aurora btn--sm" data-magnetic data-cursor="hover"><span>Start a project</span></a>
-        <button class="header__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" data-cursor="hover">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language" data-cursor="hover">
+          <span class="lang-toggle__opt is-active" data-lang="en">EN</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__opt" data-lang="fr">FR</span>
+        </button>
+        <a href="#contact" class="btn btn--aurora btn--sm" data-magnetic data-cursor="hover"><span data-i18n="nav_start">Start a project</span></a>
+        <button class="header__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" data-cursor="hover" data-i18n-attr="aria-label:aria_burger_open">
           <span></span><span></span>
         </button>
       </div>
@@ -119,13 +124,13 @@
   <!-- Menu mobile -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav class="mobile-menu__nav" aria-label="Mobile navigation">
-      <a href="#services" class="mobile-menu__link"><span>ST-01</span>Services</a>
-      <a href="#work" class="mobile-menu__link"><span>ST-02</span>Work</a>
-      <a href="#process" class="mobile-menu__link"><span>ST-03</span>Process</a>
-      <a href="#about" class="mobile-menu__link"><span>ST-04</span>About</a>
-      <a href="#contact" class="mobile-menu__link mobile-menu__link--cta"><span>→</span>Start a project</a>
+      <a href="#services" class="mobile-menu__link"><span>ST-01</span><em data-i18n="nav_services">Services</em></a>
+      <a href="#work" class="mobile-menu__link"><span>ST-02</span><em data-i18n="nav_work">Work</em></a>
+      <a href="#process" class="mobile-menu__link"><span>ST-03</span><em data-i18n="nav_process">Process</em></a>
+      <a href="#about" class="mobile-menu__link"><span>ST-04</span><em data-i18n="nav_about">About</em></a>
+      <a href="#contact" class="mobile-menu__link mobile-menu__link--cta"><span>→</span><em data-i18n="nav_start">Start a project</em></a>
     </nav>
-    <p class="mobile-menu__foot">Abidjan, CI — working worldwide</p>
+    <p class="mobile-menu__foot" data-i18n="menu_foot">Abidjan, CI — working worldwide</p>
   </div>
 
   <main id="main">
@@ -138,14 +143,14 @@
         <div class="hero__content">
           <p class="hero__status" data-intro>
             <span class="hero__status-dot"></span>
-            Available for freelance missions — worldwide
+            <span data-i18n="hero_status">Available for freelance missions — worldwide</span>
           </p>
           <h1 class="hero__title">
-            <span class="hero__line"><span>From idea to <em>orbit</em>,</span></span>
-            <span class="hero__line"><span>I build the software</span></span>
-            <span class="hero__line"><span>that gets you there.</span></span>
+            <span class="hero__line"><span data-i18n="hero_l1">From idea to <em>orbit</em>,</span></span>
+            <span class="hero__line"><span data-i18n="hero_l2">I build the software</span></span>
+            <span class="hero__line"><span data-i18n="hero_l3">that gets you there.</span></span>
           </h1>
-          <p class="hero__lead" data-intro>
+          <p class="hero__lead" data-intro data-i18n="hero_lead">
             <strong>Aboubakar Sidik Faha</strong> — freelance software engineer.
             Web &amp; mobile applications, DevOps automation and AI-powered
             solutions, crafted for founders and teams who want to move fast
@@ -153,16 +158,16 @@
           </p>
           <div class="hero__ctas" data-intro>
             <a href="#contact" class="btn btn--aurora" data-magnetic data-cursor="hover">
-              <span>Start a project</span>
+              <span data-i18n="cta_start">Start a project</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="#work" class="btn btn--ghost" data-magnetic data-cursor="hover"><span>Explore my work</span></a>
+            <a href="#work" class="btn btn--ghost" data-magnetic data-cursor="hover"><span data-i18n="cta_work">Explore my work</span></a>
           </div>
           <dl class="hero__stats" data-intro>
-            <div><dt><span data-counter="7">0</span>+</dt><dd>Years of experience</dd></div>
-            <div><dt><span data-counter="20">0</span>+</dt><dd>Projects shipped</dd></div>
-            <div><dt><span data-counter="98">0</span>%</dt><dd>Client satisfaction</dd></div>
-            <div><dt>24h</dt><dd>Response time</dd></div>
+            <div><dt><span data-counter="7">0</span>+</dt><dd data-i18n="stat_years">Years of experience</dd></div>
+            <div><dt><span data-counter="20">0</span>+</dt><dd data-i18n="stat_projects">Projects shipped</dd></div>
+            <div><dt><span data-counter="98">0</span>%</dt><dd data-i18n="stat_satisfaction">Client satisfaction</dd></div>
+            <div><dt>24h</dt><dd data-i18n="stat_response">Response time</dd></div>
           </dl>
         </div>
 
@@ -182,26 +187,26 @@
         </div>
       </div>
 
-      <a href="#clients" class="hero__scroll" data-cursor="hover" aria-label="Scroll down">
-        <span class="hero__scroll-track"><span></span></span> Scroll
+      <a href="#clients" class="hero__scroll" data-cursor="hover" data-i18n-attr="aria-label:aria_scroll" aria-label="Scroll down">
+        <span class="hero__scroll-track"><span></span></span> <span data-i18n="scroll_hint">Scroll</span>
       </a>
     </section>
 
     <!-- ============ MARQUEE ============ -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track" data-marquee>
-        <span>Web Applications</span><i>✦</i>
-        <span>Mobile Apps</span><i>✦</i>
-        <span>DevOps &amp; Cloud</span><i>✦</i>
-        <span>AI Solutions</span><i>✦</i>
-        <span>SaaS Products</span><i>✦</i>
-        <span>API Design</span><i>✦</i>
+        <span data-i18n="mq_web">Web Applications</span><i>✦</i>
+        <span data-i18n="mq_mobile">Mobile Apps</span><i>✦</i>
+        <span data-i18n="mq_devops">DevOps &amp; Cloud</span><i>✦</i>
+        <span data-i18n="mq_ai">AI Solutions</span><i>✦</i>
+        <span data-i18n="mq_saas">SaaS Products</span><i>✦</i>
+        <span data-i18n="mq_api">API Design</span><i>✦</i>
       </div>
     </div>
 
     <!-- ============ CLIENTS ============ -->
     <section class="clients" id="clients" aria-label="Clients">
-      <p class="clients__label" data-reveal>Trusted by innovative companies</p>
+      <p class="clients__label" data-reveal data-i18n="clients_label">Trusted by innovative companies</p>
       <div class="clients__row" data-reveal>
         <img src="assets/img/clients/bicici.webp" alt="Bicici" loading="lazy" />
         <img src="assets/img/clients/digit-com.webp" alt="Digit Com" loading="lazy" />
@@ -218,11 +223,11 @@
     <section class="section services" id="services" aria-labelledby="services-title">
       <div class="container">
         <header class="section__head">
-          <p class="kicker" data-reveal>ST-01 — Services</p>
-          <h2 class="section__title" id="services-title" data-reveal>
+          <p class="kicker" data-reveal data-i18n="kicker_services">ST-01 — Services</p>
+          <h2 class="section__title" id="services-title" data-reveal data-i18n="services_title">
             Four ways I can <em>launch</em> your project
           </h2>
-          <p class="section__sub" data-reveal>
+          <p class="section__sub" data-reveal data-i18n="services_sub">
             From the first line of code to production at scale — one partner,
             end to end, no hand-offs lost in space.
           </p>
@@ -232,24 +237,28 @@
           <article class="svc__item" data-reveal tabindex="0" data-cursor="view">
             <div class="svc__head">
               <span class="svc__num">01</span>
-              <h3 class="svc__title">Web Development</h3>
+              <h3 class="svc__title" data-i18n="svc1_title">Web Development</h3>
               <span class="svc__plus" aria-hidden="true"></span>
             </div>
             <div class="svc__body">
-              <p>Full-stack web applications with Next.js, Nuxt and Node.js — from lean MVPs to production-grade platforms used by thousands.</p>
-              <ul class="svc__tags"><li>React / Next.js</li><li>Nuxt / Vue</li><li>Node.js</li><li>TypeScript</li><li>REST &amp; GraphQL</li></ul>
+              <div>
+                <p data-i18n="svc1_desc">Full-stack web applications with Next.js, Nuxt and Node.js — from lean MVPs to production-grade platforms used by thousands.</p>
+                <ul class="svc__tags"><li>React / Next.js</li><li>Nuxt / Vue</li><li>Node.js</li><li>TypeScript</li><li>REST &amp; GraphQL</li></ul>
+              </div>
             </div>
           </article>
 
           <article class="svc__item" data-reveal tabindex="0" data-cursor="view">
             <div class="svc__head">
               <span class="svc__num">02</span>
-              <h3 class="svc__title">Mobile Development</h3>
+              <h3 class="svc__title" data-i18n="svc2_title">Mobile Development</h3>
               <span class="svc__plus" aria-hidden="true"></span>
             </div>
             <div class="svc__body">
-              <p>Cross-platform mobile experiences your users will love — fast, native-feel, store-ready, and wired to your backend.</p>
-              <ul class="svc__tags"><li>React Native</li><li>Flutter</li><li>iOS &amp; Android</li><li>Offline-first</li><li>Push &amp; deep links</li></ul>
+              <div>
+                <p data-i18n="svc2_desc">Cross-platform mobile experiences your users will love — fast, native-feel, store-ready, and wired to your backend.</p>
+                <ul class="svc__tags"><li>React Native</li><li>Flutter</li><li>iOS &amp; Android</li><li data-i18n="svc2_t4">Offline-first</li><li>Push &amp; deep links</li></ul>
+              </div>
             </div>
           </article>
 
@@ -260,20 +269,24 @@
               <span class="svc__plus" aria-hidden="true"></span>
             </div>
             <div class="svc__body">
-              <p>CI/CD pipelines, infrastructure as code, containers and observability — cloud architecture on AWS, Azure and GCP that scales with you.</p>
-              <ul class="svc__tags"><li>AWS / GCP / Azure</li><li>Docker &amp; Kubernetes</li><li>Terraform</li><li>GitHub Actions</li><li>Monitoring</li></ul>
+              <div>
+                <p data-i18n="svc3_desc">CI/CD pipelines, infrastructure as code, containers and observability — cloud architecture on AWS, Azure and GCP that scales with you.</p>
+                <ul class="svc__tags"><li>AWS / GCP / Azure</li><li>Docker &amp; Kubernetes</li><li>Terraform</li><li>GitHub Actions</li><li>Monitoring</li></ul>
+              </div>
             </div>
           </article>
 
           <article class="svc__item" data-reveal tabindex="0" data-cursor="view">
             <div class="svc__head">
               <span class="svc__num">04</span>
-              <h3 class="svc__title">AI Solutions</h3>
+              <h3 class="svc__title" data-i18n="svc4_title">AI Solutions</h3>
               <span class="svc__plus" aria-hidden="true"></span>
             </div>
             <div class="svc__body">
-              <p>Practical AI that ships: chatbots, workflow automation, predictive analytics and ML-powered features embedded in your product.</p>
-              <ul class="svc__tags"><li>LLM integration</li><li>Python</li><li>Automation</li><li>Data pipelines</li><li>RAG &amp; agents</li></ul>
+              <div>
+                <p data-i18n="svc4_desc">Practical AI that ships: chatbots, workflow automation, predictive analytics and ML-powered features embedded in your product.</p>
+                <ul class="svc__tags"><li data-i18n="svc4_t1">LLM integration</li><li>Python</li><li data-i18n="svc4_t3">Automation</li><li>Data pipelines</li><li>RAG &amp; agents</li></ul>
+              </div>
             </div>
           </article>
         </div>
@@ -284,11 +297,11 @@
     <section class="section work" id="work" aria-labelledby="work-title">
       <div class="container">
         <header class="section__head">
-          <p class="kicker" data-reveal>ST-02 — Selected work</p>
-          <h2 class="section__title" id="work-title" data-reveal>
+          <p class="kicker" data-reveal data-i18n="kicker_work">ST-02 — Selected work</p>
+          <h2 class="section__title" id="work-title" data-reveal data-i18n="work_title">
             Products already <em>in orbit</em>
           </h2>
-          <p class="section__sub" data-reveal>
+          <p class="section__sub" data-reveal data-i18n="work_sub">
             A selection of live products I designed, built and launched — for
             clients and for myself.
           </p>
@@ -298,12 +311,12 @@
           <article class="project" data-reveal>
             <a class="project__media" href="https://fiddeal.app" target="_blank" rel="noopener" data-cursor="view" aria-label="Visit Fiddeal live site">
               <img src="assets/img/projects/fiddeal.jpg" alt="Fiddeal — digital loyalty platform" loading="lazy" />
-              <span class="project__visit">Visit live site ↗</span>
+              <span class="project__visit" data-i18n="visit_site">Visit live site ↗</span>
             </a>
             <div class="project__body">
-              <p class="project__cat">Fintech · Founder &amp; Full-Stack · 2023 —</p>
+              <p class="project__cat" data-i18n="p1_cat">Fintech · Founder &amp; Full-Stack · 2023 —</p>
               <h3 class="project__name">Fiddeal</h3>
-              <p class="project__desc">Digital loyalty platform reinventing customer retention for African local businesses — QR-code rewards, consumer wallet and Fiddeal Pro, a CRM for merchants.</p>
+              <p class="project__desc" data-i18n="p1_desc">Digital loyalty platform reinventing customer retention for African local businesses — QR-code rewards, consumer wallet and Fiddeal Pro, a CRM for merchants.</p>
               <ul class="project__tags"><li>SaaS</li><li>Mobile</li><li>QR tech</li><li>CRM</li></ul>
             </div>
           </article>
@@ -311,12 +324,12 @@
           <article class="project project--flip" data-reveal>
             <a class="project__media" href="https://copaa.africa" target="_blank" rel="noopener" data-cursor="view" aria-label="Visit COPAA live site">
               <img src="assets/img/projects/copaa.jpg" alt="COPAA — pan-African social network" loading="lazy" />
-              <span class="project__visit">Visit live site ↗</span>
+              <span class="project__visit" data-i18n="visit_site">Visit live site ↗</span>
             </a>
             <div class="project__body">
-              <p class="project__cat">Social · Full-Stack · 2024 —</p>
+              <p class="project__cat" data-i18n="p2_cat">Social · Full-Stack · 2024 —</p>
               <h3 class="project__name">COPAA</h3>
-              <p class="project__desc">The first pan-African microblogging platform — digital sovereignty, solidarity-funded, with an exclusive honor-code access model.</p>
+              <p class="project__desc" data-i18n="p2_desc">The first pan-African microblogging platform — digital sovereignty, solidarity-funded, with an exclusive honor-code access model.</p>
               <ul class="project__tags"><li>Social network</li><li>Real-time</li><li>Community</li><li>Pan-African</li></ul>
             </div>
           </article>
@@ -324,12 +337,12 @@
           <article class="project" data-reveal>
             <a class="project__media" href="https://drbalcony.com" target="_blank" rel="noopener" data-cursor="view" aria-label="Visit DrBalcony live site">
               <img src="assets/img/projects/drbalcony.jpg" alt="DrBalcony — balcony inspection platform" loading="lazy" />
-              <span class="project__visit">Visit live site ↗</span>
+              <span class="project__visit" data-i18n="visit_site">Visit live site ↗</span>
             </a>
             <div class="project__body">
-              <p class="project__cat">PropTech · Frontend · 2023 – 2024</p>
+              <p class="project__cat" data-i18n="p3_cat">PropTech · Frontend · 2023 – 2024</p>
               <h3 class="project__name">DrBalcony</h3>
-              <p class="project__desc">AI-powered inspection platform helping California property owners comply with SB326 &amp; SB721 balcony safety laws — faster, more accurate inspections for HOAs and property managers.</p>
+              <p class="project__desc" data-i18n="p3_desc">AI-powered inspection platform helping California property owners comply with SB326 &amp; SB721 balcony safety laws — faster, more accurate inspections for HOAs and property managers.</p>
               <ul class="project__tags"><li>AI-powered</li><li>Compliance</li><li>Multi-portfolio</li><li>USA market</li></ul>
             </div>
           </article>
@@ -337,19 +350,19 @@
           <article class="project project--flip" data-reveal>
             <a class="project__media" href="https://jackwestin.com" target="_blank" rel="noopener" data-cursor="view" aria-label="Visit Jack Westin live site">
               <img src="assets/img/projects/jackwestin.jpg" alt="Jack Westin — MCAT preparation platform" loading="lazy" />
-              <span class="project__visit">Visit live site ↗</span>
+              <span class="project__visit" data-i18n="visit_site">Visit live site ↗</span>
             </a>
             <div class="project__body">
-              <p class="project__cat">EdTech · Frontend · 2023</p>
+              <p class="project__cat" data-i18n="p4_cat">EdTech · Frontend · 2023</p>
               <h3 class="project__name">Jack Westin</h3>
-              <p class="project__desc">MCAT preparation platform trusted by thousands of medical school aspirants — daily passages, question bank, flashcards and performance analytics.</p>
+              <p class="project__desc" data-i18n="p4_desc">MCAT preparation platform trusted by thousands of medical school aspirants — daily passages, question bank, flashcards and performance analytics.</p>
               <ul class="project__tags"><li>Education</li><li>Analytics</li><li>Question bank</li><li>Study plans</li></ul>
             </div>
           </article>
         </div>
 
         <p class="work__more" data-reveal>
-          More on <a href="https://github.com/sidikfaha" target="_blank" rel="noopener" data-cursor="hover">GitHub ↗</a>
+          <span data-i18n="work_more">More on</span> <a href="https://github.com/sidikfaha" target="_blank" rel="noopener" data-cursor="hover">GitHub ↗</a>
         </p>
       </div>
     </section>
@@ -358,8 +371,8 @@
     <section class="section stack" id="stack" aria-labelledby="stack-title">
       <div class="container">
         <header class="section__head">
-          <p class="kicker" data-reveal>ST-02 bis — Instrument panel</p>
-          <h2 class="section__title" id="stack-title" data-reveal>
+          <p class="kicker" data-reveal data-i18n="kicker_stack">ST-02 bis — Instrument panel</p>
+          <h2 class="section__title" id="stack-title" data-reveal data-i18n="stack_title">
             Technologies I <em>fly</em> with
           </h2>
         </header>
@@ -376,11 +389,11 @@
     <section class="section process" id="process" aria-labelledby="process-title">
       <div class="container">
         <header class="section__head">
-          <p class="kicker" data-reveal>ST-03 — Flight plan</p>
-          <h2 class="section__title" id="process-title" data-reveal>
+          <p class="kicker" data-reveal data-i18n="kicker_process">ST-03 — Flight plan</p>
+          <h2 class="section__title" id="process-title" data-reveal data-i18n="process_title">
             How a mission <em>unfolds</em>
           </h2>
-          <p class="section__sub" data-reveal>
+          <p class="section__sub" data-reveal data-i18n="process_sub">
             A clear trajectory from first call to launch — you always know
             where the ship is.
           </p>
@@ -390,26 +403,26 @@
           <li class="step" data-reveal>
             <span class="step__dot" aria-hidden="true"></span>
             <span class="step__phase">Phase 01</span>
-            <h3 class="step__name">Discovery &amp; orbit mapping</h3>
-            <p class="step__desc">We clarify your goals, users, scope and success metrics. You get a clear estimate and a realistic timeline — no surprises later.</p>
+            <h3 class="step__name" data-i18n="ph1_name">Discovery &amp; orbit mapping</h3>
+            <p class="step__desc" data-i18n="ph1_desc">We clarify your goals, users, scope and success metrics. You get a clear estimate and a realistic timeline — no surprises later.</p>
           </li>
           <li class="step" data-reveal>
             <span class="step__dot" aria-hidden="true"></span>
             <span class="step__phase">Phase 02</span>
-            <h3 class="step__name">Architecture</h3>
-            <p class="step__desc">I design a system built to scale: stack selection, data model, infrastructure and integration points, validated with you.</p>
+            <h3 class="step__name" data-i18n="ph2_name">Architecture</h3>
+            <p class="step__desc" data-i18n="ph2_desc">I design a system built to scale: stack selection, data model, infrastructure and integration points, validated with you.</p>
           </li>
           <li class="step" data-reveal>
             <span class="step__dot" aria-hidden="true"></span>
             <span class="step__phase">Phase 03</span>
-            <h3 class="step__name">Build sprints</h3>
-            <p class="step__desc">Weekly deliveries with demos and transparent communication. You see the product grow and can adjust the trajectory at every stage.</p>
+            <h3 class="step__name" data-i18n="ph3_name">Build sprints</h3>
+            <p class="step__desc" data-i18n="ph3_desc">Weekly deliveries with demos and transparent communication. You see the product grow and can adjust the trajectory at every stage.</p>
           </li>
           <li class="step" data-reveal>
             <span class="step__dot" aria-hidden="true"></span>
             <span class="step__phase">Phase 04</span>
-            <h3 class="step__name">Launch &amp; beyond</h3>
-            <p class="step__desc">Deployment, monitoring, performance tuning and documentation — then we plan the next mission together.</p>
+            <h3 class="step__name" data-i18n="ph4_name">Launch &amp; beyond</h3>
+            <p class="step__desc" data-i18n="ph4_desc">Deployment, monitoring, performance tuning and documentation — then we plan the next mission together.</p>
           </li>
         </ol>
       </div>
@@ -419,8 +432,8 @@
     <section class="section testis" id="testimonials" aria-labelledby="testi-title">
       <div class="container">
         <header class="section__head">
-          <p class="kicker" data-reveal>Transmissions</p>
-          <h2 class="section__title" id="testi-title" data-reveal>
+          <p class="kicker" data-reveal data-i18n="kicker_testi">Transmissions</p>
+          <h2 class="section__title" id="testi-title" data-reveal data-i18n="testi_title">
             Signals from <em>mission partners</em>
           </h2>
         </header>
@@ -428,30 +441,30 @@
         <div class="tstm" data-cursor="hover">
           <div class="tstm__viewport" id="tstmViewport">
             <blockquote class="tstm__slide is-active">
-              <p>“His ability to translate complex requirements into smooth, user-friendly interfaces was truly impressive. A keen eye for design, a deep understanding of frontend technologies, and a problem-solving mindset that made our collaboration seamless.”</p>
-              <footer><strong>Osaigbovo Idada</strong><span>Web Development</span></footer>
+              <p data-i18n="t1_quote">“His ability to translate complex requirements into smooth, user-friendly interfaces was truly impressive. A keen eye for design, a deep understanding of frontend technologies, and a problem-solving mindset that made our collaboration seamless.”</p>
+              <footer><strong>Osaigbovo Idada</strong><span data-i18n="t1_role">Web Development</span></footer>
             </blockquote>
             <blockquote class="tstm__slide">
-              <p>“I've worked with Aboubakar on a very innovative project around connected vehicles. On the technical side, Aboubakar was just a guru: we worked hours on CI/CD pipelines with GitHub Actions and integration of microservices using APIs.”</p>
+              <p data-i18n="t2_quote">“I've worked with Aboubakar on a very innovative project around connected vehicles. On the technical side, Aboubakar was just a guru: we worked hours on CI/CD pipelines with GitHub Actions and integration of microservices using APIs.”</p>
               <footer><strong>David Ben Otto</strong><span>AWS Cloud Engineer — KodeCloud Inc</span></footer>
             </blockquote>
             <blockquote class="tstm__slide">
-              <p>“It's rare that you come across a standout talent like Aboubakar. Incredibly multi-talented — a fully fledged full-stack engineer capable of coding in multiple JavaScript frameworks and a fully fledged DevOps engineer.”</p>
+              <p data-i18n="t3_quote">“It's rare that you come across a standout talent like Aboubakar. Incredibly multi-talented — a fully fledged full-stack engineer capable of coding in multiple JavaScript frameworks and a fully fledged DevOps engineer.”</p>
               <footer><strong>Kwiringira Bruce Hervé</strong><span>Cloud Engineer</span></footer>
             </blockquote>
             <blockquote class="tstm__slide">
-              <p>“Curious, responsible, highly involved and naturally endowed with a critical and analytical mind, Sidik Aboubakar is a driving force who loves challenges and investing in new projects.”</p>
+              <p data-i18n="t4_quote">“Curious, responsible, highly involved and naturally endowed with a critical and analytical mind, Sidik Aboubakar is a driving force who loves challenges and investing in new projects.”</p>
               <footer><strong>Jim Carlson Ngnintedem</strong><span>Terraform &amp; Agile Certified</span></footer>
             </blockquote>
             <blockquote class="tstm__slide">
-              <p>“I've known people who know their field, but Sidik, in addition to being super talented in DevOps, knows so many other areas including mobile. I love collaborating with him — helpful and hardworking.”</p>
+              <p data-i18n="t5_quote">“I've known people who know their field, but Sidik, in addition to being super talented in DevOps, knows so many other areas including mobile. I love collaborating with him — helpful and hardworking.”</p>
               <footer><strong>Jean-François Hermann N'Guessan Angora</strong><span>Entrepreneur — Mobile Developer</span></footer>
             </blockquote>
           </div>
           <div class="tstm__controls">
-            <button class="tstm__arrow" id="tstmPrev" aria-label="Previous testimonial" data-cursor="hover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
-            <div class="tstm__dots" id="tstmDots" role="tablist" aria-label="Choose a testimonial"></div>
-            <button class="tstm__arrow" id="tstmNext" aria-label="Next testimonial" data-cursor="hover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button class="tstm__arrow" id="tstmPrev" aria-label="Previous testimonial" data-cursor="hover" data-i18n-attr="aria-label:aria_prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+            <div class="tstm__dots" id="tstmDots" role="tablist" aria-label="Choose a testimonial" data-i18n-attr="aria-label:aria_dots"></div>
+            <button class="tstm__arrow" id="tstmNext" aria-label="Next testimonial" data-cursor="hover" data-i18n-attr="aria-label:aria_next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           </div>
         </div>
       </div>
@@ -467,16 +480,16 @@
           </div>
           <div class="about__badge">
             <span class="about__badge-dot"></span>
-            Based in Abidjan — remote worldwide
+            <span data-i18n="about_badge">Based in Abidjan — remote worldwide</span>
           </div>
         </div>
 
         <div class="about__content">
-          <p class="kicker" data-reveal>ST-04 — About</p>
-          <h2 class="section__title" id="about-title" data-reveal>
+          <p class="kicker" data-reveal data-i18n="kicker_about">ST-04 — About</p>
+          <h2 class="section__title" id="about-title" data-reveal data-i18n="about_title">
             Digital innovator &amp; <em>solutions architect</em>
           </h2>
-          <p class="about__text" data-reveal>
+          <p class="about__text" data-reveal data-i18n="about_text">
             Passionate about technological innovation, I transform complex
             challenges into elegant, high-performing solutions. For 7+ years
             I've helped startups, agencies and enterprises ship web platforms,
@@ -485,16 +498,16 @@
           </p>
           <ul class="about__values">
             <li data-reveal>Innovation</li>
-            <li data-reveal>Collaboration</li>
-            <li data-reveal>Development</li>
+            <li data-reveal data-i18n="val_collab">Collaboration</li>
+            <li data-reveal data-i18n="val_dev">Development</li>
             <li data-reveal>AI &amp; ML</li>
-            <li data-reveal>Strategy</li>
+            <li data-reveal data-i18n="val_strategy">Strategy</li>
             <li data-reveal>Excellence</li>
           </ul>
           <dl class="about__facts" data-reveal>
-            <div><dt>Registry</dt><dd>RCCM CI-ABJ-03-2024-A10-02543</dd></div>
-            <div><dt>Timezone</dt><dd>UTC+0 — flexible with EU &amp; US hours</dd></div>
-            <div><dt>Engagement</dt><dd>Freelance missions &amp; long-term contracts</dd></div>
+            <div><dt data-i18n="fact1_dt">Registry</dt><dd>RCCM CI-ABJ-03-2024-A10-02543</dd></div>
+            <div><dt data-i18n="fact2_dt">Timezone</dt><dd data-i18n="fact2_dd">UTC+0 — flexible with EU &amp; US hours</dd></div>
+            <div><dt data-i18n="fact3_dt">Engagement</dt><dd data-i18n="fact3_dd">Freelance missions &amp; long-term contracts</dd></div>
           </dl>
         </div>
       </div>
@@ -504,11 +517,11 @@
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="aurora-band" aria-hidden="true"></div>
       <div class="container contact__inner">
-        <p class="kicker kicker--center" data-reveal>Final transmission</p>
-        <h2 class="contact__title" id="contact-title" data-reveal>
+        <p class="kicker kicker--center" data-reveal data-i18n="kicker_contact">Final transmission</p>
+        <h2 class="contact__title" id="contact-title" data-reveal data-i18n="contact_title">
           Let's launch something <em>stellar</em> together
         </h2>
-        <p class="contact__sub" data-reveal>
+        <p class="contact__sub" data-reveal data-i18n="contact_sub">
           Tell me about your project — I reply within 24 hours with a first
           assessment and a call slot. NDA available on request.
         </p>
@@ -519,9 +532,9 @@
           </a>
         </div>
         <ul class="contact__guarantees" data-reveal>
-          <li>Response within 24h</li>
-          <li>NDA available</li>
-          <li>Remote worldwide</li>
+          <li data-i18n="g1">Response within 24h</li>
+          <li data-i18n="g2">NDA available</li>
+          <li data-i18n="g3">Remote worldwide</li>
         </ul>
         <ul class="contact__socials" data-reveal>
           <li><a href="https://github.com/sidikfaha" target="_blank" rel="noopener" aria-label="GitHub" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg></a></li>
@@ -537,18 +550,18 @@
     <div class="container footer__inner">
       <p class="footer__brand">Aboubakar Sidik Faha<span class="footer__star">✦</span></p>
       <nav class="footer__nav" aria-label="Footer navigation">
-        <a href="#services" data-cursor="hover">Services</a>
-        <a href="#work" data-cursor="hover">Work</a>
-        <a href="#process" data-cursor="hover">Process</a>
-        <a href="#about" data-cursor="hover">About</a>
-        <a href="#contact" data-cursor="hover">Contact</a>
+        <a href="#services" data-cursor="hover" data-i18n="nav_services">Services</a>
+        <a href="#work" data-cursor="hover" data-i18n="nav_work">Work</a>
+        <a href="#process" data-cursor="hover" data-i18n="nav_process">Process</a>
+        <a href="#about" data-cursor="hover" data-i18n="nav_about">About</a>
+        <a href="#contact" data-cursor="hover" data-i18n="nav_contact">Contact</a>
       </nav>
-      <p class="footer__note">© <span id="currentYear">2026</span> — Crafted among the stars, from Abidjan to the world.</p>
+      <p class="footer__note" data-i18n="footer_note">© <span id="currentYear">2026</span> — Crafted among the stars, from Abidjan to the world.</p>
     </div>
   </footer>
 
   <!-- Bouton retour en haut -->
-  <button class="to-top" id="toTop" aria-label="Back to top" data-cursor="hover">
+  <button class="to-top" id="toTop" aria-label="Back to top" data-cursor="hover" data-i18n-attr="aria-label:aria_top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
   </button>
 
@@ -556,6 +569,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
